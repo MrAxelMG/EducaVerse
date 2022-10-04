@@ -11,7 +11,7 @@ const proScreens = [
   "Kids",
   "New Collection",
   "Sign In",
-  "Sign Up"
+  "Sign Up",
 ];
 
 class DrawerItem extends React.Component {
@@ -86,7 +86,7 @@ class DrawerItem extends React.Component {
         return (
           <Icon
             size={16}
-            name="md-switch"
+            name="add-circle"
             family="ionicon"
             color={focused ? "white" : materialTheme.COLORS.MUTED}
           />
@@ -134,13 +134,18 @@ class DrawerItem extends React.Component {
     const { focused, title, navigation } = this.props;
     const proScreen = proScreens.includes(title);
     return (
-      <TouchableOpacity style={{ height: 55 }} onPress={() => {navigation.navigate(title)}}>
+      <TouchableOpacity
+        style={{ height: 55 }}
+        onPress={() => {
+          navigation.navigate(title);
+        }}
+      >
         <Block
           flex
           row
           style={[
             styles.defaultStyle,
-            focused ? [styles.activeStyle, styles.shadow] : null
+            focused ? [styles.activeStyle, styles.shadow] : null,
           ]}
         >
           <Block middle flex={0.1} style={{ marginRight: 28 }}>
@@ -172,20 +177,20 @@ export default DrawerItem;
 const styles = StyleSheet.create({
   defaultStyle: {
     paddingVertical: 16,
-    paddingHorizontal: 16
+    paddingHorizontal: 16,
   },
   activeStyle: {
     backgroundColor: materialTheme.COLORS.ACTIVE,
-    borderRadius: 4
+    borderRadius: 4,
   },
   shadow: {
     shadowColor: theme.COLORS.BLACK,
     shadowOffset: {
       width: 0,
-      height: 2
+      height: 2,
     },
     shadowRadius: 8,
-    shadowOpacity: 0.2
+    shadowOpacity: 0.2,
   },
   pro: {
     backgroundColor: materialTheme.COLORS.LABEL,
@@ -193,6 +198,6 @@ const styles = StyleSheet.create({
     marginLeft: 8,
     borderRadius: 2,
     height: 16,
-    width: 36
-  }
+    width: 36,
+  },
 });

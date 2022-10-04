@@ -21,7 +21,7 @@ const Drawer = createDrawerNavigator();
 
 const profile = {
   avatar: Images.Profile,
-  name: "Rachel Brown",
+  name: "Educaverse",
   type: "Seller",
   plan: "Pro",
   rating: 4.8,
@@ -113,7 +113,7 @@ function HomeStack(props) {
             <Header
               search
               tabs
-              title="Home"
+              title="Inicio"
               navigation={navigation}
               scene={scene}
             />
@@ -173,7 +173,7 @@ function AppStack(props) {
       }}
     >
       <Drawer.Screen
-        name="Home"
+        name="Inicio"
         component={HomeStack}
         options={{
           drawerIcon: ({ focused }) => (
@@ -279,7 +279,7 @@ function AppStack(props) {
           drawerIcon: ({ focused }) => (
             <Icon
               size={16}
-              name="md-switch"
+              name="add-circle"
               family="ionicon"
               color={focused ? "white" : materialTheme.COLORS.MUTED}
               style={{ marginRight: 2, marginLeft: 2 }}

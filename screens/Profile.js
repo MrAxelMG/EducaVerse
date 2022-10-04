@@ -1,13 +1,20 @@
-import React from 'react';
-import { StyleSheet, Dimensions, ScrollView, Image, ImageBackground, Platform } from 'react-native';
-import { Block, Text, theme } from 'galio-framework';
-import { LinearGradient } from 'expo-linear-gradient';
+import React from "react";
+import {
+  StyleSheet,
+  Dimensions,
+  ScrollView,
+  Image,
+  ImageBackground,
+  Platform,
+} from "react-native";
+import { Block, Text, theme } from "galio-framework";
+import { LinearGradient } from "expo-linear-gradient";
 
-import { Icon } from '../components';
-import { Images, materialTheme } from '../constants';
+import { Icon } from "../components";
+import { Images, materialTheme } from "../constants";
 import { HeaderHeight } from "../constants/utils";
 
-const { width, height } = Dimensions.get('screen');
+const { width, height } = Dimensions.get("screen");
 const thumbMeasure = (width - 48 - 32) / 3;
 
 export default class Profile extends React.Component {
@@ -16,60 +23,98 @@ export default class Profile extends React.Component {
       <Block flex style={styles.profile}>
         <Block flex>
           <ImageBackground
-            source={{uri: Images.Profile}}
+            source={{ uri: Images.Profile }}
             style={styles.profileContainer}
-            imageStyle={styles.profileImage}>
+            imageStyle={styles.profileImage}
+          >
             <Block flex style={styles.profileDetails}>
               <Block style={styles.profileTexts}>
-                <Text color="white" size={28} style={{ paddingBottom: 8 }}>Rachel Brown</Text>
+                <Text color="white" size={28} style={{ paddingBottom: 8 }}>
+                  Educaverse
+                </Text>
                 <Block row space="between">
                   <Block row>
                     <Block middle style={styles.pro}>
-                      <Text size={16} color="white">Pro</Text>
+                      <Text size={16} color="white">
+                        Pro
+                      </Text>
                     </Block>
-                    <Text color="white" size={16} muted style={styles.seller}>Seller</Text>
+                    <Text color="white" size={16} muted style={styles.seller}>
+                      Seller
+                    </Text>
                     <Text size={16} color={materialTheme.COLORS.WARNING}>
-                      4.8 <Icon name="shape-star" family="GalioExtra" size={14} />
+                      4.8{" "}
+                      <Icon name="shape-star" family="GalioExtra" size={14} />
                     </Text>
                   </Block>
                   <Block>
                     <Text color={theme.COLORS.MUTED} size={16}>
-                      <Icon name="map-marker" family="font-awesome" color={theme.COLORS.MUTED} size={16} />
+                      <Icon
+                        name="map-marker"
+                        family="font-awesome"
+                        color={theme.COLORS.MUTED}
+                        size={16}
+                      />
                       {` `} Los Angeles, CA
-                      </Text>
+                    </Text>
                   </Block>
                 </Block>
               </Block>
-              <LinearGradient colors={['rgba(0,0,0,0)', 'rgba(0,0,0,1)']} style={styles.gradient} />
+              <LinearGradient
+                colors={["rgba(0,0,0,0)", "rgba(0,0,0,1)"]}
+                style={styles.gradient}
+              />
             </Block>
           </ImageBackground>
         </Block>
         <Block flex style={styles.options}>
           <ScrollView showsVerticalScrollIndicator={false}>
-            <Block row space="between" style={{ padding: theme.SIZES.BASE, }}>
+            <Block row space="between" style={{ padding: theme.SIZES.BASE }}>
               <Block middle>
-                <Text bold size={12} style={{marginBottom: 8}}>36</Text>
-                <Text muted size={12}>Orders</Text>
+                <Text bold size={12} style={{ marginBottom: 8 }}>
+                  36
+                </Text>
+                <Text muted size={12}>
+                  Orders
+                </Text>
               </Block>
               <Block middle>
-                <Text bold size={12} style={{marginBottom: 8}}>5</Text>
-                <Text muted size={12}>Bids & Offers</Text>
+                <Text bold size={12} style={{ marginBottom: 8 }}>
+                  5
+                </Text>
+                <Text muted size={12}>
+                  Bids & Offers
+                </Text>
               </Block>
               <Block middle>
-                <Text bold size={12} style={{marginBottom: 8}}>2</Text>
-                <Text muted size={12}>Messages</Text>
+                <Text bold size={12} style={{ marginBottom: 8 }}>
+                  2
+                </Text>
+                <Text muted size={12}>
+                  Messages
+                </Text>
               </Block>
             </Block>
-            <Block row space="between" style={{ paddingVertical: 16, alignItems: 'baseline' }}>
+            <Block
+              row
+              space="between"
+              style={{ paddingVertical: 16, alignItems: "baseline" }}
+            >
               <Text size={16}>Recently viewed</Text>
-              <Text size={12} color={theme.COLORS.PRIMARY} onPress={() => this.props.navigation.navigate('Home')}>View All</Text>
+              <Text
+                size={12}
+                color={theme.COLORS.PRIMARY}
+                onPress={() => this.props.navigation.navigate("Home")}
+              >
+                View All
+              </Text>
             </Block>
             <Block style={{ paddingBottom: -HeaderHeight * 2 }}>
-              <Block row space="between" style={{ flexWrap: 'wrap' }} >
+              <Block row space="between" style={{ flexWrap: "wrap" }}>
                 {Images.Viewed.map((img, imgIndex) => (
                   <Image
                     source={{ uri: img }}
-                    key={`viewed-${img}`}  
+                    key={`viewed-${img}`}
                     resizeMode="cover"
                     style={styles.thumb}
                   />
@@ -85,12 +130,12 @@ export default class Profile extends React.Component {
 
 const styles = StyleSheet.create({
   profile: {
-    marginTop: Platform.OS === 'android' ? -HeaderHeight : 0,
+    marginTop: Platform.OS === "android" ? -HeaderHeight : 0,
     marginBottom: -HeaderHeight * 2,
   },
   profileImage: {
     width: width * 1.1,
-    height: 'auto',
+    height: "auto",
   },
   profileContainer: {
     width: width,
@@ -98,13 +143,13 @@ const styles = StyleSheet.create({
   },
   profileDetails: {
     paddingTop: theme.SIZES.BASE * 4,
-    justifyContent: 'flex-end',
-    position: 'relative',
+    justifyContent: "flex-end",
+    position: "relative",
   },
   profileTexts: {
     paddingHorizontal: theme.SIZES.BASE * 2,
     paddingVertical: theme.SIZES.BASE * 2,
-    zIndex: 2
+    zIndex: 2,
   },
   pro: {
     backgroundColor: materialTheme.COLORS.LABEL,
@@ -118,14 +163,14 @@ const styles = StyleSheet.create({
     marginRight: theme.SIZES.BASE / 2,
   },
   options: {
-    position: 'relative',
+    position: "relative",
     padding: theme.SIZES.BASE,
     marginHorizontal: theme.SIZES.BASE,
     marginTop: -theme.SIZES.BASE * 7,
     borderTopLeftRadius: 13,
     borderTopRightRadius: 13,
     backgroundColor: theme.COLORS.WHITE,
-    shadowColor: 'black',
+    shadowColor: "black",
     shadowOffset: { width: 0, height: 0 },
     shadowRadius: 8,
     shadowOpacity: 0.2,
@@ -134,16 +179,16 @@ const styles = StyleSheet.create({
   thumb: {
     borderRadius: 4,
     marginVertical: 4,
-    alignSelf: 'center',
+    alignSelf: "center",
     width: thumbMeasure,
-    height: thumbMeasure
+    height: thumbMeasure,
   },
   gradient: {
     zIndex: 1,
     left: 0,
     right: 0,
     bottom: 0,
-    height: '30%',
-    position: 'absolute',
+    height: "30%",
+    position: "absolute",
   },
 });
