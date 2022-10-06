@@ -8,28 +8,28 @@ const { width } = Dimensions.get("screen");
 import products from "../constants/products";
 
 export default class Home extends React.Component {
-  renderSearch = () => {
-    const { navigation } = this.props;
-    const iconCamera = (
-      <Icon
-        size={16}
-        color={theme.COLORS.MUTED}
-        name="zoom-in"
-        family="material"
-      />
-    );
+  // renderSearch = () => {
+  //   const { navigation } = this.props;
+  //   const iconCamera = (
+  //     <Icon
+  //       size={16}
+  //       color={theme.COLORS.MUTED}
+  //       name="zoom-in"
+  //       family="material"
+  //     />
+  //   );
 
-    return (
-      <Input
-        right
-        color="black"
-        style={styles.search}
-        iconContent={iconCamera}
-        placeholder="What are you looking for?"
-        onFocus={() => navigation.navigate("Pro")}
-      />
-    );
-  };
+  //   return (
+  //     <Input
+  //       right
+  //       color="black"
+  //       style={styles.search}
+  //       iconContent={iconCamera}
+  //       placeholder="What are you looking for?"
+  //       onFocus={() => navigation.navigate("Pro")}
+  //     />
+  //   );
+  // };
 
   renderTabs = () => {
     const { navigation } = this.props;
