@@ -17,7 +17,7 @@ class CreateNivelesEducativosTable extends Migration
             $table->id();
             $table->string('grado', 40);
             $table->string('nivel', 40);
-            $table->unsignedBigInteger('escuela_id')->nullable();
+            $table->unsignedBigInteger('escuela_id');
             $table->foreign('escuela_id')->references('id')->on('escuelas')->onUpdate('cascade')->onDelete('cascade');
         });
     }
