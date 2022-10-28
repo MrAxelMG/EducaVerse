@@ -7,79 +7,49 @@ use Illuminate\Http\Request;
 
 class EscuelaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        return view("admin.escuelas.show");
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function show()
     {
-        //
+        $escuelas = Escuela::all();
+        return datatables()->of($escuelas)->addColumn('btn', 'admin.escuelas.buttons')->rawColumns(['btn'])->toJson();
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function add(Request $request)
     {
-        //
+        $escuela = new Escuela;
+        $escuela->nombre = $request->nombre;
+        $escuela->direccion = $request->direccion;
+        $escuela->col_fracc = $request->col_fracc;
+        $escuela->cp = $request->cp;
+        $escuela->ciudad = $request->ciudad;
+        $escuela->estado = $request->estado;
+        $escuela->pais = $request->pais;
+        $escuela->save();
+
+        return response($escuela);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Escuela  $escuela
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Escuela $escuela)
+    public function update(Request $request)
     {
-        //
+        $escuela = Escuela::find($request->id);
+        $escuela->nombre = $request->nombre;
+        $escuela->direccion = $request->direccion;
+        $escuela->col_fracc = $request->col_fracc;
+        $escuela->cp = $request->cp;
+        $escuela->ciudad = $request->ciudad;
+        $escuela->estado = $request->estado;
+        $escuela->pais = $request->pais;
+        $escuela->save();
+
+        return response($escuela);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Escuela  $escuela
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Escuela $escuela)
+    public function delete(Request $request)
     {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Escuela  $escuela
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Escuela $escuela)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Escuela  $escuela
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Escuela $escuela)
-    {
-        //
+        Escuela::destroy($request->id);
     }
 }

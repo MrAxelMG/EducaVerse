@@ -7,79 +7,39 @@ use Illuminate\Http\Request;
 
 class VideojuegosController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        return view("admin.videojuegos.show");
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function show()
     {
-        //
+        $videojuegos = Videojuegos::all();
+        return datatables()->of($videojuegos)->addColumn('btn', 'admin.videojuegos.buttons')->rawColumns(['btn'])->toJson();
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function add(Request $request)
     {
-        //
+        $videojuegos = new Videojuegos;
+        $videojuegos->nombre = $request->nombre;
+        $videojuegos->categoria = $request->categoria;
+        $videojuegos->save();
+
+        return response($videojuegos);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Videojuegos  $videojuegos
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Videojuegos $videojuegos)
+    public function update(Request $request)
     {
-        //
+        $videojuegos = Videojuegos::find($request->id);
+        $videojuegos->nombre = $request->nombre;
+        $videojuegos->categoria = $request->categoria;
+        $videojuegos->save();
+
+        return response($videojuegos);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Videojuegos  $videojuegos
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Videojuegos $videojuegos)
+    public function delete(Request $request)
     {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Videojuegos  $videojuegos
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Videojuegos $videojuegos)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Videojuegos  $videojuegos
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Videojuegos $videojuegos)
-    {
-        //
+        Videojuegos::destroy($request->id);
     }
 }

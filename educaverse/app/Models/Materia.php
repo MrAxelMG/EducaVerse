@@ -9,6 +9,9 @@ class Materia extends Model
 {
     use HasFactory;
 
+    protected $table = "materias";
+    public $timestamps = false;
+
     public function nivelEducativo()
     {
         return $this->hasMany(NIivelEducativo::class);

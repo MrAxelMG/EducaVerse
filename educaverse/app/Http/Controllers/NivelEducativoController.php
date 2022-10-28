@@ -2,84 +2,48 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\NivelEducativo;
+use App\Models\NivelesEducativo;
+use App\Models\Escuela;
 use Illuminate\Http\Request;
 
 class NivelEducativoController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        $escuelas = Escuela::all();
+        return view("admin.nivel-educativo.show", compact('escuelas'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function show()
     {
-        //
+        $nivel_educativo = NivelesEducativo::all();
+        return datatables()->of($nivel_educativo)->addColumn('btn', 'admin.nivel-educativo.buttons')->rawColumns(['btn'])->toJson();
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function add(Request $request)
     {
-        //
+        $nivel_educativo = new NivelesEducativo;
+        $nivel_educativo->grado = $request->grado;
+        $nivel_educativo->nivel = $request->nivel;
+        $nivel_educativo->escuela_id = $request->escuela;
+        $nivel_educativo->save();
+
+        return response($nivel_educativo);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\NivelEducativo  $nivelEducativo
-     * @return \Illuminate\Http\Response
-     */
-    public function show(NivelEducativo $nivelEducativo)
+    public function update(Request $request)
     {
-        //
+        $nivel_educativo = NivelesEducativo::find($request->id);
+        $nivel_educativo->grado = $request->grado;
+        $nivel_educativo->nivel = $request->nivel;
+        $nivel_educativo->escuela_id = $request->escuela;
+        $nivel_educativo->save();
+
+        return response($nivel_educativo);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\NivelEducativo  $nivelEducativo
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(NivelEducativo $nivelEducativo)
+    public function delete(Request $request)
     {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\NivelEducativo  $nivelEducativo
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, NivelEducativo $nivelEducativo)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\NivelEducativo  $nivelEducativo
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(NivelEducativo $nivelEducativo)
-    {
-        //
+        NivelesEducativo::destroy($request->id);
     }
 }
