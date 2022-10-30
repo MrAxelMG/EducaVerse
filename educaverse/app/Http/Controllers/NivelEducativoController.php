@@ -25,7 +25,7 @@ class NivelEducativoController extends Controller
         $nivel_educativo = new NivelesEducativo;
         $nivel_educativo->grado = $request->grado;
         $nivel_educativo->nivel = $request->nivel;
-        $nivel_educativo->escuela_id = $request->escuela;
+        $nivel_educativo->escuela_id = $request->escuela_id;
         $nivel_educativo->save();
 
         return response($nivel_educativo);
@@ -36,7 +36,7 @@ class NivelEducativoController extends Controller
         $nivel_educativo = NivelesEducativo::find($request->id);
         $nivel_educativo->grado = $request->grado;
         $nivel_educativo->nivel = $request->nivel;
-        $nivel_educativo->escuela_id = $request->escuela;
+        $nivel_educativo->escuela_id = $request->escuela_id;
         $nivel_educativo->save();
 
         return response($nivel_educativo);

@@ -3,11 +3,7 @@ $(document).ready(function () {
 
     var table = $("#materiasTable").DataTable({
         ajax: "/admin/materias/show",
-        columns: [
-            { data: "nombre" },
-            { data: "nivel_educativo" },
-            { data: "btn" },
-        ],
+        columns: [{ data: "nombre" }, { data: "nivel" }, { data: "btn" }],
         responsive: {
             breakpoints: [
                 {

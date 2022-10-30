@@ -16,7 +16,7 @@ class MateriaController extends Controller
 
     public function show()
     {
-        $materias = Materia::all();
+        $materias = Materia::join('niveles_educativos', 'niveles_educativos.id', '=', 'materias.nivel_id');
         return datatables()->of($materias)->addColumn('btn', 'admin.materias.buttons')->rawColumns(['btn'])->toJson();
     }
 

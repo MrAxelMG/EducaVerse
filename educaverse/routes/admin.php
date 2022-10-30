@@ -36,6 +36,8 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function(){
     Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout']);
 });
 
+Route::get('/', [App\Http\Controllers\WebsiteController::class, 'index']);
+
 Route::get('login', [App\Http\Controllers\Auth\LoginController::class, 'create'])->name('login');
 Route::post('login', [App\Http\Controllers\Auth\LoginController::class, 'store']);
 
