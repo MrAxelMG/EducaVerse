@@ -974,16 +974,16 @@ section {
     text-decoration: underline;
 }
 
-.values .card:hover .card-body {
+/* .values .card:hover .card-body {
     background: #0d476c;
-}
+} */
 
-.values .card:hover .read-more a,
+/* .values .card:hover .read-more a,
 .values .card:hover .card-title,
 .values .card:hover .card-title a,
 .values .card:hover .card-text {
     color: #fff;
-}
+} */
 
 /*--------------------------------------------------------------
 # Testimonials
@@ -2343,4 +2343,8 @@ section {
     background: #012c47;
     color: #fff;
     text-decoration: none;
+}
+
+.footer-short {
+    background: #3c8687 !important;
 }
