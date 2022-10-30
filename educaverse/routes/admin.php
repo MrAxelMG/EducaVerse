@@ -30,6 +30,8 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function(){
     Route::post('videojuegos/add', [App\Http\Controllers\VideojuegosController::class, 'add']);
     Route::post('videojuegos/update', [App\Http\Controllers\VideojuegosController::class, 'update']);
     Route::post('videojuegos/delete', [App\Http\Controllers\VideojuegosController::class, 'delete']);
+
+    Route::get('perfil', [App\Http\Controllers\PerfilController::class, 'index']);
     
     Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout']);
 });

@@ -19578,3 +19578,16 @@ small {
 
 
 /*# sourceMappingURL=app.css.map*/
+
+#imgPerfil {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+.imgPerfil {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
