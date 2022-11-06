@@ -49,7 +49,7 @@
             </div>
             <div class="text-block text-center my-3">
               <span class="text-small font-weight-semibold">¿No eres parte de esta familia?</span>
-              <a href="{{ url('/register') }}" class="text-black text-small">Crea una cuenta</a>
+              <a href="{{ url('/registro') }}" class="text-black text-small">Crea una cuenta</a>
             </div>
           </form>
         </div>
