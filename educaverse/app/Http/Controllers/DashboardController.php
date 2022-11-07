@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Escuela;
 use App\Models\Materia;
-use App\Models\NivelesEducativo;
+use App\Models\Videojuego;
 use App\Models\User;
 
 class DashboardController extends Controller
@@ -15,7 +15,7 @@ class DashboardController extends Controller
     {
         $escuelasCount = Escuela::count();
         $materiasCount = Materia::count();
-        $videojuegosCount = NivelesEducativo::count();
+        $videojuegosCount = Videojuego::count();
         $usuariosCount = User::count();
 
         return view('admin.dashboard.show', compact('escuelasCount', 'materiasCount', 'videojuegosCount', 'usuariosCount'));

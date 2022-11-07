@@ -1,6 +1,6 @@
 @extends('admin.index')
 
-@section('title', 'Gestión de materias')
+@section('title', 'Gestión de categorias')
 
 @section('styles')
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap5.min.css">
@@ -12,9 +12,9 @@
         <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <a class="btn btn-primary mb-4 new text-white" data-bs-toggle="modal" data-bs-target="#formModal"> <i class="mdi mdi-plus me-1"> </i>Añadir una nueva materia</a>
+                <a class="btn btn-primary mb-4 new text-white" data-bs-toggle="modal" data-bs-target="#formModal"> <i class="mdi mdi-plus me-1"> </i>Añadir una nueva categoria</a>
                 <div class="table-responsive">
-                    <table class="table table-hover table-striped table-bordered text-center nowrap" id="materiasTable" style="width: 100%;" >
+                    <table class="table table-hover table-striped table-bordered text-center nowrap" id="categoriasTable" style="width: 100%;" >
                         <thead>
                             <tr>
                                 <th>Nombre</th>
@@ -33,25 +33,25 @@
         <div class="modal-dialog modal-dialog-centered modal-md">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalTitle">Añadir materia</h5>
+                    <h5 class="modal-title" id="modalTitle">Añadir categoria</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form id="materiaForm" method="post">
+                <form id="categoriaForm" method="post">
                     <div class="modal-body">
                         @csrf
                         <input type="hidden" name="id" id="idInput">
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" placeholder="Ingresa el nombre de la materia" id="nombreInput" name="nombre" required>
-                                    <label for="nombreInput">Nombre de la materia</label>
+                                    <input type="text" class="form-control" placeholder="Ingresa el nombre de la categoria" id="nombreInput" name="nombre" required>
+                                    <label for="nombreInput">Nombre de la categoria</label>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="subtmit" class="btn btn-primary" id="btnSubmit">Añadir materia</button>
+                        <button type="subtmit" class="btn btn-primary" id="btnSubmit">Añadir categoria</button>
                     </div>
                 </form>
             </div>
@@ -65,5 +65,5 @@
     <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap5.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <script src="{{ asset('js/materias.js') }}"></script>
+    <script src="{{ asset('js/categorias.js') }}"></script>
 @endsection

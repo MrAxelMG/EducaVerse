@@ -19,19 +19,20 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function(){
     Route::post('escuelas/update', [App\Http\Controllers\EscuelaController::class, 'update']);
     Route::post('escuelas/delete', [App\Http\Controllers\EscuelaController::class, 'delete']);
 
-    Route::get('niveles-educativos', [App\Http\Controllers\NivelEducativoController::class, 'index']);
-    Route::get('niveles-educativos/show', [App\Http\Controllers\NivelEducativoController::class, 'show']);
-    Route::post('niveles-educativos/add', [App\Http\Controllers\NivelEducativoController::class, 'add']);
-    Route::post('niveles-educativos/update', [App\Http\Controllers\NivelEducativoController::class, 'update']);
-    Route::post('niveles-educativos/delete', [App\Http\Controllers\NivelEducativoController::class, 'delete']);
+    Route::get('categorias', [App\Http\Controllers\CategoriaController::class, 'index']);
+    Route::get('categorias/show', [App\Http\Controllers\CategoriaController::class, 'show']);
+    Route::post('categorias/add', [App\Http\Controllers\CategoriaController::class, 'add']);
+    Route::post('categorias/update', [App\Http\Controllers\CategoriaController::class, 'update']);
+    Route::post('categorias/delete', [App\Http\Controllers\CategoriaController::class, 'delete']);
 
-    Route::get('videojuegos', [App\Http\Controllers\VideojuegosController::class, 'index']);
-    Route::get('videojuegos/show', [App\Http\Controllers\VideojuegosController::class, 'show']);
-    Route::post('videojuegos/add', [App\Http\Controllers\VideojuegosController::class, 'add']);
-    Route::post('videojuegos/update', [App\Http\Controllers\VideojuegosController::class, 'update']);
-    Route::post('videojuegos/delete', [App\Http\Controllers\VideojuegosController::class, 'delete']);
+    Route::get('videojuegos', [App\Http\Controllers\VideojuegoController::class, 'index']);
+    Route::get('videojuegos/show', [App\Http\Controllers\VideojuegoController::class, 'show']);
+    Route::post('videojuegos/add', [App\Http\Controllers\VideojuegoController::class, 'add']);
+    Route::post('videojuegos/update', [App\Http\Controllers\VideojuegoController::class, 'update']);
+    Route::post('videojuegos/delete', [App\Http\Controllers\VideojuegoController::class, 'delete']);
 
     Route::get('perfil', [App\Http\Controllers\PerfilController::class, 'index']);
+    Route::post('perfil/update', [App\Http\Controllers\PerfilController::class, 'update']);
     
     Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout']);
 });

@@ -19,10 +19,10 @@
     <li class="nav-item">
       <a class="nav-link" href="{{ url('/admin/dashboard') }}">
         <i class="menu-icon mdi mdi-television"></i>
-        <span class="menu-title">Dashboard</span>
+        <span class="menu-title">Panel de control</span>
       </a>
     </li>
-    <li class="nav-item">
+    {{-- <li class="nav-item">
       <a class="nav-link" data-toggle="collapse" href="#basic-ui" aria-controls="basic-ui">
         <i class="menu-icon mdi mdi-dna"></i>
         <span class="menu-title">Basic UI Elements</span>
@@ -60,20 +60,17 @@
         <i class="menu-icon mdi mdi-emoticon"></i>
         <span class="menu-title">Icons</span>
       </a>
-    </li>
+    </li> --}}
     <li class="nav-item ">
-      <a class="nav-link" data-toggle="collapse" href="#materias" aria-controls="materias">
+      <a class="nav-link" data-toggle="collapse" href="#educacion" aria-controls="educacion">
         <i class="menu-icon mdi mdi-school"></i>
-        <span class="menu-title">Escuelas</span>
+        <span class="menu-title">Educación</span>
         <i class="menu-arrow"></i>
       </a>
-      <div class="collapse" id="materias">
+      <div class="collapse" id="educacion">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
             <a class="nav-link" href="{{ url('/admin/materias') }}">Materias</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url('/admin/niveles-educativos') }}">Niveles educativos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ url('/admin/escuelas') }}">Escuela</a>
@@ -82,6 +79,23 @@
       </div>
     </li>
     <li class="nav-item ">
+      <a class="nav-link" data-toggle="collapse" href="#entretenimientos" aria-controls="entretenimientos">
+        <i class="menu-icon mdi mdi-gamepad-variant"></i>
+        <span class="menu-title">Entretenimiento</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="entretenimientos">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/admin/videojuegos') }}">Videojuegos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/admin/categorias') }}">Categorias</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    {{-- <li class="nav-item ">
       <a class="nav-link" data-toggle="collapse" href="#user-pages" aria-controls="user-pages">
         <i class="menu-icon mdi mdi-lock-outline"></i>
         <span class="menu-title">User Pages</span>
@@ -100,6 +114,6 @@
           </li>
         </ul>
       </div>
-    </li>
+    </li> --}}
   </ul>
 </nav>

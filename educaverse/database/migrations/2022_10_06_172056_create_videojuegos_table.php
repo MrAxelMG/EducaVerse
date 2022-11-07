@@ -18,8 +18,7 @@ class CreateVideojuegosTable extends Migration
             $table->string('nombre', 50);
             $table->mediumtext('plataformas');
             $table->mediumtext('jugadores');
-            $table->unsignedBigInteger('categoria_id');
-            $table->foreign('categoria_id')->references('id')->on('categorias')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('categoria_id');
             $table->unsignedBigInteger('materia_id');
             $table->foreign('materia_id')->references('id')->on('materias')->onUpdate('cascade')->onDelete('cascade');
             $table->string('imagen', 255);

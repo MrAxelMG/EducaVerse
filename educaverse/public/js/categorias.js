@@ -1,16 +1,9 @@
 $(document).ready(function () {
     let acc = "";
 
-    var table = $("#videojuegosTable").DataTable({
-        ajax: "/admin/videojuegos/show",
-        columns: [
-            { data: "nombre" },
-            { data: "categoria" },
-            { data: "materiaNombre" },
-            { data: "plataforma" },
-            { data: "jugadores" },
-            { data: "btn" },
-        ],
+    var table = $("#categoriasTable").DataTable({
+        ajax: "/admin/categorias/show",
+        columns: [{ data: "nombre" }, { data: "btn" }],
         responsive: {
             breakpoints: [
                 {
@@ -33,12 +26,12 @@ $(document).ready(function () {
         },
         language: {
             processing: "Procesando...",
-            lengthMenu: "Mostrar _MENU_ videojuegos",
+            lengthMenu: "Mostrar _MENU_ categorias",
             zeroRecords: "No se encontraron resultados",
-            emptyTable: "No se ha registrado ningúna videojuego",
+            emptyTable: "No se ha registrado ningúna categoria",
             infoEmpty:
-                "Mostrando videojuegos del 0 al 0 de un total de 0 videojuegos",
-            infoFiltered: "(filtrado de un total de _MAX_ videojuegos)",
+                "Mostrando categorias del 0 al 0 de un total de 0 categorias",
+            infoFiltered: "(filtrado de un total de _MAX_ categorias)",
             search: "Buscar:",
             infoThousands: ",",
             loadingRecords: "Cargando...",
@@ -210,7 +203,7 @@ $(document).ready(function () {
                         "Este registro puede ser editado individualmente, pero no como parte de un grupo.",
                 },
             },
-            info: "Mostrando de _START_ a _END_ de _TOTAL_ videojuegos",
+            info: "Mostrando de _START_ a _END_ de _TOTAL_ categorias",
         },
     });
 
@@ -220,7 +213,7 @@ $(document).ready(function () {
         },
     });
 
-    $("#videojuegoForm").on("submit", function (e) {
+    $("#categoriaForm").on("submit", function (e) {
         e.preventDefault();
         var url = $(this).attr("action");
         $("#alertMessage").text("");
@@ -235,13 +228,13 @@ $(document).ready(function () {
             processData: false,
             success: function () {
                 $("#formModal").modal("hide");
-                $("#videojuegoForm")[0].reset();
+                $("#categoriaForm")[0].reset();
                 table.ajax.reload(null, false);
                 if (acc == "new") {
                     Swal.fire({
                         icon: "success",
-                        title: '<h1 style="font-family: Poppins; font-weight: 700;">Videojuego añadido</h1>',
-                        html: '<p style="font-family: Poppins">La videojuego ha sido añadida correctamente</p>',
+                        title: '<h1 style="font-family: Poppins; font-weight: 700;">Categoría añadida</h1>',
+                        html: '<p style="font-family: Poppins">La categoria ha sido añadida correctamente</p>',
                         confirmButtonText:
                             '<a style="font-family: Poppins">Aceptar</a>',
                         confirmButtonColor: "#01bbcc",
@@ -249,8 +242,8 @@ $(document).ready(function () {
                 } else if (acc == "edit") {
                     Swal.fire({
                         icon: "success",
-                        title: '<h1 style="font-family: Poppins; font-weight: 700;">Videojuego actualizado</h1>',
-                        html: '<p style="font-family: Poppins">La videojuego ha sido actualizada correctamente</p>',
+                        title: '<h1 style="font-family: Poppins; font-weight: 700;">Categoría actualizada</h1>',
+                        html: '<p style="font-family: Poppins">La categoria ha sido actualizada correctamente</p>',
                         confirmButtonText:
                             '<a style="font-family: Poppins">Aceptar</a>',
                         confirmButtonColor: "#01bbcc",
@@ -267,35 +260,19 @@ $(document).ready(function () {
     });
 
     $(document).on("click", ".new", function (e) {
-        $("#videojuegoForm").attr("action", "/admin/videojuegos/add");
+        e.preventDefault();
+        console.log("prueba");
+        $("#categoriaForm").attr("action", "/admin/categorias/add");
         $("#alertMessage").text("");
         $("#formModal").modal("show");
         acc = "new";
-        $("#videojuegoForm")[0].reset();
 
         $("#idInput").val("");
 
         $("#nombreInput").prop("readonly", false);
-        $("#jugadoresInput").prop("disabled", false);
-        $("#materiaIdInput").prop("disabled", false);
 
-        $("#windowsInput").prop("disabled", false);
-        $("#macInput").prop("disabled", false);
-        $("#xboxInput").prop("disabled", false);
-        $("#playstationInput").prop("disabled", false);
-        $("#androidInput").prop("disabled", false);
-
-        var categoriacant = $(this).data("categoriacant");
-        categoriacant = categoriacant.split(",");
-
-        for (let i = 0; i < categoriacant.length; i++) {
-            if (categoriacant[i] > 0) {
-                $(`#${categoriacant[i]}`).prop("disabled", false);
-            }
-        }
-
-        $("#modalTitle").text("Añadir videojuego");
-        $("#btnSubmit").text("Añadir videojuego");
+        $("#modalTitle").text("Añadir categoria");
+        $("#btnSubmit").text("Añadir categoria");
 
         $("#btnSubmit").show();
         $("#btnCancel").text("Cancelar");
@@ -305,68 +282,16 @@ $(document).ready(function () {
         e.preventDefault();
         $("#alertMessage").text("");
         acc = "view";
-        $("#videojuegoForm")[0].reset();
+
+        var nombre = $(this).data("nombre");
 
         $("#modalTitle").text("Vista previa");
 
-        var nombre = $(this).data("nombre");
+        $("#formModal").modal("show");
+
         $("#nombreInput").val(nombre);
         $("#nombreInput").prop("readonly", true);
 
-        var jugadores = $(this).data("jugadores");
-        $("#jugadoresInput").val(jugadores);
-        $("#jugadoresInput").prop("disabled", true);
-
-        var materiaid = $(this).data("materiaid");
-        $("#materiaIdInput").val(materiaid);
-        $("#materiaIdInput").prop("disabled", true);
-
-        $("#windowsInput").prop("disabled", true);
-        $("#macInput").prop("disabled", true);
-        $("#xboxInput").prop("disabled", true);
-        $("#playstationInput").prop("disabled", true);
-        $("#androidInput").prop("disabled", true);
-
-        var plataformas = $(this).data("plataformas");
-        plataformas = plataformas.split(",");
-
-        for (let i = 0; i < plataformas.length; i++) {
-            if (plataformas[i] == "Windows") {
-                $("#windowsInput").prop("checked", true);
-            }
-            if (plataformas[i] == "Mac") {
-                $("#macInput").prop("checked", true);
-            }
-            if (plataformas[i] == "Xbox") {
-                $("#xboxInput").prop("checked", true);
-            }
-            if (plataformas[i] == "Playstation") {
-                $("#playstationInput").prop("checked", true);
-            }
-            if (plataformas[i] == "Android") {
-                $("#androidInput").prop("checked", true);
-            }
-        }
-
-        var categoriaid = $(this).data("categoriaid");
-        categoriaid = categoriaid.split(",");
-
-        for (let i = 0; i < categoriaid.length; i++) {
-            if (categoriaid[i] == categoriaid[i] && categoriaid[i] > 0) {
-                $(`#${categoriaid[i]}`).prop("checked", true);
-            }
-        }
-
-        var categoriacant = $(this).data("categoriacant");
-        categoriacant = categoriacant.split(",");
-
-        for (let i = 0; i < categoriacant.length; i++) {
-            if (categoriacant[i] > 0) {
-                $(`#${categoriacant[i]}`).prop("disabled", true);
-            }
-        }
-
-        $("#formModal").modal("show");
         $("#btnCancel").text("Cerrar vista previa");
         $("#btnSubmit").hide();
     });
@@ -375,74 +300,21 @@ $(document).ready(function () {
         e.preventDefault();
         $("#alertMessage").text("");
         acc = "edit";
-        $("#videojuegoForm")[0].reset();
         var id = $(this).data("id");
 
+        var nombre = $(this).data("nombre");
+
         $("#formModal").modal("show");
-        $("#videojuegoForm").attr("action", "/admin/videojuegos/update");
+        $("#categoriaForm").attr("action", "/admin/categorias/update");
 
         $("#idInput").val(id);
 
-        var nombre = $(this).data("nombre");
         $("#nombreInput").val(nombre);
         $("#nombreInput").prop("readonly", false);
 
-        var jugadores = $(this).data("jugadores");
-        $("#jugadoresInput").val(jugadores);
-        $("#jugadoresInput").prop("disabled", false);
-
-        var materiaid = $(this).data("materiaid");
-        $("#materiaIdInput").val(materiaid);
-        $("#materiaIdInput").prop("disabled", false);
-
-        $("#windowsInput").prop("disabled", false);
-        $("#macInput").prop("disabled", false);
-        $("#xboxInput").prop("disabled", false);
-        $("#playstationInput").prop("disabled", false);
-        $("#androidInput").prop("disabled", false);
-
-        var plataformas = $(this).data("plataformas");
-        plataformas = plataformas.split(",");
-
-        for (let i = 0; i < plataformas.length; i++) {
-            if (plataformas[i] == "Windows") {
-                $("#windowsInput").prop("checked", true);
-            }
-            if (plataformas[i] == "Mac") {
-                $("#macInput").prop("checked", true);
-            }
-            if (plataformas[i] == "Xbox") {
-                $("#xboxInput").prop("checked", true);
-            }
-            if (plataformas[i] == "Playstation") {
-                $("#playstationInput").prop("checked", true);
-            }
-            if (plataformas[i] == "Android") {
-                $("#androidInput").prop("checked", true);
-            }
-        }
-
-        var categoriaid = $(this).data("categoriaid");
-        categoriaid = categoriaid.split(",");
-
-        for (let i = 0; i < categoriaid.length; i++) {
-            if (categoriaid[i] == categoriaid[i] && categoriaid[i] > 0) {
-                $(`#${categoriaid[i]}`).prop("checked", true);
-            }
-        }
-
-        var categoriacant = $(this).data("categoriacant");
-        categoriacant = categoriacant.split(",");
-
-        for (let i = 0; i < categoriacant.length; i++) {
-            if (categoriacant[i] > 0) {
-                $(`#${categoriacant[i]}`).prop("disabled", false);
-            }
-        }
-
-        $("#modalTitle").text(`Editar videojuego: ${nombre}`);
+        $("#modalTitle").text(`Editar categoria: ${nombre}`);
         $("#btnSubmit").show();
-        $("#btnSubmit").text("Editar videojuego");
+        $("#btnSubmit").text("Editar categoria");
         $("#btnCancel").text("Cancelar");
     });
 
@@ -452,8 +324,8 @@ $(document).ready(function () {
         var id = $(this).data("id");
 
         Swal.fire({
-            title: '<h1 style="font-family: Poppins; font-weight: 700;">Eliminar videojuego</h1>',
-            html: '<p style="font-family: Poppins">¿Estás seguro de eliminar esta videojuego? esta opción no se puede deshacer</p>',
+            title: '<h1 style="font-family: Poppins; font-weight: 700;">Eliminar categoria</h1>',
+            html: '<p style="font-family: Poppins">¿Estás seguro de eliminar esta categoria? esta opción no se puede deshacer</p>',
             icon: "warning",
             showCancelButton: true,
             confirmButtonText: '<a style="font-family: Poppins">Eliminar</a>',
@@ -462,12 +334,12 @@ $(document).ready(function () {
             cancelButtonColor: "#dc3545",
         }).then((result) => {
             if (result.value) {
-                $.post("/admin/videojuegos/delete", { id: id }, function () {
+                $.post("/admin/categorias/delete", { id: id }, function () {
                     table.ajax.reload(null, false);
                     Swal.fire({
                         icon: "success",
-                        title: '<h1 style="font-family: Poppins; font-weight: 700;">Videojuego eliminado</h1>',
-                        html: '<p style="font-family: Poppins">El videojuego se ha eliminado correctamente</p>',
+                        title: '<h1 style="font-family: Poppins; font-weight: 700;">Categoría eliminada</h1>',
+                        html: '<p style="font-family: Poppins">La categoria se ha eliminado correctamente</p>',
                         confirmButtonText:
                             '<a style="font-family: Poppins">Aceptar</a>',
                         confirmButtonColor: "#01bbcc",

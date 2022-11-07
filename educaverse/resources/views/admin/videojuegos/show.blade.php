@@ -5,7 +5,6 @@
 @section('styles')
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap5.min.css">
-    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"> --}}
 @endsection
 
 @section('content')
@@ -13,13 +12,22 @@
         <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <a class="btn btn-primary mb-4 new text-white" data-bs-toggle="modal" data-bs-target="#formModal"> <i class="mdi mdi-plus me-1"> </i>Añadir un nuevo vodeojuego</a>
+                @php
+                    $categoriaAll = "";
+                    foreach ($lista_categorias as $categoriaButton) {
+                        $categoriaAll .= $categoriaButton->id.',';
+                    }
+                @endphp
+                <a class="btn btn-primary mb-4 new text-white" data-categoriacant="{{ $categoriaAll }}" data-bs-toggle="modal" data-bs-target="#formModal"> <i class="mdi mdi-plus me-1"> </i>Añadir un nuevo vodeojuego</a>
                 <div class="table-responsive">
                     <table class="table table-hover table-striped table-bordered text-center nowrap" id="videojuegosTable" style="width: 100%;" >
                         <thead>
                             <tr>
                                 <th>Nombre</th>
                                 <th>Categoría</th>
+                                <th>Materia</th>
+                                <th>Plataformas</th>
+                                <th>Jugadores</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
@@ -43,16 +51,73 @@
                         @csrf
                         <input type="hidden" name="id" id="idInput">
                         <div class="row">
-                            <div class="col-md-6 col-12">
+                            <div class="col-12">
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" placeholder="Ingresa el nombre" id="nombreInput" name="nombre" required>
+                                    <input type="text" class="form-control" id="nombreInput" name="nombre" required>
                                     <label for="nombreInput">Nombre</label>
                                 </div>
                             </div>
+                        </div>                        
+                        <div class="row">
                             <div class="col-md-6 col-12">
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" placeholder="Ingresa el categoria" id="categoriaInput" name="categoria" required>
-                                    <label for="categoriaInput">Categoría</label>
+                                    <select name="jugadores" class="form-control" id="jugadoresInput" required>
+                                        <option selected disabled>Selecciona...</option>
+                                        <option value="Individual">Individual</option>
+                                        <option value="Multijugador">Multijugador</option>
+                                    </select>
+                                    <label for="jugadoresInput">Jugadores</label>
+                                </div>
+                            </div>  
+                            <div class="col-md-6 col-12">
+                                <div class="form-floating mb-3">
+                                    <select name="materia_id" class="form-control" id="materiaIdInput" required>
+                                        <option value="" disabled selected>Selecciona...</option>
+                                        @foreach($lista_materias as $materia)
+                                            <option value="{{ $materia->id }}">{{ $materia->nombre }}</option>
+                                        @endforeach
+                                    </select>
+                                    <label for="materiaIdInput">Materia</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-12">
+                                <div><label for="plataformasInput">Plataformas</label></div>
+                                <div class="d-flex align-items-center" style="margin-top: -15px">
+                                    <div class="form-check px-0">
+                                        <input class="form-check-input me-0 ms-0" name="plataformas[]" type="checkbox" id="windowsInput" value="Windows">
+                                        <label class="form-check-label ms-2" for="windowsInput">Windows</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input me-0 ms-0" name="plataformas[]" type="checkbox" id="macInput" value="Mac">
+                                        <label class="form-check-label ms-2" for="macInput">Mac</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input me-0 ms-0" name="plataformas[]" type="checkbox" id="xboxInput" value="Xbox">
+                                        <label class="form-check-label ms-2" for="xboxInput">Xbox</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input me-0 ms-0" name="plataformas[]" type="checkbox" id="playstationInput" value="Playstation">
+                                        <label class="form-check-label ms-2" for="playstationInput">Playstation</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input me-0 ms-0" name="plataformas[]" type="checkbox" id="androidInput" value="Android">
+                                        <label class="form-check-label ms-2" for="androidInput">Android</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <div><label for="categoriaIdInput">Categorias</label></div>
+                                <div class="d-flex align-items-center" style="margin-top: -15px">
+                                    @foreach($lista_categorias as $categoria)
+                                        <div class="form-check px-0 pe-4">
+                                            <input class="form-check-input me-0 ms-0" name="categoria_id[]" type="checkbox" value="{{ $categoria->id }}" id="{{ $categoria->id }}">
+                                            <label class="form-check-label ms-2" for="{{ $categoria->id }}">
+                                                {{ $categoria->nombre }}
+                                            </label>
+                                        </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>

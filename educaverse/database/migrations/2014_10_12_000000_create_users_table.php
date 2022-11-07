@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('apellidom');
             $table->string('email')->unique();
             $table->string('password');
+            $table->string('foto_perfil')->default('default.png');
         });
     }
 

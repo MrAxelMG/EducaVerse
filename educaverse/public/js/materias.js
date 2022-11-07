@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     var table = $("#materiasTable").DataTable({
         ajax: "/admin/materias/show",
-        columns: [{ data: "nombre" }, { data: "nivel" }, { data: "btn" }],
+        columns: [{ data: "nombre" }, { data: "btn" }],
         responsive: {
             breakpoints: [
                 {
@@ -271,7 +271,6 @@ $(document).ready(function () {
         $("#idInput").val("");
 
         $("#nombreInput").prop("readonly", false);
-        $("#nivelIdInput").prop("disabled", false);
 
         $("#modalTitle").text("Añadir materia");
         $("#btnSubmit").text("Añadir materia");
@@ -286,7 +285,6 @@ $(document).ready(function () {
         acc = "view";
 
         var nombre = $(this).data("nombre");
-        var nivelid = $(this).data("nivelid");
 
         $("#modalTitle").text("Vista previa");
 
@@ -294,9 +292,6 @@ $(document).ready(function () {
 
         $("#nombreInput").val(nombre);
         $("#nombreInput").prop("readonly", true);
-
-        $("#nivelIdInput").val(nivelid);
-        $("#nivelIdInput").prop("disabled", true);
 
         $("#btnCancel").text("Cerrar vista previa");
         $("#btnSubmit").hide();
@@ -309,7 +304,6 @@ $(document).ready(function () {
         var id = $(this).data("id");
 
         var nombre = $(this).data("nombre");
-        var nivelid = $(this).data("nivelid");
 
         $("#formModal").modal("show");
         $("#materiaForm").attr("action", "/admin/materias/update");
@@ -318,9 +312,6 @@ $(document).ready(function () {
 
         $("#nombreInput").val(nombre);
         $("#nombreInput").prop("readonly", false);
-
-        $("#nivelIdInput").val(nivelid);
-        $("#nivelIdInput").prop("disabled", false);
 
         $("#modalTitle").text(`Editar materia: ${nombre}`);
         $("#btnSubmit").show();
