@@ -116,9 +116,9 @@
             fade: true,
             arrows: true,
             prevArrow:
-                '<button type="button" class="slick-prev"><img src="assets/web/img/icon/arrow_left.png" alt=""></button>',
+                '<button type="button" class="slick-prev"><img src="images/icon/arrow_left.png" alt=""></button>',
             nextArrow:
-                '<button type="button" class="slick-next"><img src="assets/web/img/icon/arrow_right.png" alt=""></button>',
+                '<button type="button" class="slick-next"><img src="images/icon/arrow_right.png" alt=""></button>',
             responsive: [
                 { breakpoint: 1200, settings: { dots: false, arrows: false } },
             ],
@@ -550,7 +550,7 @@
         slidesToScroll: 1,
         arrows: false,
         fade: true,
-        dots: true,
+        dots: false,
         asNavFor: ".released-game-nav",
         responsive: [
             {

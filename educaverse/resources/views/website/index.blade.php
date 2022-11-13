@@ -1,5 +1,7 @@
-<html class="no-js" lang="en">
-  <head>
+<!doctype html>
+<html class="no-js" lang="es">
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>EducaVerse</title>
@@ -7,192 +9,183 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="shortcut icon" href="{{ asset('assets/images/fav.png') }}">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/fontawesome-all.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/odometer.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/aos.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/meanmenu.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/slick.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/default.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
+    <!-- Place favicon.ico in the root directory -->
 
-    <style>.navbar-wrap > ul > li.show > a::after{width:928.9375px;}</style>
-    <style>.navbar-wrap > ul > li.active > a::after,.navbar-wrap > ul > li:hover > a::after{width:812.890625px;}</style>
-    <style>.navbar-wrap > ul > li.active > a::after,.navbar-wrap > ul > li:hover > a::after{width:723px;}</style>
-    <style>.navbar-wrap > ul > li.active > a::after,.navbar-wrap > ul > li:hover > a::after{width:899.71875px;}</style>
-    <style>.navbar-wrap > ul > li.active > a::after,.navbar-wrap > ul > li:hover > a::after{width:383.453125px;}</style>
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/odometer.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/meanmenu.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
 
-  </head>
-  <body data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="0">
+<body>
 
-      <div id="preloader" style="display: none;">
-          <div id="loading-center">
-              <div id="loading-center-absolute">
-                  <img src="{{ asset('images/icon/preloader.svg') }}" alt="">
-              </div>
-          </div>
-      </div>
-
-      <header>
-        <div id="sticky-header" class="transparent-header">
-          <div class="container-fluid s-container-full-padding">
-            <div class="row">
-              <div class="col-12">
-                <div class="main-menu menu-style-two">
-                  <nav>
-                    <div class="logo">
-                      <a href="/" class="d-flex align-items-center">
-                        <img src="{{ asset('assets/images/EV.png') }}" width="70px" alt="Logo">
-                        <h2 style="margin-top: 5px">EducaVerse</h2>
-                      </a>
-                    </div>
-                    <div id="mobile-menu" class="navbar-wrap d-none d-lg-flex" style="display: block;">
-                      <ul>
-                        <li class="show"><a href="{{ url('/') }}">INICIO</a></li>
-                        <li><a href="{{ url('/videojuegos') }}">Videojuegos</a></li>
-                        <li><a href="{{ url('/nosotros') }}">Nosotros</a></li>
-                        <li class=""><a href="{{ url('/contacto') }}">Contacto</a></li>
-                      </ul>
-                    </div>
-                  </nav>
-                </div>
-                <div class="mobile-menu"></div>
-              </div>
+    <!-- preloader -->
+    <div id="preloader">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <img src="images/icon/preloader.svg" alt="">
             </div>
-          </div>
         </div>
-      </header>
+    </div>
+    <!-- preloader-end -->
 
-      <main>
-        <section class="slider-area">
-          <div class="slider-active slick-initialized slick-slider" id="sliderP">
-            <div class="slick-list draggable">
-              <div class="slick-track" style="opacity: 1; width: 2526px;">
-                <div class="single-slider slider-bg slider-style-two slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false"  style="width: 100%; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;" tabindex="0">
-                  {{-- 1263px --}}
-                  <div class="container-fluid container-full-padding">
-                    <div class="row">
-                      <div class="col-xl-6 col-lg-7 col-md-11">
-                        <div class="slider-content">
-                          <h6 data-animation="fadeInUp" data-delay=".4s" class="" style="animation-delay: 0.4s;">EducaVerse</h6>
-                          <h2 data-animation="fadeInUp" data-delay=".4s" class="" style="animation-delay: 0.4s;">Empresa <span style="text-transform: none; color: #fff;">de</span> <span>Videojuegos</span> educativos</h2>
-                          <p data-animation="fadeInUp" data-delay=".6s" class="" style="animation-delay: 0.6s;">Somos una plataforma de videojuegos que tiene lo mejor para ti.</p>
+    <!-- header-area -->
+    <header class="header-style-four">
+        <div id="sticky-header" class="header-four-wrap">
+            <div class="container custom-container-two">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="main-menu menu-style-two">
+                            <nav>
+                                <div class="logo">
+                                  <a href="/" class="d-flex align-items-center">
+                                    <img src="{{ asset('assets/images/EV.png') }}" width="70px" alt="Logo">
+                                    <h2 style="margin-top: 5px">EducaVerse</h2>
+                                  </a>
+                                </div>
+                                <div id="mobile-menu" class="navbar-wrap d-none d-lg-flex" style="display: block;">
+                                  <ul>
+                                    <li class="show"><a href="{{ url('/') }}">INICIO</a></li>
+                                    <li><a href="{{ url('/videojuegos') }}">Videojuegos</a></li>
+                                    <li><a href="{{ url('/nosotros') }}">Nosotros</a></li>
+                                    <li class=""><a href="{{ url('/contacto') }}">Contacto</a></li>
+                                  </ul>
+                                </div>
+                            </nav>
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="slider-img" data-animation="slideInRightS" data-delay=".6s" style="animation-delay: 0.6s;">
-                    <img src="{{ asset('images/slider/slider_img01.png') }}" alt="">
-                  </div>
-                  <div class="slider-img slider-img2" data-animation="slideInLeftS" data-delay=".6s" style="animation-delay: 0.6s;">
-                    <img src="{{ asset('images/slider/slider_img02.png') }}" alt="">
-                  </div>
-                  <div class="slider-circle-shape">
-                    <img src="{{ asset('images/slider/slider_circle.png') }}" alt="" class="rotateme">
-                  </div>
+                        <div class="mobile-menu"></div>
+                    </div>                    
                 </div>
-                <div class="single-slider slider-bg slider-style-two slick-slide" style="background-image: url(&quot;{{ asset('images/slider/slider_bg.jpg')}}&quot;); width: 1263px; position: relative; left: -1263px; top: 0px; z-index: 998; opacity: 0;" data-slick-index="1" aria-hidden="true" tabindex="-1">
-                  <div class="container-fluid container-full-padding">
-                    <div class="row">
-                      <div class="col-xl-6 col-lg-7 col-md-11">
-                        <div class="slider-content">
-                          <h6 data-animation="fadeInUp" data-delay=".4s">world gaming</h6>
-                          <h2 data-animation="fadeInUp" data-delay=".4s">Cod <span>Modern</span> Warfare</h2>
-                          <p data-animation="fadeInUp" data-delay=".6s">Find technology or people for digital projects in public sector and Find an individual specialist develope researcher.</p>
-                          <a href="#" class="btn btn-style-two" data-animation="fadeInUp" data-delay=".8s" tabindex="-1">READ MORE</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="slider-img" data-animation="slideInRightS" data-delay=".6s">
-                    <img src="{{ asset('images/slider/slider_img01.png') }}" alt="">
-                  </div>
-                  <div class="slider-img slider-img2" data-animation="slideInLeftS" data-delay=".6s">
-                    <img src="{{ asset('images/slider/slider_img02.png') }}" alt="">
-                  </div>
-                  <div class="slider-circle-shape">
-                    <img src="{{ asset('images/slider/slider_circle.png') }}" alt="" class="rotateme">
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
+        </div>
+    </header>
+    <!-- header-area-end -->
+
+    <!-- main-area -->
+    <main>        
+        <section class="slider-area home-four-slider">
+            <div class="slider-active">
+                <div class="single-slider slider-bg slider-style-two">
+                    <div class="container custom-container-two">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-7 col-md-11">
+                                <div class="slider-content">
+                                    <h6 data-animation="fadeInUp" data-delay=".4s">EducaVerse</h6>
+                                    <h2 data-animation="fadeInUp" data-delay=".4s">Empresa de <span>Videojuegos</span> Educativos</h2>
+                                    <p data-animation="fadeInUp" data-delay=".6s">
+                                        Somos una plataforma de videojuegos que tiene lo mejor para ti. Queremos desarrollar una plataforma educativa en entornos de un alto grado de participación e interactividad, en los que el alumno sea capaz de construir, diseñar, modificar, experimentar e involucrarse de forma mucho más activa en el proceso de su aprendizaje
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-img"><img src="images/slider/four_slider_img01.png" alt=""
+                                data-animation="slideInRightS" data-delay=".8s"></div>
+                    </div>
+                </div>
+                <div class="single-slider slider-bg slider-style-two">
+                    <div class="container custom-container-two">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-7 col-md-11">
+                                <div class="slider-content">
+                                    <h6 data-animation="fadeInUp" data-delay=".4s">world gaming</h6>
+                                    <h2 data-animation="fadeInUp" data-delay=".4s">Create <span>Manage</span> Matches
+                                    </h2>
+                                    <p data-animation="fadeInUp" data-delay=".6s">Find technology or people for digital
+                                        projects in public sector and Find an individual specialist develope researcher.
+                                    </p>
+                                    <a href="#" class="btn btn-style-two" data-animation="fadeInUp"
+                                        data-delay=".8s">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-img"><img src="images/slider/four_slider_img02.png" alt=""
+                                data-animation="slideInRightS" data-delay=".8s"></div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="released-games-area gray-bg pt-115 pb-70">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-xl-6 col-lg-8">
-                <div class="section-title title-style-three text-center mb-20">
-                  <h2>Juegos <span>lanzados</span></h2>
-                  <p>Aquí puedes adquirir nuestros videojuegos lanzados, así como revisar sus características.</p>
-                </div>
-              </div>
-            </div>
-            <div class="row align-items-center">
-              <div class="col-xl-8 col-lg-12">
-                <div class="released-game-active slick-initialized slick-slider slick-dotted">
-                  <div class="slick-list draggable">
-                    <div class="slick-track" style="opacity: 1; width: 3160px;">
-                      @foreach ($videojuegos as $videojuego)                        
-                        <div class="released-game-carousel slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 790px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;" tabindex="0" role="tabpanel" id="slick-slide10" aria-describedby="slick-slide-control10">
-                          <div class="released-game-item">
-                            <div class="released-game-item-bg"></div>
-                            <div class="released-game-img">
-                              <img src="{{ asset("images/images/$videojuego->imagen") }}" alt="">
-                            </div>
-                            <div class="released-game-content">
-                              <div class="released-game-rating">
-                                <h5>Rating :</h5>
-                                <div class="released-rating">
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                                </div>
-                              </div>
-                              @php
-                                $nombre = explode(' ', $videojuego->nombre, 2);
-                              @endphp
-                              <h4>{{ $nombre[0] }} <span> {{ $nombre[1] }} </span></h4>
-                              <div class="released-game-list mb-15">
-                                <ul>
-                                  <li><span>Materia :</span> {{ $videojuego->nombreMateria }}.</li>
-                                  <li><span>Categoría :</span> {{ $videojuego->nombreCategoria }}.</li>
-                                  <li><span>Jugadores :</span> {{ $videojuego->jugadores }}.</li>
-                                  <li><span>Plataformas :</span> {{ $videojuego->plataformas }}.</li>
-                                </ul>
-                              </div>
-                              <p></p>
-                              <a href="#" class="btn btn-style-two" tabindex="0">Comprar ahora</a>
-                            </div>
-                          </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6 col-lg-8">
+                        <div class="section-title title-style-three text-center mb-20">
+                          <h2>Juegos <span>lanzados</span></h2>
+                          <p>Aquí puedes adquirir nuestros videojuegos lanzados, así como revisar sus características.</p>
                         </div>
-                        <ul class="slick-dots" style="" role="tablist"><li class="slick-active" role="presentation"><button type="button" role="tab" id="slick-slide-control10" aria-controls="slick-slide10" aria-label="1 of 4" tabindex="0" aria-selected="true">1</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control11" aria-controls="slick-slide11" aria-label="2 of 4" tabindex="-1">2</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control12" aria-controls="slick-slide12" aria-label="3 of 4" tabindex="-1">3</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control13" aria-controls="slick-slide13" aria-label="4 of 4" tabindex="-1">4</button></li></ul></div>
-                      @endforeach
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-4 col-lg-12">
-                <div class="released-game-nav slick-initialized slick-slider slick-vertical">
-                  <div class="slick-list draggable" style="height: 454.875px;">
-                    <div class="slick-track" style="opacity: 1; height: 1668px; transform: translate3d(0px, -454px, 0px);">                      
-                      @foreach ($videojuegos as $videojuego)                        
-                        <div class="released-game-nav-item slick-slide slick-active" data-slick-index="{{ $videojuego->id }}" aria-hidden="false" style="width: 380px;" tabindex="1">
-                          <img src="{{ asset("images/images/$videojuego->imagen2") }}" alt="{{ $videojuego->nombre }}">
-                        </div>
-                      @endforeach
                     </div>
-                  </div>
                 </div>
-              </div>
+                <div class="row align-items-center">
+                    <div class="col-xl-8 col-lg-12">
+                        <div class="released-game-active">
+                            @foreach ($videojuegos as $videojuego)                                
+                                <div class="released-game-carousel">
+                                    <div class="released-game-item">
+                                        <div class="released-game-item-bg"></div>
+                                        <div class="released-game-img">
+                                            <img src="images/images/{{ $videojuego->imagen }}" alt="{{ $videojuego->nombre }}" height="365px">
+                                        </div>
+                                        <div class="released-game-content">
+                                            <div class="released-game-rating">
+                                                <h5>Rating :</h5>
+                                                <div class="released-rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                            </div>
+                                            @php
+                                                $nombre = explode(' ', $videojuego->nombre, 2);
+
+                                                $plataformas = explode(",", $videojuego->plataformas);
+
+                                                $plat = "";
+                                                foreach ($plataformas as $plataforma) {
+                                                    $plat .= "$plataforma, ";
+                                                }
+
+                                                $plat = substr($plat, 0, -4);
+                                            @endphp
+                                            <h4>{{ $nombre[0] }} <span>{{ $nombre[1] }}</span></h4>
+                                            <div class="released-game-list mb-15">
+                                                <ul>
+                                                    <li><span>Materia :</span> {{ $videojuego->nombreMateria }}.</li>
+                                                    <li><span>Categoría :</span> {{ $videojuego->nombreCategoria }}.</li>
+                                                    <li><span>Jugadores :</span> {{ $videojuego->jugadores }}.</li>
+                                                    <li><span>Plataformas :</span> {{ $plat }}.</li>
+                                                </ul>
+                                            </div>
+                                            <p>Compete with 100 players on a remote thats island for winner takes showdown
+                                                known issue</p>
+                                            <a href="#" class="btn btn-style-two">Comprar ahora</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-12">
+                        <div class="released-game-nav">
+                            @foreach ($videojuegos as $videojuego)                                
+                                <div class="released-game-nav-item">
+                                    <img src="images/images/{{ $videojuego->imagen2 }}" alt="{{ $videojuego->nombre }}">
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </section>
 
         <section class="just-gamers-area just-gamers-bg pt-115 pb-120">
@@ -249,138 +242,353 @@
             </div>
         </section>
 
-        <section class="featured-game-area position-relative pt-115 pb-90">
-            <div class="featured-game-bg"></div>
+        <section class="featured-game-area new-released-game-area pt-115 pb-90">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-6 col-lg-8">
                         <div class="section-title title-style-three text-center mb-70">
-                            <h2>GALERIA DE LOS <span>JUEGOS</span></h2>
-                            <p>Te mostramos algunas portadas de los videojuegos que tenemos para ti.</p>
+                          <h2>GALERIA DE LOS <span>JUEGOS</span></h2>
+                          <p>Te mostramos algunas portadas de los videojuegos que tenemos para ti.</p>
                         </div>
                     </div>
                 </div>
-                <div class="row featured-active" style="position: relative; height: 1085px;">
-                  @foreach ($videojuegos as $videojuego)                    
-                    <div class="col-lg-4 col-sm-6 grid-item" style="position: absolute; left: 0%; top: 0px;">
-                      <div class="featured-game-item mb-30">
-                        <div class="featured-game-thumb">
-                          <img src="{{ asset("images/images/$videojuego->imagen") }}" alt="">
-                        </div>
+            </div>
+            <div class="container-fluid container-full">
+                <div class="row no-gutters new-released-game-active">
+                    @foreach ($videojuegos as $videojuego)
                         @php
-                          $nombre = explode(' ', $videojuego->nombre, 2);
-                        @endphp
-                        <div class="featured-game-content">
-                          <h4><a href="#">{{ $nombre[0] }} <span>{{ $nombre[1] }}</span></a></h4>
-                          <div class="featured-game-meta">
-                              <i class="fas fa-bell"></i>
-                              <span>{{ $videojuego->plataformas }}</span>
-                          </div>
-                        </div>
-                        <div class="featured-game-content featured-game-overlay-content">
-                          <div class="featured-game-icon"><img src="{{ asset('images/icon/featured_game_icon.png') }}" alt=""></div>
-                          <h4><a href="#">{{ $nombre[0] }} <span>{{ $nombre[1] }}</span></a></h4>
-                          <div class="featured-game-meta">
-                              <i class="fas fa-bell"></i>
-                              <span>{{ $videojuego->plataformas }}</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  @endforeach                    
-            </div>
-        </section>
+                            $nombre = explode(' ', $videojuego->nombre, 2);
 
-        <section class="cta-area cta-bg">
-            <div class="container">
-                <div class="row align-items-center justify-content-between">
-                    <div class="col-xl-5 col-lg-6">
-                        <div class="cta-img">
-                            <img src="{{ asset('images/images/cta_img.png') }}" alt="">
+                            $plataformas = explode(",", $videojuego->plataformas);
+
+                            $plat = "";
+                            foreach ($plataformas as $plataforma) {
+                                $plat .= "$plataforma, ";
+                            }
+
+                            $plat = substr($plat, 0, -4);
+                        @endphp
+                        <div class="col-lg-3">
+                            <div class="featured-game-item mb-30">
+                                <div class="featured-game-thumb">
+                                    <img src="images/images/{{ $videojuego->imagen }}" alt="{{ $videojuego->nombre }}" height="365px">
+                                </div>
+                                <div class="featured-game-content">
+                                    <h4><a href="#">{{ $nombre[0] }} <span>{{ $nombre[1] }}</span></a></h4>
+                                    <div class="featured-game-meta">
+                                        <i class="fas fa-bell"></i>
+                                        <span>{{ $plat }}</span>
+                                    </div>
+                                </div>
+                                <div class="featured-game-content featured-game-overlay-content">
+                                    <div class="featured-game-icon"><img src="images/icon/featured_game_icon.png" alt=""></div>
+                                    <h4><a href="#">{{ $nombre[0] }} <span>{{ $nombre[1] }}</span></a></h4>
+                                    <div class="featured-game-meta">
+                                        <i class="fas fa-bell"></i>
+                                        <span>{{ $plat }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                    {{-- <div class="col-lg-3">
+                        <div class="featured-game-item mb-30">
+                            <div class="featured-game-thumb">
+                                <img src="images/images/s_featured_game_thumb02.jpg" alt="">
+                            </div>
+                            <div class="featured-game-content">
+                                <h4><a href="#">Need FOR <span>Speed</span></a></h4>
+                                <div class="featured-game-meta">
+                                    <i class="fas fa-bell"></i>
+                                    <span>Playstation 5 , Xbox</span>
+                                </div>
+                            </div>
+                            <div class="featured-game-content featured-game-overlay-content">
+                                <div class="featured-game-icon"><img src="images/icon/featured_game_icon.png" alt=""></div>
+                                <h4><a href="#">Need FOR <span>Speed</span></a></h4>
+                                <div class="featured-game-meta">
+                                    <i class="fas fa-bell"></i>
+                                    <span>Playstation 5 , Xbox</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="cta-content">
-                            <div class="cta-icon mb-15">
-                                <img src="{{ asset('images/icon/cta_icon.png') }}" alt="">
+                    <div class="col-lg-3">
+                        <div class="featured-game-item mb-30">
+                            <div class="featured-game-thumb">
+                                <img src="images/images/s_featured_game_thumb03.jpg" alt="">
                             </div>
-                            <div class="section-title title-style-three white-title mb-50">
-                                <h2>ACERCA DE <span>NOSOTROS</span></h2>
-                                <p>Somos una plataforma enfocada en el desarrollo de los juegos educativos y destinado a los niños, escuelas y profesores.</p>
+                            <div class="featured-game-content">
+                                <h4><a href="#">egypt hunting <span>GAMERS</span></a></h4>
+                                <div class="featured-game-meta">
+                                    <i class="fas fa-bell"></i>
+                                    <span>Playstation 5 , Xbox</span>
+                                </div>
                             </div>
-                            <div class="cta-btn">
-                                <a href="{{ url('/nosotros') }}" class="btn btn-style-two">Ver más</a>
+                            <div class="featured-game-content featured-game-overlay-content">
+                                <div class="featured-game-icon"><img src="images/icon/featured_game_icon.png" alt=""></div>
+                                <h4><a href="#">egypt hunting <span>GAMERS</span></a></h4>
+                                <div class="featured-game-meta">
+                                    <i class="fas fa-bell"></i>
+                                    <span>Playstation 5 , Xbox</span>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-3">
+                        <div class="featured-game-item mb-30">
+                            <div class="featured-game-thumb">
+                                <img src="images/images/s_featured_game_thumb04.jpg" alt="">
+                            </div>
+                            <div class="featured-game-content">
+                                <h4><a href="#">JUST FOR <span>GAMERS</span></a></h4>
+                                <div class="featured-game-meta">
+                                    <i class="fas fa-bell"></i>
+                                    <span>Playstation 5 , Xbox</span>
+                                </div>
+                            </div>
+                            <div class="featured-game-content featured-game-overlay-content">
+                                <div class="featured-game-icon"><img src="images/icon/featured_game_icon.png" alt=""></div>
+                                <h4><a href="#">JUST FOR <span>GAMERS</span></a></h4>
+                                <div class="featured-game-meta">
+                                    <i class="fas fa-bell"></i>
+                                    <span>Playstation 5 , Xbox</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="featured-game-item mb-30">
+                            <div class="featured-game-thumb">
+                                <img src="images/images/s_featured_game_thumb02.jpg" alt="">
+                            </div>
+                            <div class="featured-game-content">
+                                <h4><a href="#">Need FOR <span>Speed</span></a></h4>
+                                <div class="featured-game-meta">
+                                    <i class="fas fa-bell"></i>
+                                    <span>Playstation 5 , Xbox</span>
+                                </div>
+                            </div>
+                            <div class="featured-game-content featured-game-overlay-content">
+                                <div class="featured-game-icon"><img src="images/icon/featured_game_icon.png" alt=""></div>
+                                <h4><a href="#">Need FOR <span>Speed</span></a></h4>
+                                <div class="featured-game-meta">
+                                    <i class="fas fa-bell"></i>
+                                    <span>Playstation 5 , Xbox</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div> --}}
                 </div>
             </div>
         </section>
 
-        <section class="shop-area pt-115 pb-90">
+        <section class="shop-area home-four-shop-area pt-115 pb-90">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-6 col-lg-8">
-                        <div class="section-title title-style-three text-center mb-70">
-                          <h2>Futuros <span>Lanzamientos</span></h2>
+                        <div class="section-title title-style-three white-title text-center mb-35">
+                            <h2>Futuros <span>Lanzamientos</span></h2>
                           <p>Estos son algunos de los futuros lanzamientos que EducaVerse tienen para ti.</p>
-                      </div>
+                        </div>
                     </div>
                 </div>
-                <div class="row product-active slick-initialized slick-slider" id="productos">
-                  <div class="slick-list draggable">
-                    <div class="col-xl-3 slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 308px;" tabindex="0">
-                      <div class="shop-item">
-                        <div class="product-thumb">
-                            <a href="#" tabindex="0"><img src="{{ asset('images/images/featured_game_thumb02.jpg') }}" alt=""></a>
+                <div class="row product-active">
+                    <div class="col-xl-3">
+                        <div class="shop-item">
+                            <div class="product-thumb">
+                                <a href="#"><img src="images/product/s_product_img01.jpg" alt=""></a>
+                            </div>
+                            <div class="product-content">
+                                <div class="product-tag"><a href="#">t-shirt</a></div>
+                                <h4><a href="#">Women Black T-shirt</a></h4>
+                                <div class="product-meta">
+                                    <div class="product-price">
+                                        <h5>$29.00</h5>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="product-content">
-                          <div class="product-tag"><a href="#" tabindex="0">Matemáticas</a></div>
-                          <h4 class="text-center"><a href="#" tabindex="0">Aprende a contar</a></h4>
-                        </div>
-                      </div>
                     </div>
-                    <div class="col-xl-3 slick-slide slick-active" data-slick-index="1" aria-hidden="false" style="width: 308px;" tabindex="0">
-                      <div class="shop-item">
-                        <div class="product-thumb">
-                          <a href="#" tabindex="0"><img src="{{ asset('images/product/s_product_img02.jpg') }}" alt=""></a>
+                    <div class="col-xl-3">
+                        <div class="shop-item">
+                            <div class="product-thumb">
+                                <a href="#"><img src="images/product/s_product_img02.jpg" alt=""></a>
+                            </div>
+                            <div class="product-content">
+                                <div class="product-tag"><a href="#">x-box</a></div>
+                                <h4><a href="#">Gears 5 Xbox Controller</a></h4>
+                                <div class="product-meta">
+                                    <div class="product-price">
+                                        <h5>$29.00</h5>
+                                    </div>
+                                    <div class="product-cart-action">
+                                        <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="product-content">
-                          <div class="product-tag"><a href="#" tabindex="0">x-box</a></div>
-                          <h4><a href="#" tabindex="0">Gears 5 Xbox Controller</a></h4>
-                        </div>
-                      </div>
                     </div>
-                    <div class="col-xl-3 slick-slide slick-active" data-slick-index="2" aria-hidden="false" style="width: 308px;" tabindex="0">
-                      <div class="shop-item">
-                        <div class="product-thumb">
-                          <a href="#" tabindex="0"><img src="{{ asset('images/product/s_product_img03.jpg') }}" alt=""></a>
+                    <div class="col-xl-3">
+                        <div class="shop-item">
+                            <div class="product-thumb">
+                                <a href="#"><img src="images/product/s_product_img03.jpg" alt=""></a>
+                            </div>
+                            <div class="product-content">
+                                <div class="product-tag"><a href="#">graphics</a></div>
+                                <h4><a href="#">GeForce RTX 2070</a></h4>
+                                <div class="product-meta">
+                                    <div class="product-price">
+                                        <h5>$29.00</h5>
+                                    </div>
+                                    <div class="product-cart-action">
+                                        <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="product-content">
-                          <div class="product-tag"><a href="#" tabindex="0">graphics</a></div>
-                          <h4><a href="#" tabindex="0">GeForce RTX 2070</a></h4>
-                        </div>
-                      </div>
                     </div>
-                    <div class="col-xl-3 slick-slide slick-active" data-slick-index="3" aria-hidden="false" style="width: 308px;" tabindex="0">
-                      <div class="shop-item">
-                        <div class="product-thumb">
-                          <a href="#" tabindex="0"><img src="{{ asset('images/product/s_product_img04.jpg') }}" alt=""></a>
+                    <div class="col-xl-3">
+                        <div class="shop-item">
+                            <div class="product-thumb">
+                                <a href="#"><img src="images/product/s_product_img04.jpg" alt=""></a>
+                            </div>
+                            <div class="product-content">
+                                <div class="product-tag"><a href="#">VR-Box</a></div>
+                                <h4><a href="#">Virtual Reality Smiled</a></h4>
+                                <div class="product-meta">
+                                    <div class="product-price">
+                                        <h5>$29.00</h5>
+                                    </div>
+                                    <div class="product-cart-action">
+                                        <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="product-content">
-                          <div class="product-tag"><a href="#" tabindex="0">VR-Box</a></div>
-                          <h4><a href="#" tabindex="0">Virtual Reality Smiled</a></h4>
-                        </div>
-                      </div>
                     </div>
-                  </div>
-                </div>                
-              </div>
+                    <div class="col-xl-3">
+                        <div class="shop-item">
+                            <div class="product-thumb">
+                                <a href="#"><img src="images/product/s_product_img04.jpg" alt=""></a>
+                            </div>
+                            <div class="product-content">
+                                <div class="product-tag"><a href="#">VR-Box</a></div>
+                                <h4><a href="#">Virtual Reality Smiled</a></h4>
+                                <div class="product-meta">
+                                    <div class="product-price">
+                                        <h5>$29.00</h5>
+                                    </div>
+                                    <div class="product-cart-action">
+                                        <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-      </main>
 
-      <footer>
+        {{-- <!-- home-four-area-bg -->
+        <div class="home-four-area-bg">
+            <div class="bg"></div>
+            <!-- latest-games-area -->
+            <section class="latest-games-area home-four-latest-games pt-120">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-8">
+                            <div class="section-title home-four-title mb-50">
+                                <span>LATEST RELEASES</span>
+                                <h2>Create & <span>Manage</span></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="latest-games-active owl-carousel">
+                                <div class="latest-games-items mb-30">
+                                    <div class="latest-games-thumb">
+                                        <a href="#"><img src="images/product/latest_games_thumb01.jpg" alt=""></a>
+                                    </div>
+                                    <div class="latest-games-content">
+                                        <div class="lg-tag">
+                                            <a href="#">racing</a>
+                                        </div>
+                                        <h4><a href="#">Vertical Games <span>Daily</span></a></h4>
+                                        <p>entry fee : <span>free</span></p>
+                                    </div>
+                                </div>
+                                <div class="latest-games-items mb-30">
+                                    <div class="latest-games-thumb">
+                                        <a href="#"><img src="images/product/latest_games_thumb02.jpg" alt=""></a>
+                                    </div>
+                                    <div class="latest-games-content">
+                                        <div class="lg-tag">
+                                            <a href="#">zombie</a>
+                                        </div>
+                                        <h4><a href="#">Hunter Killer <span>ii</span></a></h4>
+                                        <p>entry fee : <span>$25,00</span></p>
+                                    </div>
+                                </div>
+                                <div class="latest-games-items mb-30">
+                                    <div class="latest-games-thumb">
+                                        <a href="#"><img src="images/product/latest_games_thumb03.jpg" alt=""></a>
+                                    </div>
+                                    <div class="latest-games-content">
+                                        <div class="lg-tag">
+                                            <a href="#">creative</a>
+                                        </div>
+                                        <h4><a href="#">Sky Walker <span>Daily</span></a></h4>
+                                        <p>entry fee : <span>$25,00</span></p>
+                                    </div>
+                                </div>
+                                <div class="latest-games-items mb-30">
+                                    <div class="latest-games-thumb">
+                                        <a href="#"><img src="images/product/latest_games_thumb01.jpg" alt=""></a>
+                                    </div>
+                                    <div class="latest-games-content">
+                                        <div class="lg-tag">
+                                            <a href="#">racing</a>
+                                        </div>
+                                        <h4><a href="#">Vertical games <span>daily</span></a></h4>
+                                        <p>entry fee : <span>free</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- latest-games-area-end -->
+
+            <!-- live-match-area -->
+            <section class="live-match-area pt-90">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6 col-md-8">
+                            <div class="section-title home-four-title text-center mb-60">
+                                <h2>watch live <span>match</span></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-xl-8 col-lg-9">
+                            <div class="live-match-wrap">
+                                <img src="images/images/live_match_img.jpg" alt="">
+                                <a href="https://www.youtube.com/watch?v=04KPiGmC7Lc" class="popup-video"><img
+                                        src="images/icon/video_play_icon.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- live-match-area-end -->
+        </div>
+        <!-- home-four-area-bg-end --> --}}        
+    </main>
+
+    <footer>
         <div class="footer-top footer-bg s-footer-bg">
           <div class="container pt-5">
               <div class="row justify-content-between">
@@ -466,26 +674,28 @@
                 </div>
             </div>
         </div>
-      </footer>
+    </footer>
 
-    <script src="{{ asset('js/vendor/jquery-3.4.1.min.js') }}"></script>
-    <script src="{{ asset('js/popper.min.js') }}"></script>
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('js/isotope.pkgd.min.js') }}"></script>    
-    <script src="{{ asset('js/slick.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.meanmenu.min.js') }}"></script>
-    <script src="{{ asset('js/wow.min.js') }}"></script>
-    <script src="{{ asset('js/aos.js') }}"></script>
-    <script src="{{ asset('js/jquery.lettering.js') }}"></script>
-    <script src="{{ asset('js/jquery.textillate.js') }}"></script>
-    <script src="{{ asset('js/jquery.odometer.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.appear.js') }}"></script>
-    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.countdown.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.scrollUp.min.js') }}"></script>
-    <script src="{{ asset('js/imagesloaded.pkgd.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('js/plugins.js') }}"></script>
-    <script src="{{ asset('js/main.js') }}"></script>
-  </body>
+    {{-- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> --}}
+    <script src="js/vendor/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.meanmenu.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.lettering.js"></script>
+    <script src="js/jquery.textillate.js"></script>
+    <script src="js/jquery.odometer.min.js"></script>
+    <script src="js/jquery.appear.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
 </html>
