@@ -18,15 +18,15 @@
                             @endphp
                             <ul>
                               <li @if ($ruta[0] == '/') class="show" @endif >
-                                <a href="{{ url('/') }}">INICIO {{ $ruta[0] }}</a>
+                                <a href="{{ url('/') }}">INICIO</a>
                               </li>
-                              <li @if ($ruta[0] == '/videojuegos') class="show" @endif >
+                              <li @if ($ruta[0] == 'videojuegos') class="show" @endif >
                                 <a href="{{ url('/videojuegos') }}">VIDEOJUEGOS</a>
                               </li>
-                              <li @if ($ruta[0] == '/nosotros') class="show" @endif >
+                              <li @if ($ruta[0] == 'nosotros') class="show" @endif >
                                 <a href="{{ url('/nosotros') }}">NOSOTROS</a>
                               </li>
-                              <li @if ($ruta[0] == '/contacto') class="show" @endif >
+                              <li @if ($ruta[0] == 'contacto') class="show" @endif >
                                 <a href="{{ url('/contacto') }}">CONTACTO</a>
                               </li>
                             </ul>
