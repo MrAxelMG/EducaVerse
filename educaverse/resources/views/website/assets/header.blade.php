@@ -23,7 +23,7 @@
                                 <a href="{{ url('/videojuegos') }}">VIDEOJUEGOS {{ request() }}</a>
                               </li>
                               <li @if ($ruta[1] == '/nosotros') class="show" @endif >
-                                <a href="{{ url('/nosotros') }}">NOSOTROS {{ $ruta[1] }}</a>
+                                <a href="{{ url('/nosotros') }}">NOSOTROS {{ $ruta[3] }}</a>
                               </li>
                               <li @if ($ruta[1] == '/contacto') class="show" @endif >
                                 <a href="{{ url('/contacto') }}">CONTACTO</a>
