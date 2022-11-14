@@ -20,10 +20,10 @@
                                 <a href="{{ url('/') }}">INICIO</a>
                               </li>
                               <li @if ($ruta[1] == '/videojuegos') class="show" @endif >
-                                <a href="{{ url('/videojuegos') }}">VIDEOJUEGOS</a>
+                                <a href="{{ url('/videojuegos') }}">VIDEOJUEGOS {{ request() }}</a>
                               </li>
                               <li @if ($ruta[1] == '/nosotros') class="show" @endif >
-                                <a href="{{ url('/nosotros') }}">NOSOTROS</a>
+                                <a href="{{ url('/nosotros') }}">NOSOTROS {{ $ruta[1] }}</a>
                               </li>
                               <li @if ($ruta[1] == '/contacto') class="show" @endif >
                                 <a href="{{ url('/contacto') }}">CONTACTO</a>
