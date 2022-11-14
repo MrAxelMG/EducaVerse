@@ -121,7 +121,7 @@
                         <div class="released-game-nav">
                             @foreach ($videojuegos as $videojuego)                                
                                 <div class="released-game-nav-item">
-                                    <img src="{{ asset('images/videojuegos/$videojuego->imagen2') }}" alt="{{ $videojuego->nombre }}">
+                                    <img src="{{ asset("images/videojuegos/$videojuego->imagen2") }}" alt="{{ $videojuego->nombre }}">
                                 </div>
                             @endforeach
                         </div>
