@@ -36,7 +36,7 @@
                                 @foreach ($videojuegos as $videojuego)                                    
                                     <div class="latest-games-items mb-30">
                                         <div class="latest-games-thumb">
-                                            <a href="#"><img src="images/videojuegos/{{ $videojuego->imagen }}" alt="{{ $videojuego->nombre }}" height="400px"></a>
+                                            <a href="#"><img src="{{ asset('images/videojuegos/{{ $videojuego->imagen }}') }}" alt="{{ $videojuego->nombre }}" height="400px"></a>
                                         </div>
                                         <div class="latest-games-content">
                                             <div class="lg-tag"><a href="#">{{ $videojuego->nombreMateria }}</a></div>
@@ -69,7 +69,7 @@
                     <div class="col-xl-3">
                         <div class="shop-item">
                             <div class="product-thumb">
-                                <a href="#"><img src="images/product/s_product_img01.jpg" alt=""></a>
+                                <a href="#"><img src="{{ asset('images/product/s_product_img01.jpg') }}" alt=""></a>
                             </div>
                             <div class="product-content">
                                 <div class="product-tag"><a href="#">t-shirt</a></div>
@@ -85,7 +85,7 @@
                     <div class="col-xl-3">
                         <div class="shop-item">
                             <div class="product-thumb">
-                                <a href="#"><img src="images/product/s_product_img02.jpg" alt=""></a>
+                                <a href="#"><img src="{{ asset('images/product/s_product_img02.jpg') }}" alt=""></a>
                             </div>
                             <div class="product-content">
                                 <div class="product-tag"><a href="#">x-box</a></div>
@@ -101,7 +101,7 @@
                     <div class="col-xl-3">
                         <div class="shop-item">
                             <div class="product-thumb">
-                                <a href="#"><img src="images/product/s_product_img03.jpg" alt=""></a>
+                                <a href="#"><img src="{{ asset('images/product/s_product_img03.jpg') }}" alt=""></a>
                             </div>
                             <div class="product-content">
                                 <div class="product-tag"><a href="#">graphics</a></div>
@@ -117,7 +117,7 @@
                     <div class="col-xl-3">
                         <div class="shop-item">
                             <div class="product-thumb">
-                                <a href="#"><img src="images/product/s_product_img04.jpg" alt=""></a>
+                                <a href="#"><img src="{{ asset('images/product/s_product_img04.jpg') }}" alt=""></a>
                             </div>
                             <div class="product-content">
                                 <div class="product-tag"><a href="#">VR-Box</a></div>
@@ -133,7 +133,7 @@
                     <div class="col-xl-3">
                         <div class="shop-item">
                             <div class="product-thumb">
-                                <a href="#"><img src="images/product/s_product_img04.jpg" alt=""></a>
+                                <a href="#"><img src="{{ asset('images/product/s_product_img04.jpg') }}" alt=""></a>
                             </div>
                             <div class="product-content">
                                 <div class="product-tag"><a href="#">VR-Box</a></div>

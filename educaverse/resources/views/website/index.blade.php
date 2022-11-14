@@ -33,7 +33,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slider-img"><img src="images/slider/four_slider_img01.png" alt=""
+                        <div class="slider-img"><img src="{{ asset('images/slider/four_slider_img01.png') }}" alt=""
                                 data-animation="slideInRightS" data-delay=".8s"></div>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slider-img"><img src="images/slider/four_slider_img02.png" alt=""
+                        <div class="slider-img"><img src="{{ asset('images/slider/four_slider_img02.png') }}" alt=""
                                 data-animation="slideInRightS" data-delay=".8s"></div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                                     <div class="released-game-item">
                                         <div class="released-game-item-bg"></div>
                                         <div class="released-game-img">
-                                            <img src="images/videojuegos/{{ $videojuego->imagen }}" alt="{{ $videojuego->nombre }}" height="365px">
+                                            <img src="{{ asset('images/videojuegos/{{ $videojuego->imagen }}') }}" alt="{{ $videojuego->nombre }}" height="365px">
                                         </div>
                                         <div class="released-game-content">
                                             <div class="released-game-rating">
@@ -121,7 +121,7 @@
                         <div class="released-game-nav">
                             @foreach ($videojuegos as $videojuego)                                
                                 <div class="released-game-nav-item">
-                                    <img src="images/videojuegos/{{ $videojuego->imagen2 }}" alt="{{ $videojuego->nombre }}">
+                                    <img src="{{ asset('images/videojuegos/{{ $videojuego->imagen2 }}') }}" alt="{{ $videojuego->nombre }}">
                                 </div>
                             @endforeach
                         </div>
@@ -213,16 +213,13 @@
                         <div class="col-lg-3">
                             <div class="featured-game-item mb-30">
                                 <div class="featured-game-thumb">
-                                    <img src="images/videojuegos/{{ $videojuego->imagen }}" alt="{{ $videojuego->nombre }}" height="365px">
+                                    <img src="{{ asset('images/videojuegos/{{ $videojuego->imagen }}') }}" alt="{{ $videojuego->nombre }}" height="365px">
                                 </div>
                                 <div class="featured-game-content">
                                     <h4><a href="#">{{ $nombre[0] }} <span>{{ $nombre[1] }}</span></a></h4>
-                                    <div class="featured-game-meta">
-                                        <i class="fas fa-bell" style="color: rgb(0, 0, 0)"></i>
-                                    </div>
                                 </div>
                                 <div class="featured-game-content featured-game-overlay-content">
-                                    <div class="featured-game-icon"><img src="images/icon/featured_game_icon.png" alt=""></div>
+                                    <div class="featured-game-icon"><img src="{{ asset('images/icon/featured_game_icon.png') }}" alt=""></div>
                                     <h4><a href="#">{{ $nombre[0] }} <span>{{ $nombre[1] }}</span></a></h4>
                                     <div class="featured-game-meta">
                                         <i class="fas fa-bell"></i>
@@ -250,9 +247,9 @@
                     <div class="row justify-content-center">
                         <div class="col-xl-8 col-lg-9">
                             <div class="live-match-wrap">
-                                <img src="images/images/live_match_img.jpg" alt="">
+                                <img src="{{ asset('images/images/live_match_img.jpg') }}" alt="">
                                 <a href="https://www.youtube.com/watch?v=04KPiGmC7Lc" class="popup-video"><img
-                                        src="images/icon/video_play_icon.png" alt=""></a>
+                                        src="{{ asset('images/icon/video_play_icon.png') }}" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -274,7 +271,7 @@
                     <div class="col-xl-3">
                         <div class="shop-item">
                             <div class="product-thumb">
-                                <a href="#"><img src="images/product/s_product_img01.jpg" alt=""></a>
+                                <a href="#"><img src="{{ asset('images/product/s_product_img01.jpg') }}" alt=""></a>
                             </div>
                             <div class="product-content">
                                 <div class="product-tag"><a href="#">t-shirt</a></div>
@@ -290,7 +287,7 @@
                     <div class="col-xl-3">
                         <div class="shop-item">
                             <div class="product-thumb">
-                                <a href="#"><img src="images/product/s_product_img02.jpg" alt=""></a>
+                                <a href="#"><img src="{{ asset('images/product/s_product_img02.jpg') }}" alt=""></a>
                             </div>
                             <div class="product-content">
                                 <div class="product-tag"><a href="#">x-box</a></div>
@@ -306,7 +303,7 @@
                     <div class="col-xl-3">
                         <div class="shop-item">
                             <div class="product-thumb">
-                                <a href="#"><img src="images/product/s_product_img03.jpg" alt=""></a>
+                                <a href="#"><img src="{{ asset('images/product/s_product_img03.jpg') }}" alt=""></a>
                             </div>
                             <div class="product-content">
                                 <div class="product-tag"><a href="#">graphics</a></div>
@@ -322,7 +319,7 @@
                     <div class="col-xl-3">
                         <div class="shop-item">
                             <div class="product-thumb">
-                                <a href="#"><img src="images/product/s_product_img04.jpg" alt=""></a>
+                                <a href="#"><img src="{{ asset('images/product/s_product_img04.jpg') }}" alt=""></a>
                             </div>
                             <div class="product-content">
                                 <div class="product-tag"><a href="#">VR-Box</a></div>
@@ -338,7 +335,7 @@
                     <div class="col-xl-3">
                         <div class="shop-item">
                             <div class="product-thumb">
-                                <a href="#"><img src="images/product/s_product_img04.jpg" alt=""></a>
+                                <a href="#"><img src="{{ asset('images/product/s_product_img04.jpg') }}" alt=""></a>
                             </div>
                             <div class="product-content">
                                 <div class="product-tag"><a href="#">VR-Box</a></div>

@@ -41,11 +41,11 @@
                 <div class="row align-items-center">
                     <div class="col-xl-7 col-lg-6 order-0 order-lg-2">
                         <div class="inner-about-img">
-                            <img src="images/images/inner_about_img01.png" class="wow fadeInRight" data-wow-delay=".3s"
+                            <img src="{{ asset('images/images/inner_about_img01.png') }}" class="wow fadeInRight" data-wow-delay=".3s"
                                 alt="">
-                            <img src="images/images/inner_about_img02.png" class="wow fadeInLeft" data-wow-delay=".6s"
+                            <img src="{{ asset('images/images/inner_about_img02.png') }}" class="wow fadeInLeft" data-wow-delay=".6s"
                                 alt="">
-                            <img src="images/images/inner_about_img03.png" class="wow fadeInUp" data-wow-delay=".6s"
+                            <img src="{{ asset('images/images/inner_about_img03.png') }}" class="wow fadeInUp" data-wow-delay=".6s"
                                 alt="">
                         </div>
                     </div>
@@ -65,7 +65,7 @@
                     </div>
                 </div>
             </div>
-            <div class="inner-about-shape"><img src="images/images/medale_shape.png" alt=""></div>
+            <div class="inner-about-shape"><img src="{{ asset('images/images/medale_shape.png') }}" alt=""></div>
         </section>
     </main>
 
