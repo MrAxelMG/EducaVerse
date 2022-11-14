@@ -25,6 +25,7 @@ class CategoriaController extends Controller
         $categoria->save();
 
         return response($categoria);
+        
     }
 
     public function update(Request $request)
