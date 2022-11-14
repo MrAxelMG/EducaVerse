@@ -75,7 +75,7 @@
                                     <div class="released-game-item">
                                         <div class="released-game-item-bg"></div>
                                         <div class="released-game-img">
-                                            <img src="{{ asset('images/videojuegos/{{ $videojuego->imagen }}') }}" alt="{{ $videojuego->nombre }}" height="365px">
+                                            <img src="{{ asset("images/videojuegos/$videojuego->imagen") }}" alt="{{ $videojuego->nombre }}" height="365px">
                                         </div>
                                         <div class="released-game-content">
                                             <div class="released-game-rating">
@@ -121,7 +121,7 @@
                         <div class="released-game-nav">
                             @foreach ($videojuegos as $videojuego)                                
                                 <div class="released-game-nav-item">
-                                    <img src="{{ asset('images/videojuegos/{{ $videojuego->imagen2 }}') }}" alt="{{ $videojuego->nombre }}">
+                                    <img src="{{ asset('images/videojuegos/$videojuego->imagen2') }}" alt="{{ $videojuego->nombre }}">
                                 </div>
                             @endforeach
                         </div>
@@ -213,7 +213,7 @@
                         <div class="col-lg-3">
                             <div class="featured-game-item mb-30">
                                 <div class="featured-game-thumb">
-                                    <img src="{{ asset('images/videojuegos/{{ $videojuego->imagen }}') }}" alt="{{ $videojuego->nombre }}" height="365px">
+                                    <img src="{{ asset("images/videojuegos/$videojuego->imagen") }}" alt="{{ $videojuego->nombre }}" height="365px">
                                 </div>
                                 <div class="featured-game-content">
                                     <h4><a href="#">{{ $nombre[0] }} <span>{{ $nombre[1] }}</span></a></h4>

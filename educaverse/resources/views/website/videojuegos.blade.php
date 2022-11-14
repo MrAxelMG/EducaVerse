@@ -36,7 +36,7 @@
                                 @foreach ($videojuegos as $videojuego)                                    
                                     <div class="latest-games-items mb-30">
                                         <div class="latest-games-thumb">
-                                            <a href="#"><img src="{{ asset('images/videojuegos/{{ $videojuego->imagen }}') }}" alt="{{ $videojuego->nombre }}" height="400px"></a>
+                                            <a href="#"><img src="{{ asset("images/videojuegos/$videojuego->imagen") }}" alt="{{ $videojuego->nombre }}" height="400px"></a>
                                         </div>
                                         <div class="latest-games-content">
                                             <div class="lg-tag"><a href="#">{{ $videojuego->nombreMateria }}</a></div>
