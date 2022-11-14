@@ -219,7 +219,6 @@
                                     <h4><a href="#">{{ $nombre[0] }} <span>{{ $nombre[1] }}</span></a></h4>
                                     <div class="featured-game-meta">
                                         <i class="fas fa-bell" style="color: rgb(0, 0, 0)"></i>
-                                        <span style="color: rgb(0, 0, 0)"><b>{{ $plat }}</b></span>
                                     </div>
                                 </div>
                                 <div class="featured-game-content featured-game-overlay-content">
