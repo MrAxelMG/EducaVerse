@@ -18,7 +18,7 @@
                             @endphp
                             <ul>
                               <li @if ($ruta[0] == '/') class="show" @endif >
-                                <a href="{{ url('/') }}">INICIO</a>
+                                <a href="{{ url('/') }}">INICIO {{ $ruta[0] }}</a>
                               </li>
                               <li @if ($ruta[0] == 'videojuegos') class="show" @endif >
                                 <a href="{{ url('/videojuegos') }}">VIDEOJUEGOS</a>
