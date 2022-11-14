@@ -12,7 +12,7 @@ class WebsiteController extends Controller
     {
         $videojuegos = Videojuego::join('materias', 'materias.id', '=', 'videojuegos.materia_id')
                         ->join('categorias', 'categorias.id', '=', 'videojuegos.categoria_id')
-                        ->select('videojuegos.id', 'videojuegos.nombre', 'videojuegos.plataformas', 'videojuegos.jugadores', 'materias.nombre AS nombreMateria', 'categorias.nombre AS nombreCategoria', 'videojuegos.imagen', 'videojuegos.imagen2')
+                        ->select('videojuegos.id', 'videojuegos.nombre', 'videojuegos.plataformas', 'videojuegos.jugadores', 'materias.nombre AS nombreMateria', 'categorias.nombre AS nombreCategoria', 'videojuegos.imagen', 'videojuegos.imagen2', 'videojuegos.descripcion', 'videojuegos.precio')
                         ->get();
         return view('website.index', compact('videojuegos'));
     }

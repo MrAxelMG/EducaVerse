@@ -75,7 +75,7 @@
                                     <div class="released-game-item">
                                         <div class="released-game-item-bg"></div>
                                         <div class="released-game-img">
-                                            <img src="images/images/{{ $videojuego->imagen }}" alt="{{ $videojuego->nombre }}" height="365px">
+                                            <img src="images/videojuegos/{{ $videojuego->imagen }}" alt="{{ $videojuego->nombre }}" height="365px">
                                         </div>
                                         <div class="released-game-content">
                                             <div class="released-game-rating">
@@ -109,11 +109,10 @@
                                                     <li><span>Plataformas :</span> {{ $plat }}.</li>
                                                 </ul>
                                             </div>
-                                            <p>Compete with 100 players on a remote thats island for winner takes showdown
-                                                known issue</p>
+                                            <p>{{ $videojuego->descripcion }}</p>
                                             <a href="#" class="btn btn-style-two">Comprar ahora</a>
                                         </div>
-                                    </div>
+                                    </div>                                    
                                 </div>
                             @endforeach
                         </div>
@@ -122,7 +121,7 @@
                         <div class="released-game-nav">
                             @foreach ($videojuegos as $videojuego)                                
                                 <div class="released-game-nav-item">
-                                    <img src="images/images/{{ $videojuego->imagen2 }}" alt="{{ $videojuego->nombre }}">
+                                    <img src="images/videojuegos/{{ $videojuego->imagen2 }}" alt="{{ $videojuego->nombre }}">
                                 </div>
                             @endforeach
                         </div>
@@ -197,7 +196,7 @@
                 </div>
             </div>
             <div class="container-fluid container-full">
-                <div class="row no-gutters new-released-game-active">
+                <div class="row no-gutters new-released-game-active text-center justify-content-center">
                     @foreach ($videojuegos as $videojuego)
                         @php
                             $nombre = explode(' ', $videojuego->nombre, 2);
@@ -214,13 +213,13 @@
                         <div class="col-lg-3">
                             <div class="featured-game-item mb-30">
                                 <div class="featured-game-thumb">
-                                    <img src="images/images/{{ $videojuego->imagen }}" alt="{{ $videojuego->nombre }}" height="365px">
+                                    <img src="images/videojuegos/{{ $videojuego->imagen }}" alt="{{ $videojuego->nombre }}" height="365px">
                                 </div>
                                 <div class="featured-game-content">
                                     <h4><a href="#">{{ $nombre[0] }} <span>{{ $nombre[1] }}</span></a></h4>
                                     <div class="featured-game-meta">
-                                        <i class="fas fa-bell"></i>
-                                        <span>{{ $plat }}</span>
+                                        <i class="fas fa-bell" style="color: rgb(0, 0, 0)"></i>
+                                        <span style="color: rgb(0, 0, 0)"><b>{{ $plat }}</b></span>
                                     </div>
                                 </div>
                                 <div class="featured-game-content featured-game-overlay-content">
