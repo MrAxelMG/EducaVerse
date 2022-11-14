@@ -16,8 +16,6 @@ class CreateMateriasTable extends Migration
         Schema::create('materias', function (Blueprint $table) {
             $table->id();
             $table->string("nombre", 70);
-            $table->unsignedBigInteger('nivel_id')->nullable();
-            $table->foreign('nivel_id')->references('id')->on('niveles_educativos')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

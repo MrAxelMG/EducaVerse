@@ -16,8 +16,13 @@ class CreateVideojuegosTable extends Migration
         Schema::create('videojuegos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 50);
-            $table->string('categoria', 50);
-            $table->timestamps();
+            $table->mediumtext('plataformas');
+            $table->mediumtext('jugadores');
+            $table->string('categoria_id');
+            $table->unsignedBigInteger('materia_id');
+            $table->foreign('materia_id')->references('id')->on('materias')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('imagen', 255);
+            $table->string('imagen2', 255)->nulleable();
         });
     }
 

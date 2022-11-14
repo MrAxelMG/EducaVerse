@@ -18,9 +18,9 @@ class CreateUsersTable extends Migration
             $table->string('nombre');
             $table->string('apellidop');
             $table->string('apellidom');
-            $table->string('edad');
             $table->string('email')->unique();
             $table->string('password');
+            $table->string('foto_perfil')->default('default.png');
         });
     }
 
