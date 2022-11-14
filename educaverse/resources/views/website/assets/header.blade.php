@@ -16,16 +16,16 @@
                               $ruta = explode('/', request());
                             @endphp
                             <ul>
-                              <li @if ($ruta[1] == '/') class="show" @endif >
+                              <li @if ($ruta[3] == '/') class="show" @endif >
                                 <a href="{{ url('/') }}">INICIO</a>
                               </li>
-                              <li @if ($ruta[1] == '/videojuegos') class="show" @endif >
+                              <li @if ($ruta[3] == '/videojuegos') class="show" @endif >
                                 <a href="{{ url('/videojuegos') }}">VIDEOJUEGOS {{ request() }}</a>
                               </li>
-                              <li @if ($ruta[1] == '/nosotros') class="show" @endif >
-                                <a href="{{ url('/nosotros') }}">NOSOTROS {{ $ruta[2] }}</a>
+                              <li @if ($ruta[3] == '/nosotros') class="show" @endif >
+                                <a href="{{ url('/nosotros') }}">NOSOTROS {{ $ruta[3] }}</a>
                               </li>
-                              <li @if ($ruta[1] == '/contacto') class="show" @endif >
+                              <li @if ($ruta[3] == '/contacto') class="show" @endif >
                                 <a href="{{ url('/contacto') }}">CONTACTO</a>
                               </li>
                             </ul>
