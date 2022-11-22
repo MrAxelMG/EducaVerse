@@ -1,12 +1,12 @@
 <header class="header-style-four">
   <div id="sticky-header" class="header-four-wrap">
       <div class="container custom-container-two">
-          <div class="row">
+          <div>
               <div class="col-12">
                   <div class="main-menu menu-style-two">
                       <nav>
                           <div class="logo">
-                            <a href="/" class="d-flex align-items-center">
+                            <a href="/" class="d-flex align-items-center logo_ancla">
                               <img src="{{ asset('assets/images/EV.png') }}" width="70px" alt="Logo">
                               <h2 style="margin-top: 5px">EducaVerse</h2>
                             </a>
@@ -29,6 +29,18 @@
                               <li @if ($ruta[0] == 'contacto') class="show" @endif >
                                 <a href="{{ url('/contacto') }}">CONTACTO</a>
                               </li>
+                              {{-- <li class="show">
+                                <a href="{{ url('/') }}">INICIO</a>
+                              </li>
+                              <li>
+                                <a href="{{ url('/videojuegos') }}">VIDEOJUEGOS</a>
+                              </li>
+                              <li>
+                                <a href="{{ url('/nosotros') }}">NOSOTROS</a>
+                              </li>
+                              <li>
+                                <a href="{{ url('/contacto') }}">CONTACTO</a>
+                              </li> --}}
                             </ul>
                           </div>
                       </nav>

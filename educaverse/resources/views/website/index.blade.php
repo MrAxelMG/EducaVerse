@@ -247,8 +247,8 @@
                     <div class="row justify-content-center">
                         <div class="col-xl-8 col-lg-9">
                             <div class="live-match-wrap">
-                                <img src="{{ asset('images/images/live_match_img.jpg') }}" alt="">
-                                <a href="https://www.youtube.com/watch?v=04KPiGmC7Lc" class="popup-video"><img
+                                <img src="{{ asset('images/images/live_match_img.png') }}" alt="">
+                                <a href="https://www.youtube.com/watch?v=TpMtWdVVaRQ" class="popup-video"><img
                                         src="{{ asset('images/icon/video_play_icon.png') }}" alt=""></a>
                             </div>
                         </div>

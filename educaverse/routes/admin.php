@@ -50,6 +50,8 @@ Route::post('registro', [App\Http\Controllers\Auth\RegisterController::class, 's
 
 Route::get('lock-screen', [App\Http\Controllers\LoginController::class, 'index']);
 
+Route::get('/set_language/{lang}', [App\Http\Controllers\Controller::class, 'set_language'])->name('set_language');
+
 Route::group(['prefix' => 'basic-ui'], function(){
     Route::get('accordions', function () { return view('admin.basic-ui.accordions'); });
     Route::get('buttons', function () { return view('admin.basic-ui.buttons'); });

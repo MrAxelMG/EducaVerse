@@ -504,17 +504,18 @@ ul.minicart .cart-content a:hover,
 .main-menu nav {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    /* justify-content: flex-start; */
 }
 .navbar-wrap {
     display: flex;
-    flex-grow: 1;
+    /* flex-grow: 1; */
 }
 .navbar-wrap ul {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
     margin-left: auto;
 }
 .navbar-wrap ul li {
@@ -6733,4 +6734,9 @@ ul.minicart .cart-price .new {
 }
 .home-six-footer .copyright-wrap {
     padding: 31px 0;
+}
+
+.logo_ancla img {
+    text-align: left;
+    margin-left: -3rem;
 }
