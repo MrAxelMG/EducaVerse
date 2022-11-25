@@ -15,7 +15,7 @@
 
     @include('website.assets.preloader')
     
-    @include('website.assets.header')  
+    @include('website.assets.header')
     
     <main>
         <section class="slider-area home-four-slider">

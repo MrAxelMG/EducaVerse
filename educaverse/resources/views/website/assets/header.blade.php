@@ -48,3 +48,8 @@
       </div>
   </div>
 </header>
+
+<!-- Progressbar -->
+<div class="container-progressbar">
+  <div class="progressbar"></div>
+</div>
