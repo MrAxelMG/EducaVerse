@@ -3,7 +3,7 @@
       <div class="container pt-5">
           <div class="row justify-content-between">
               <div class="col-xl-4 col-lg-4 col-md-6">
-                  <div class="footer-widget">
+                  <div class="footer-widget mb-50">
                       <div class="footer-logo mb-35">
                         <a href="/" class="d-flex align-items-center">
                           <img src="{{ asset('assets/images/EV.png') }}" width="70px" alt="Logo">
@@ -23,7 +23,7 @@
                   </div>
               </div>
               <div class="col-xl-2 col-lg-3 col-sm-6">
-                  <div class="footer-widget">
+                  <div class="footer-widget mb-50">
                       <div class="fw-title mb-35">
                           <h5>Acceder</h5>
                       </div>
@@ -35,8 +35,8 @@
                       </div>
                   </div>
               </div>
-              <div class="col-xl-2 col-lg-3 col-sm-6">
-                  <div class="footer-widget">
+              <div class="col-xl-3 col-lg-4 col-sm-6">
+                  <div class="footer-widget mb-50">
                       <div class="fw-title mb-35">
                           <h5>¿Necesitas ayuda?</h5>
                       </div>
@@ -50,14 +50,13 @@
                   </div>
               </div>
               <div class="col-xl-2 col-lg-4 col-md-6">
-                  <div class="footer-widget">
+                  <div class="footer-widget mb-50">
                       <div class="fw-title mb-35">
                           <h5>Siguenos</h5>
                       </div>
                       <div class="footer-social">
                           <ul>
                               <li><a href="#" class="d-flex align-items-center justify-content-center"><i class="fab fa-facebook-f"></i></a></li>
-                              <li><a href="#" class="d-flex align-items-center justify-content-center"><i class="fab fa-twitter"></i></a></li>
                               <li><a href="#" class="d-flex align-items-center justify-content-center"><i class="fab fa-instagram"></i></a></li>
                           </ul>
                       </div>

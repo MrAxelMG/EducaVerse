@@ -31,6 +31,10 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function(){
     Route::post('videojuegos/update', [App\Http\Controllers\VideojuegoController::class, 'update']);
     Route::post('videojuegos/delete', [App\Http\Controllers\VideojuegoController::class, 'delete']);
 
+    Route::get('contacto', [App\Http\Controllers\ContactoController::class, 'index']);
+    Route::get('contacto/show', [App\Http\Controllers\ContactoController::class, 'show']);
+    Route::post('contacto/delete', [App\Http\Controllers\ContactoController::class, 'delete']);
+
     Route::get('perfil', [App\Http\Controllers\PerfilController::class, 'index']);
     Route::post('perfil/update', [App\Http\Controllers\PerfilController::class, 'update']);
     
@@ -41,6 +45,7 @@ Route::get('/', [App\Http\Controllers\WebsiteController::class, 'index'])->name(
 Route::get('/videojuegos', [App\Http\Controllers\WebsiteController::class, 'videojuegos'])->name('videojuegos');
 Route::get('/nosotros', [App\Http\Controllers\WebsiteController::class, 'nosotros'])->name('contacto');
 Route::get('/contacto', [App\Http\Controllers\WebsiteController::class, 'contacto'])->name('nosotros');
+Route::post('/contacto/add', [App\Http\Controllers\ContactoController::class, 'add']);
 
 Route::get('login', [App\Http\Controllers\Auth\LoginController::class, 'create'])->name('login');
 Route::post('login', [App\Http\Controllers\Auth\LoginController::class, 'store']);

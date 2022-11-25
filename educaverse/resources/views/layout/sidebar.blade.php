@@ -95,6 +95,12 @@
         </ul>
       </div>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url('/admin/contacto') }}">
+        <i class="menu-icon mdi mdi-contact-mail"></i>
+        <span class="menu-title">Contacto</span>
+      </a>
+    </li>
     {{-- <li class="nav-item ">
       <a class="nav-link" data-toggle="collapse" href="#user-pages" aria-controls="user-pages">
         <i class="menu-icon mdi mdi-lock-outline"></i>

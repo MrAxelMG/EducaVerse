@@ -73,18 +73,19 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="contact-form">
-                            <form action="#">
-                                <textarea name="message" id="message" placeholder="Escribe un mensaje"></textarea>
+                        <div class="contact-form" >
+                            <form id="contactoForm" action="/contacto/add">
+                                @csrf
+                                <textarea name="mensaje" id="message" placeholder="Escribe un mensaje"></textarea>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <input type="text" placeholder="Nombre">
+                                        <input type="text" name="nombre" placeholder="Nombre">
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="email" placeholder="Email">
+                                        <input type="email" name="email" placeholder="Email">
                                     </div>
                                 </div>
-                                <button>Enviar mensaje</button>
+                                <button type="submit" id="enviarMensaje">Enviar mensaje</button>
                             </form>
                         </div>
                     </div>
@@ -96,6 +97,8 @@
     @include('website.assets.footer')
     
     @include('website.assets.js')
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="{{ asset('js/contacto.js') }}"></script>
 </body>
 
 </html>

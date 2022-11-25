@@ -505,17 +505,17 @@ ul.minicart .cart-content a:hover,
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* flex-wrap: wrap; */
-    /* justify-content: flex-start; */
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 .navbar-wrap {
     display: flex;
-    /* flex-grow: 1; */
+    flex-grow: 1;
 }
 .navbar-wrap ul {
     display: flex;
-    /* flex-direction: row; */
-    /* flex-wrap: wrap; */
+    flex-direction: row;
+    flex-wrap: wrap;
     margin-left: auto;
 }
 .navbar-wrap ul li {
@@ -2111,12 +2111,13 @@ ul.minicart .cart-price .new {
 }
 .released-game-content h4::before {
     content: "";
-    background-image: url(../images/images/released_game_brush.png);
+    background-image: url(../images/images/released_game_brush2.png);
     position: absolute;
-    right: -50px;
+    left: -8.2rem;
+    right: 30px;
     top: 0;
     height: 100%;
-    width: 324px;
+    width: 530px;
     background-repeat: no-repeat;
     z-index: -1;
 }
@@ -6734,9 +6735,4 @@ ul.minicart .cart-price .new {
 }
 .home-six-footer .copyright-wrap {
     padding: 31px 0;
-}
-
-.logo_ancla img {
-    text-align: left;
-    margin-left: -3rem;
 }

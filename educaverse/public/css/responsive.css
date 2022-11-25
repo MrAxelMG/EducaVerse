@@ -695,9 +695,6 @@
     .home-four-area-bg .bg {
         height: 1275px;
     }
-    .header-style-four .logo img {
-        filter: brightness(0) invert(1);
-    }
     .header-four-wrap::before {
         width: 0;
     }
@@ -1920,8 +1917,5 @@
 @media (max-width: 990px) {
     .header-four-wrap::before {
         width: 0% !important;
-    }
-    .logo_ancla {
-        margin-left: 2rem;
     }
 }
