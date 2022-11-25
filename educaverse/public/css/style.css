@@ -67,12 +67,12 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #232b35;
+    background: #252634;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #252634;
+    background: #1d242c;
 }
 .container-progressbar {
     width: 100%;
