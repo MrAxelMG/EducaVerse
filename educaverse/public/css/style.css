@@ -55,6 +55,25 @@ body {
     font-weight: 500;
     color: #d4d4d4;
 }
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #232b35;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #1d242c;
+}
 .img {
     max-width: 100%;
     transition: all 0.3s ease-out 0s;
