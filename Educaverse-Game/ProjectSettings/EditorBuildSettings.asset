@@ -5,9 +5,27 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Dynamic Parkour System/Scenes/Testing.unity
     guid: ff8b50065f42ff846be8fa425db054d5
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/IntroVideo.unity
+    guid: 9d97bfaaf98b7e4458a62f03e991a903
+  - enabled: 1
+    path: Assets/Intro.unity
+    guid: 9bf4dd86fc77a7f41933f0d12162c204
+  - enabled: 1
+    path: Assets/EducaVerse.unity
+    guid: 53b06513ffa9d3b4a8d9a71e2b868576
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/JuegoMatematico.unity
+    guid: ddc728ae2b973584cbbf59a80b91cc08
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: bd6aa9f8443cca14baac4c6627a3c067,
       type: 2}

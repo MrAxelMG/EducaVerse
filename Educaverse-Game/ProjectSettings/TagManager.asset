@@ -10,6 +10,9 @@ TagManager:
   - Slide
   - Reach
   - Pole
+  - Pathpoint
+  - MultiPathpoint
+  - objetivo
   layers:
   - Default
   - TransparentFX
