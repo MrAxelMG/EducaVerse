@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::group(['prefix' => 'admin'], function(){
+Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function(){
     Route::get('dashboard', [App\Http\Controllers\DashboardController::class, 'index']);
 
     Route::get('materias', [App\Http\Controllers\MateriaController::class, 'index']);
