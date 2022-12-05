@@ -4,11 +4,13 @@
       <div class="nav-link">
         <div class="user-wrapper">
           <div class="profile-image">
-            @php $foto = auth()->user()->foto; @endphp
+            @php $foto = "default.png"; @endphp
+            {{-- @php $foto = auth()->user()->foto; @endphp --}}
             <img src="{{ asset("images/usuarios/$foto") }}" alt="profile image">
           </div>
           <div class="text-wrapper">
-            <p class="profile-name">{{ auth()->user()->nombre }} {{ auth()->user()->apellidop }}</p>
+            <p class="profile-name">Javier Salazar</p>
+            {{-- <p class="profile-name">{{ auth()->user()->nombre }} {{ auth()->user()->apellidop }}</p> --}}
             <small class="designation text-muted">Admin</small>
             <span class="status-indicator online"></span>
           </div>
