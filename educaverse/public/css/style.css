@@ -2883,9 +2883,13 @@ ul.minicart .cart-price .new {
     top: -83px;
     right: 0;
 }
+.just-gamers-img .just-gamers-character {
+    margin-top: 5rem;
+    margin-left: -10rem !important;
+}
 .just-gamers-circle-shape {
     position: absolute;
-    bottom: 215px;
+    bottom: 120px;
     left: 145px;
     z-index: -1;
 }
@@ -2896,7 +2900,7 @@ ul.minicart .cart-price .new {
 }
 .gamers-chart-shape {
     position: absolute;
-    right: 0;
+    right: 70px !important;
     top: 70px;
 }
 

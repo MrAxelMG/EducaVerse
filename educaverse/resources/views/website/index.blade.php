@@ -33,7 +33,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slider-img"><img src="{{ asset('images/slider/four_slider_img01.png') }}" alt=""
+                        <div class="slider-img"><img src="{{ asset('images/funko/like.png') }}" alt=""
                                 data-animation="slideInRightS" data-delay=".8s"></div>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slider-img"><img src="{{ asset('images/slider/four_slider_img02.png') }}" alt=""
+                        <div class="slider-img"><img src="{{ asset('images/slider/3.png') }}" alt=""
                                 data-animation="slideInRightS" data-delay=".8s"></div>
                     </div>
                 </div>
@@ -172,7 +172,7 @@
                     </div>
                     <div class="col-xl-7 col-lg-6 d-none d-lg-block">
                         <div class="just-gamers-img">
-                            <img src="{{ asset('images/images/just_gamers_img.png') }}" alt="" class="just-gamers-character">
+                            <img src="{{ asset('images/funko/paz.png') }}" alt="pazmado" class="just-gamers-character">
                             <div class="just-gamers-circle-shape">
                                 <img src="{{ asset('images/images/gamers_circle_line.png') }}" alt="">
                                 <img src="{{ asset('images/images/gamers_circle_shape.png') }}" alt="" class="rotateme">
