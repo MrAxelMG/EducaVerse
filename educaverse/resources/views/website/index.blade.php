@@ -25,9 +25,9 @@
                         <div class="row">
                             <div class="col-xl-6 col-lg-7 col-md-11">
                                 <div class="slider-content">
-                                    <h6 data-animation="fadeInUp" data-delay=".4s">EducaVerse</h6>
-                                    <h2 data-animation="fadeInUp" data-delay=".4s">Empresa de <span>Videojuegos</span> Educativos</h2>
-                                    <p data-animation="fadeInUp" data-delay=".6s">
+                                    <h6 data-animation="fadeInUp" data-delay=".4s" style="color: #88c426">EducaVerse</h6>
+                                    <h2 data-animation="fadeInUp" data-delay=".4s" style="color: #505050">Empresa de <span style="color: #519548">Videojuegos</span> Educativos</h2>
+                                    <p data-animation="fadeInUp" data-delay=".6s" style="color: #161616">
                                         Desarrollamos videojuegos educativos en entornos de un alto grado de participación e interactividad, en los que el alumno es capaz de construir, diseñar, modificar, experimentar e involucrarse de forma mucho más activa en el proceso de su aprendizaje.
                                     </p>
                                 </div>
@@ -42,15 +42,15 @@
                         <div class="row">
                             <div class="col-xl-6 col-lg-7 col-md-11">
                                 <div class="slider-content">
-                                    <h6 data-animation="fadeInUp" data-delay=".4s">EducaVerse</h6>
-                                    <h2 data-animation="fadeInUp" data-delay=".4s">Empresa de <span>Videojuegos</span> Educativos</h2>
-                                    <p data-animation="fadeInUp" data-delay=".6s">
+                                    <h6 data-animation="fadeInUp" data-delay=".4s" style="color: #88c426">EducaVerse</h6>
+                                    <h2 data-animation="fadeInUp" data-delay=".4s" style="color: #505050">Empresa de <span style="color: #519548">Videojuegos</span> Educativos</h2>
+                                    <p data-animation="fadeInUp" data-delay=".6s" style="color: #161616">
                                         Desarrollamos videojuegos educativos en entornos de un alto grado de participación e interactividad, en los que el alumno es capaz de construir, diseñar, modificar, experimentar e involucrarse de forma mucho más activa en el proceso de su aprendizaje.
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="slider-img"><img src="{{ asset('images/slider/3.png') }}" alt=""
+                        <div class="slider-img"><img src="{{ asset('images/funko/paz.png') }}" alt=""
                                 data-animation="slideInRightS" data-delay=".8s"></div>
                     </div>
                 </div>
