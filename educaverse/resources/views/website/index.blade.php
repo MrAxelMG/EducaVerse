@@ -26,7 +26,7 @@
                             <div class="col-xl-6 col-lg-7 col-md-11">
                                 <div class="slider-content">
                                     <h6 data-animation="fadeInUp" data-delay=".4s" style="color: #88c426">EducaVerse</h6>
-                                    <h2 data-animation="fadeInUp" data-delay=".4s" style="color: #505050">Empresa de <span style="color: #519548">Videojuegos</span> Educativos</h2>
+                                    <h2 data-animation="fadeInUp" data-delay=".4s" style="color: #252634; text-transform: none;">Empresa de <span style="color: #519548">Videojuegos</span> Educativos</h2>
                                     <p data-animation="fadeInUp" data-delay=".6s" style="color: #161616">
                                         Desarrollamos videojuegos educativos en entornos de un alto grado de participación e interactividad, en los que el alumno es capaz de construir, diseñar, modificar, experimentar e involucrarse de forma mucho más activa en el proceso de su aprendizaje.
                                     </p>
@@ -43,8 +43,8 @@
                             <div class="col-xl-6 col-lg-7 col-md-11">
                                 <div class="slider-content">
                                     <h6 data-animation="fadeInUp" data-delay=".4s" style="color: #88c426">EducaVerse</h6>
-                                    <h2 data-animation="fadeInUp" data-delay=".4s" style="color: #505050">Empresa de <span style="color: #519548">Videojuegos</span> Educativos</h2>
-                                    <p data-animation="fadeInUp" data-delay=".6s" style="color: #161616">
+                                    <h2 data-animation="fadeInUp" data-delay=".4s" style="color: #505050; text-transform: none;">Empresa de <span style="color: #519548">Videojuegos</span> Educativos</h2>
+                                    <p data-animation="fadeInUp" data-delay=".6s" style="color: #252634">
                                         Desarrollamos videojuegos educativos en entornos de un alto grado de participación e interactividad, en los que el alumno es capaz de construir, diseñar, modificar, experimentar e involucrarse de forma mucho más activa en el proceso de su aprendizaje.
                                     </p>
                                 </div>
@@ -135,23 +135,23 @@
                 <div class="row">
                     <div class="col-xl-5 col-lg-6 col-md-10">
                         <div class="section-title title-style-three white-title mb-70">
-                            <h2>Conoce <span>EducaVerse</span></h2>
-                            <p>Para informarte de nuestros videojuegos, aquí te dejamos algunos puntos importantes de la empresa.</p>
+                            <h2 style="color: #252634;">Conoce <span style="color: #519548">EducaVerse</span></h2>
+                            <p  style="color: #252634">Para informarte de nuestros videojuegos, aquí te dejamos algunos puntos importantes de la empresa.</p>
                         </div>
                         <div class="just-gamers-list">
                             <ul>
                                 <li>
                                     <div class="just-gamers-list-icon d-flex align-items-center justify-content-center">
-                                        <img src="{{ asset('images/icon/gamer_list_icon01.png') }}" alt="">
+                                        <img src="{{ asset('images/funko/jugador-contra-jugador.png') }}" alt="">
                                     </div>
                                     <div class="just-gamers-list-content fix">
-                                        <h5>Videojuegos educativos</h5>
+                                        <h5 style="color: #505050;">Videojuegos educativos</h5>
                                         <p>Tenemos videojuegos con el fin de apoyar al docente en el proceso de enseñanza.</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="just-gamers-list-icon d-flex align-items-center justify-content-center">
-                                        <img src="{{ asset('images/icon/gamer_list_icon02.png') }}" alt="">
+                                        <img src="{{ asset('images/funko/pazmado.png') }}" alt="">
                                     </div>
                                     <div class="just-gamers-list-content fix">
                                         <h5>Diseño &amp; Aprendizaje</h5>
@@ -160,7 +160,7 @@
                                 </li>
                                 <li>
                                     <div class="just-gamers-list-icon d-flex align-items-center justify-content-center">
-                                        <img src="{{ asset('images/icon/gamer_list_icon03.png') }}" alt="">
+                                        <img src="{{ asset('images/funko/explorador.png') }}" alt="">
                                     </div>
                                     <div class="just-gamers-list-content fix">
                                         <h5>Mundo abierto</h5>
