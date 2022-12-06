@@ -74,7 +74,7 @@
                             </ul>
                         </div>
                         <div class="contact-form" >
-                            <form id="contactoForm" action="/contacto/add">
+                            <form id="contactoForm" action="public/contacto/add">
                                 @csrf
                                 <textarea name="mensaje" id="message" placeholder="Escribe un mensaje"></textarea>
                                 <div class="row">
