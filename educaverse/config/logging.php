@@ -3,6 +3,7 @@
 use Monolog\Handler\NullHandler;
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\SyslogUdpHandler;
+use Monolog\Handler\SocketHandler;
 
 return [
 
@@ -77,7 +78,7 @@ return [
         'papertrail' => [
             'driver' => 'monolog',
             'level' => "info",
-            'handler' => SyslogUdpHandler::class,
+            'handler' => SocketHandler::class,
             'handler_with' => [
                 'host' => env('PAPERTRAIL_URL', 'logs.papertrailapp.com'),
                 'port' => env('PAPERTRAIL_PORT', '26957'),
