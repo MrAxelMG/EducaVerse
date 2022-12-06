@@ -76,11 +76,11 @@ return [
 
         'papertrail' => [
             'driver' => 'monolog',
-            'level' => "debug",
+            'level' => "info",
             'handler' => SyslogUdpHandler::class,
             'handler_with' => [
-                'host' => env('PAPERTRAIL_URL'),
-                'port' => env('PAPERTRAIL_PORT'),
+                'host' => env('PAPERTRAIL_URL', 'logs.papertrailapp.com'),
+                'port' => env('PAPERTRAIL_PORT', '26957'),
             ],
         ],
 
