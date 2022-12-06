@@ -14,7 +14,7 @@ class PaperTrailServiceProvider extends ServiceProvider {
      */
     public function register()
     {
-        $monolog = Log::getMonolog();
+        $monolog = Log::getLogger();
         $syslogHandler = new SyslogUdpHandler(env('PAPERTRAIL_URL'), env('PAPERTRAIL_PORT'));
 
         $formatter = new LineFormatter('%channel%.%level_name%: %message% %extra%');
