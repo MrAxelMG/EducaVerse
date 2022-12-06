@@ -211,7 +211,7 @@
                                     <img src="{{ asset("images/videojuegos/$videojuego->imagen") }}" alt="{{ $videojuego->nombre }}" height="365px">
                                 </div>
                                 <div class="featured-game-content">
-                                    <h4><a href="#">{{ $nombre[0] }} <span style="color: rgb(75, 75, 75)">{{ $nombre[1] }}</span></a></h4>
+                                    <h4><a href="#">{{ $nombre[0] }} <span style="color: #221d1d">{{ $nombre[1] }}</span></a></h4>
                                 </div>
                                 <div class="featured-game-content featured-game-overlay-content">
                                     <div class="featured-game-icon"><img src="{{ asset('images/icon/featured_game_icon.png') }}" alt=""></div>
