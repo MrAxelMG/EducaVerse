@@ -3,8 +3,8 @@
 @section('title', 'Inicio de sesión')
 
 @section('content')
-  <div class="content-wrapper d-flex align-items-center justify-content-center auth theme-one" style="background-image: url({{ url('assets/images/auth/login_1.jpg') }}); background-size: cover;">
-    <div class="row w-100">
+  <div class="content-wrapper d-flex align-items-center justify-content-center auth theme-one" style="background-image: url({{ asset('images/funko/fondo2.jpg') }}); background-size: cover;">
+    <div class="row w-100" style="margin-top: 3rem">
       <div class="col-lg-4 mx-auto">
         <div class="auto-form-wrapper">
           <form method="POST" action="{{ route('login') }}">
@@ -53,7 +53,7 @@
             </div>
           </form>
         </div>
-        <ul class="auth-footer">
+        <ul class="auth-footer" style="color: #252634 !important;">
           <li>
             <a href="{{ url('/terminos') }}">Terminos</a>
           </li>

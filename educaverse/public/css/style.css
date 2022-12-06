@@ -1176,7 +1176,14 @@ ul.minicart .cart-price .new {
 
 /* 4. Breadcrumb */
 .breadcrumb-bg {
-    background-image: url(../images/bg/breadcrumb_bg.jpg);
+    background-image: url(../images/funko/fondo4.jpg);
+    padding-top: 275px;
+    padding-bottom: 170px;
+    background-position: center;
+    background-size: cover;
+}
+.breadcrumb-bg2 {
+    background-image: url(../images/funko/fondo5.jpg);
     padding-top: 275px;
     padding-bottom: 170px;
     background-position: center;
@@ -2800,7 +2807,7 @@ ul.minicart .cart-price .new {
 
 /* 14. Just-gamers */
 .just-gamers-bg {
-    background-image: url(../images/funko/fondo3.png);
+    background-image: url(../images/funko/fondo6.png);
     position: relative;
     background-position: center;
     background-size: cover;

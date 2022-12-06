@@ -23,7 +23,7 @@
             </div>
           </div>
           <p class="text-muted mt-3 mb-0 text-left text-md-center text-xl-left">
-            <i class="mdi mdi-alert-octagon mr-1" aria-hidden="true"></i> 65% lower growth </p>
+            <i class="mdi mdi-alert-octagon mr-1" aria-hidden="true"></i> 80% de confianza </p>
         </div>
       </div>
     </div>
@@ -42,7 +42,7 @@
             </div>
           </div>
           <p class="text-muted mt-3 mb-0 text-left text-md-center text-xl-left">
-            <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i> Product-wise sales </p>
+            <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i> Materias educativas </p>
         </div>
       </div>
     </div>
@@ -61,7 +61,7 @@
             </div>
           </div>
           <p class="text-muted mt-3 mb-0 text-left text-md-center text-xl-left">
-            <i class="mdi mdi-calendar mr-1" aria-hidden="true"></i> Weekly Sales </p>
+            <i class="mdi mdi-calendar mr-1" aria-hidden="true"></i> Nuevo juego en 1 semana </p>
         </div>
       </div>
     </div>
@@ -80,7 +80,7 @@
             </div>
           </div>
           <p class="text-muted mt-3 mb-0 text-left text-md-center text-xl-left">
-            <i class="mdi mdi-reload mr-1" aria-hidden="true"></i> Product-wise sales </p>
+            <i class="mdi mdi-reload mr-1" aria-hidden="true"></i> Administradores activos </p>
         </div>
       </div>
     </div>
@@ -240,8 +240,8 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-sm-6 col-md-6 col-lg-6 grid-margin stretch-card">
+  <div class="row mb-4">
+    <div class="col-sm-6 col-md-6 col-lg-6 grid-margingrid-margin stretch-card">
       <div class="card">
         <div class="card-body">
           <div class="row">
@@ -295,46 +295,7 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-4 grid-margin stretch-card">
-      <div class="card">
-        <div class="card-body py-5">
-          <div class="d-flex flex-row justify-content-center align-items">
-            <i class="mdi mdi-facebook text-facebook icon-lg"></i>
-            <div class="ml-3">
-              <h6 class="text-facebook font-weight-semibold mb-0">2.62 Subscribers</h6>
-              <p class="text-muted card-text">You main list growing</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 grid-margin stretch-card">
-      <div class="card">
-        <div class="card-body py-5">
-          <div class="d-flex flex-row justify-content-center align-items">
-            <i class="mdi mdi-google-plus text-google icon-lg"></i>
-            <div class="ml-3">
-              <h6 class="text-google font-weight-semibold mb-0">3.4k Followers</h6>
-              <p class="text-muted card-text">You main list growing</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 grid-margin stretch-card">
-      <div class="card">
-        <div class="card-body py-5">
-          <div class="d-flex flex-row justify-content-center align-items">
-            <i class="mdi mdi-twitter text-twitter icon-lg"></i>
-            <div class="ml-3">
-              <h6 class="text-twitter font-weight-semibold mb-0">3k followers</h6>
-              <p class="text-muted card-text">You main list growing</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </div>    
   </div>
   <div class="row">
     <div class="col-lg-12 grid-margin">
@@ -430,121 +391,91 @@
     <div class="col-12">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title mb-4">Manage Tickets</h5>
+          <h5 class="card-title mb-4">Mensajes</h5>
           <div class="fluid-container">
-            <div class="row ticket-card mt-3 pb-2 border-bottom pb-3 mb-3">
-              <div class="col-md-1">
-                <img class="img-sm rounded-circle mb-4 mb-md-0 d-block mx-md-auto" src="{{ url('assets/images/faces/face1.jpg') }}" alt="profile image"> </div>
-              <div class="ticket-details col-md-9">
-                <div class="d-flex">
-                  <p class="text-dark font-weight-semibold mr-2 mb-0 no-wrap">James :</p>
-                  <p class="text-primary mr-1 mb-0">[#23047]</p>
-                  <p class="mb-0 ellipsis">Donec rutrum congue leo eget malesuada.</p>
-                </div>
-                <p class="text-gray ellipsis mb-2">Donec rutrum congue leo eget malesuada. Quisque velit nisi, pretium ut lacinia in, elementum id enim vivamus. </p>
-                <div class="row text-gray d-md-flex d-none">
-                  <div class="col-4 d-flex">
-                    <small class="mb-0 mr-2 text-muted text-muted">Last responded :</small>
-                    <small class="Last-responded mr-2 mb-0 text-muted text-muted">3 hours ago</small>
+            @if (sizeof($mensajes) > 0)
+              @foreach ($mensajes as $mensaje)              
+                <div class="row ticket-card mt-3 pb-2 border-bottom pb-3 mb-3">
+                  <div class="col-md-1">
+                    <img class="img-sm rounded-circle mb-4 mb-md-0 d-block mx-md-auto" src="{{ asset("images/usuarios/default.png") }}" alt="profile image"> </div>
+                  <div class="ticket-details col-md-9">
+                    <div class="d-flex">
+                      <p class="text-dark font-weight-semibold mr-2 mb-0 no-wrap">{{ $mensaje->nombre }} : </p>
+                      <p class="text-primary mr-1 mb-0">[#{{ $mensaje->id }}]</p>
+                      <p class="mb-0 ellipsis">{{ $mensaje->email }}</p>
+                    </div>
+                    <p class="text-gray ellipsis mb-2">{{ $mensaje->mensaje }}.</p>
+                    <div class="row text-gray d-md-flex d-none">
+                      <div class="col-12 d-flex">
+                        <small class="mb-0 mr-2 text-muted text-muted">Última actualización : </small>
+                        <small class="Last-responded mr-2 mb-0 text-muted text-muted">{{ ucfirst(Carbon\Carbon::parse($mensaje->fecha)->diffForHumans()) }}</small>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-4 d-flex">
-                    <small class="mb-0 mr-2 text-muted text-muted">Due in :</small>
-                    <small class="Last-responded mr-2 mb-0 text-muted text-muted">2 Days</small>
+                  <div class="ticket-actions col-md-2">
+                    <div class="btn-group dropdown">
+                      <button type="button" class="btn btn-success dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Acciones </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{{ url('/admin/contacto') }}">
+                          <i class="fa fa-reply fa-fw"></i>Ver mensajes
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fa fa-history fa-fw"></i>Eliminar mensaje
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              @endforeach              
+            @else
+              <div class="row ticket-card mt-3 pb-2 border-bottom pb-3 mb-3">                
+                <div class="ticket-details col-md-9">
+                  <div class="d-flex">
+                    <p class="text-dark font-weight-semibold mr-2 mb-0 no-wrap">No hay ningun mensaje.</p>
                   </div>
                 </div>
               </div>
-              <div class="ticket-actions col-md-2">
-                <div class="btn-group dropdown">
-                  <button type="button" class="btn btn-success dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Manage </button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">
-                      <i class="fa fa-reply fa-fw"></i>Quick reply</a>
-                    <a class="dropdown-item" href="#">
-                      <i class="fa fa-history fa-fw"></i>Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">
-                      <i class="fa fa-check text-success fa-fw"></i>Resolve Issue</a>
-                    <a class="dropdown-item" href="#">
-                      <i class="fa fa-times text-danger fa-fw"></i>Close Issue</a>
-                  </div>
-                </div>
-              </div>
+            @endif
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-0 mt-4">
+    <div class="col-md-4 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body py-5">
+          <div class="d-flex flex-row justify-content-center align-items">
+            <i class="mdi mdi-facebook text-facebook icon-lg"></i>
+            <div class="ml-3">
+              <h6 class="text-facebook font-weight-semibold mb-0">50k Me gustas</h6>
+              <p class="text-muted card-text">Gente que confía en nosotros</p>
             </div>
-            <div class="row ticket-card mt-3 pb-2 border-bottom pb-3 mb-3">
-              <div class="col-md-1">
-                <img class="img-sm rounded-circle mb-4 mb-md-0 d-block mx-md-auto" src="{{ url('assets/images/faces/face2.jpg') }}" alt="profile image"> </div>
-              <div class="ticket-details col-md-9">
-                <div class="d-flex">
-                  <p class="text-dark font-weight-semibold mr-2 mb-0 no-wrap">Stella :</p>
-                  <p class="text-primary mr-1 mb-0">[#23135]</p>
-                  <p class="mb-0 ellipsis">Curabitur aliquet quam id dui posuere blandit.</p>
-                </div>
-                <p class="text-gray ellipsis mb-2">Pellentesque in ipsum id orci porta dapibus. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl. </p>
-                <div class="row text-gray d-md-flex d-none">
-                  <div class="col-4 d-flex">
-                    <small class="mb-0 mr-2 text-muted">Last responded :</small>
-                    <small class="Last-responded mr-2 mb-0 text-muted">3 hours ago</small>
-                  </div>
-                  <div class="col-4 d-flex">
-                    <small class="mb-0 mr-2 text-muted">Due in :</small>
-                    <small class="Last-responded mr-2 mb-0 text-muted">2 Days</small>
-                  </div>
-                </div>
-              </div>
-              <div class="ticket-actions col-md-2">
-                <div class="btn-group dropdown">
-                  <button type="button" class="btn btn-success dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Manage </button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">
-                      <i class="fa fa-reply fa-fw"></i>Quick reply</a>
-                    <a class="dropdown-item" href="#">
-                      <i class="fa fa-history fa-fw"></i>Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">
-                      <i class="fa fa-check text-success fa-fw"></i>Resolve Issue</a>
-                    <a class="dropdown-item" href="#">
-                      <i class="fa fa-times text-danger fa-fw"></i>Close Issue</a>
-                  </div>
-                </div>
-              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body py-5">
+          <div class="d-flex flex-row justify-content-center align-items">
+            <i class="mdi mdi-instagram text-instagram icon-lg"></i>
+            <div class="ml-3">
+              <h6 class="text-instagram font-weight-semibold mb-0">58.3k Seguidores</h6>
+              <p class="text-muted card-text">Los cuales les gusta nuestro contenido</p>
             </div>
-            <div class="row ticket-card mt-3">
-              <div class="col-md-1">
-                <img class="img-sm rounded-circle mb-4 mb-md-0 d-block mx-md-auto" src="{{ url('assets/images/faces/face3.jpg') }}" alt="profile image"> </div>
-              <div class="ticket-details col-md-9">
-                <div class="d-flex">
-                  <p class="text-dark font-weight-semibold mr-2 mb-0 no-wrap">John Doe :</p>
-                  <p class="text-primary mr-1 mb-0">[#23246]</p>
-                  <p class="mb-0 ellipsis">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar.</p>
-                </div>
-                <p class="text-gray ellipsis mb-2">Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus. Lorem ipsum dolor sit amet.</p>
-                <div class="row text-gray d-md-flex d-none">
-                  <div class="col-4 d-flex">
-                    <small class="mb-0 mr-2 text-muted">Last responded :</small>
-                    <small class="Last-responded mr-2 mb-0 text-muted">3 hours ago</small>
-                  </div>
-                  <div class="col-4 d-flex">
-                    <small class="mb-0 mr-2 text-muted">Due in :</small>
-                    <small class="Last-responded mr-2 mb-0 text-muted">2 Days</small>
-                  </div>
-                </div>
-              </div>
-              <div class="ticket-actions col-md-2">
-                <div class="btn-group dropdown">
-                  <button type="button" class="btn btn-success dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Manage </button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">
-                      <i class="fa fa-reply fa-fw"></i>Quick reply</a>
-                    <a class="dropdown-item" href="#">
-                      <i class="fa fa-history fa-fw"></i>Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">
-                      <i class="fa fa-check text-success fa-fw"></i>Resolve Issue</a>
-                    <a class="dropdown-item" href="#">
-                      <i class="fa fa-times text-danger fa-fw"></i>Close Issue</a>
-                  </div>
-                </div>
-              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body py-5">
+          <div class="d-flex flex-row justify-content-center align-items">
+            <i class="mdi mdi-twitter text-twitter icon-lg"></i>
+            <div class="ml-3">
+              <h6 class="text-twitter font-weight-semibold mb-0">60k Seguidores</h6>
+              <p class="text-muted card-text">Que ven nuestros productos</p>
             </div>
           </div>
         </div>

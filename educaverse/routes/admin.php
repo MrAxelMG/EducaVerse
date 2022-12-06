@@ -37,6 +37,8 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function(){
 
     Route::get('perfil', [App\Http\Controllers\PerfilController::class, 'index']);
     Route::post('perfil/update', [App\Http\Controllers\PerfilController::class, 'update']);
+
+    Route::get('grafica', [App\Http\Controllers\DashboardController::class, 'grafica']);
     
     Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout']);
 });
@@ -56,6 +58,10 @@ Route::post('registro', [App\Http\Controllers\Auth\RegisterController::class, 's
 Route::get('lock-screen', [App\Http\Controllers\LoginController::class, 'index']);
 
 Route::get('/set_language/{lang}', [App\Http\Controllers\Controller::class, 'set_language'])->name('set_language');
+
+Route::get('/offline', function(){
+    return view('vendor.laravelpwa.offline');
+});
 
 Route::group(['prefix' => 'basic-ui'], function(){
     Route::get('accordions', function () { return view('admin.basic-ui.accordions'); });

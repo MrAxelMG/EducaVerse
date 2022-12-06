@@ -18,7 +18,7 @@
     @include('website.assets.header')  
     
     <main>
-        <section class="breadcrumb-area breadcrumb-bg">
+        <section class="breadcrumb-area breadcrumb-bg2">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -27,7 +27,7 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="{{ url('/') }}">Inicio</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Contacto</li>
+                                    <li class="breadcrumb-item active" aria-current="page" style="font-weight: bold;">Contacto</li>
                                 </ol>
                             </nav>
                         </div>

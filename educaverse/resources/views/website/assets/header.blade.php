@@ -1,4 +1,5 @@
-<header class="header-style-four">  
+
+<header class="header-style-four">
   <div id="sticky-header" class="header-four-wrap">
       <div class="container custom-container-two">
           <div class="row">
@@ -14,7 +15,7 @@
                           $ruta = explode(' ', $ruta[3]);
                         @endphp
                         <ul>
-                          <li @if ($ruta[0] == '') class="show" @endif >
+                          {{-- <li @if ($ruta[0] == '') class="show" @endif >
                             <a href="{{ url('/') }}">INICIO</a>
                           </li>
                           <li @if ($ruta[0] == 'videojuegos') class="show" @endif >
@@ -25,8 +26,8 @@
                           </li>
                           <li @if ($ruta[0] == 'contacto') class="show" @endif >
                             <a href="{{ url('/contacto') }}">CONTACTO</a>
-                          </li>
-                          {{-- <li class="show">
+                          </li> --}}
+                          <li class="show">
                             <a href="{{ url('/') }}">INICIO</a>
                           </li>
                           <li>
@@ -37,7 +38,7 @@
                           </li>
                           <li>
                             <a href="{{ url('/contacto') }}">CONTACTO</a>
-                          </li> --}}
+                          </li>
                         </ul>
                       </div>
                   </nav>

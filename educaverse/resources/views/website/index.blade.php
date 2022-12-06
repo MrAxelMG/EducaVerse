@@ -25,11 +25,8 @@
                         <div class="row">
                             <div class="col-xl-6 col-lg-7 col-md-11">
                                 <div class="slider-content">
-                                    <h6 data-animation="fadeInUp" data-delay=".4s" style="color: #88c426">EducaVerse</h6>
-                                    <h2 data-animation="fadeInUp" data-delay=".4s" style="color: #252634; text-transform: none;">Empresa de <span style="color: #519548">Videojuegos</span> Educativos</h2>
-                                    <p data-animation="fadeInUp" data-delay=".6s" style="color: #161616">
-                                        Desarrollamos videojuegos educativos en entornos de un alto grado de participación e interactividad, en los que el alumno es capaz de construir, diseñar, modificar, experimentar e involucrarse de forma mucho más activa en el proceso de su aprendizaje.
-                                    </p>
+                                    <h6 data-animation="fadeInUp" data-delay=".4s" style="color: #418039; margin-left: 2.8rem !important;">EducaVerse</h6>
+                                    <h2 data-animation="fadeInUp" data-delay=".4s" style="text-transform: none; margin-left: 2.6rem !important;">Empresa de <span style="color: #2f552a">Videojuegos</span> Educativos</h2>
                                 </div>
                             </div>
                         </div>
@@ -42,16 +39,14 @@
                         <div class="row">
                             <div class="col-xl-6 col-lg-7 col-md-11">
                                 <div class="slider-content">
-                                    <h6 data-animation="fadeInUp" data-delay=".4s" style="color: #88c426">EducaVerse</h6>
-                                    <h2 data-animation="fadeInUp" data-delay=".4s" style="color: #505050; text-transform: none;">Empresa de <span style="color: #519548">Videojuegos</span> Educativos</h2>
-                                    <p data-animation="fadeInUp" data-delay=".6s" style="color: #252634">
-                                        Desarrollamos videojuegos educativos en entornos de un alto grado de participación e interactividad, en los que el alumno es capaz de construir, diseñar, modificar, experimentar e involucrarse de forma mucho más activa en el proceso de su aprendizaje.
-                                    </p>
+                                    <h6 data-animation="fadeInUp" data-delay=".4s" style="color: #418039; margin-left: 2.8rem !important;">EducaVerse</h6>
+                                    <h2 data-animation="fadeInUp" data-delay=".4s" style="text-transform: none; margin-left: 2.6rem !important;">Empresa de <span style="color: #2f552a">Videojuegos</span> Educativos</h2>
                                 </div>
                             </div>
                         </div>
-                        <div class="slider-img"><img src="{{ asset('images/funko/paz.png') }}" alt=""
-                                data-animation="slideInRightS" data-delay=".8s"></div>
+                        <div class="slider-img" style="right: 5% !important">
+                            <img src="{{ asset('images/funko/sentadino.png') }}" style="width: 460px !important" alt="" data-animation="slideInRightS" data-delay=".8s">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -135,8 +130,8 @@
                 <div class="row">
                     <div class="col-xl-5 col-lg-6 col-md-10">
                         <div class="section-title title-style-three white-title mb-70">
-                            <h2 style="color: #252634;">Conoce <span style="color: #519548">EducaVerse</span></h2>
-                            <p  style="color: #252634">Para informarte de nuestros videojuegos, aquí te dejamos algunos puntos importantes de la empresa.</p>
+                            <h2>Conoce <span>EducaVerse</span></h2>
+                            <p>Para informarte de nuestros videojuegos, aquí te dejamos algunos puntos importantes de la empresa.</p>
                         </div>
                         <div class="just-gamers-list">
                             <ul>
@@ -145,7 +140,7 @@
                                         <img src="{{ asset('images/funko/jugador-contra-jugador.png') }}" alt="">
                                     </div>
                                     <div class="just-gamers-list-content fix">
-                                        <h5 style="color: #505050;">Videojuegos educativos</h5>
+                                        <h5>Videojuegos educativos</h5>
                                         <p>Tenemos videojuegos con el fin de apoyar al docente en el proceso de enseñanza.</p>
                                     </div>
                                 </li>

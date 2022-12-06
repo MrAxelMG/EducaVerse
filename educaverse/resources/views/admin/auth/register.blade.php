@@ -3,7 +3,7 @@
 @section('title', 'Registro')
 
 @section('content')
-<div class="content-wrapper d-flex align-items-center justify-content-center auth theme-one" style="background-image: url({{ url('assets/images/auth/register.jpg') }}); background-size: cover;">
+<div class="content-wrapper d-flex align-items-center justify-content-center auth theme-one" style="background-image: url({{ asset('images/funko/fondo3.png') }}); background-size: cover;">
   <div class="row w-100">
     <div class="col-lg-4 mx-auto">
       <h2 class="text-center mb-4">Registrarse</h2>

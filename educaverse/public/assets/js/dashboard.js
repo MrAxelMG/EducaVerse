@@ -1,31 +1,31 @@
-(function($) {
+(function ($) {
     "use strict";
-    $(function() {
+    $(function () {
         var lineChartStyleOption_1 = {
             scales: {
                 yAxes: [
                     {
-                        display: false
-                    }
+                        display: false,
+                    },
                 ],
                 xAxes: [
                     {
-                        display: false
-                    }
-                ]
+                        display: false,
+                    },
+                ],
             },
             legend: {
-                display: false
+                display: false,
             },
             elements: {
                 point: {
-                    radius: 1
+                    radius: 1,
                 },
                 line: {
-                    tension: 0
-                }
+                    tension: 0,
+                },
             },
-            stepsize: 100
+            stepsize: 100,
         };
         if ($("#revenue-chart").length) {
             $("#revenue-chart").sparkline("html", {
@@ -35,7 +35,7 @@
                 fillColor: "false",
                 barWidth: 2,
                 barSpacing: 10,
-                chartRangeMin: 0
+                chartRangeMin: 0,
             });
         }
         if ($("#dashboard-area-chart").length) {
@@ -51,7 +51,7 @@
                         backgroundColor: "#2196f3",
                         borderColor: "#0c83e2",
                         borderWidth: 1,
-                        fill: true
+                        fill: true,
                     },
                     {
                         label: "Product",
@@ -59,9 +59,9 @@
                         backgroundColor: "#19d895",
                         borderColor: "#15b67d",
                         borderWidth: 1,
-                        fill: true
-                    }
-                ]
+                        fill: true,
+                    },
+                ],
             };
             var options = {
                 responsive: true,
@@ -70,49 +70,49 @@
                     yAxes: [
                         {
                             gridLines: {
-                                color: "#F2F6F9"
+                                color: "#F2F6F9",
                             },
                             ticks: {
                                 beginAtZero: true,
                                 min: 0,
                                 max: 20,
-                                stepSize: 10
-                            }
-                        }
+                                stepSize: 10,
+                            },
+                        },
                     ],
                     xAxes: [
                         {
                             gridLines: {
-                                color: "#F2F6F9"
+                                color: "#F2F6F9",
                             },
                             ticks: {
-                                beginAtZero: true
-                            }
-                        }
-                    ]
+                                beginAtZero: true,
+                            },
+                        },
+                    ],
                 },
                 legend: {
-                    display: false
+                    display: false,
                 },
                 elements: {
                     point: {
-                        radius: 2
-                    }
+                        radius: 2,
+                    },
                 },
                 layout: {
                     padding: {
                         left: 0,
                         right: 0,
                         top: 0,
-                        bottom: 0
-                    }
+                        bottom: 0,
+                    },
                 },
-                stepsize: 1
+                stepsize: 1,
             };
             var lineChart = new Chart(lineChartCanvas, {
                 type: "line",
                 data: data,
-                options: options
+                options: options,
             });
         }
         if ($("#trafficDoughnutChart").length) {
@@ -124,12 +124,12 @@
                     {
                         data: [70, 20],
                         backgroundColor: [primaryColor, successColor],
-                        borderColor: [primaryColor, successColor]
-                    }
+                        borderColor: [primaryColor, successColor],
+                    },
                 ],
 
                 // These labels appear in the legend and in the tooltips when hovering different arcs
-                labels: ["Chrome", "Firefox", "Safari", "Opera", "IE"]
+                labels: ["Chrome", "Firefox", "Safari", "Opera", "IE"],
             };
             var doughnutPieOptions = {
                 cutoutPercentage: 70,
@@ -140,21 +140,21 @@
                 maintainAspectRatio: true,
                 showScale: true,
                 legend: {
-                    display: false
+                    display: false,
                 },
                 layout: {
                     padding: {
                         left: 0,
                         right: 0,
                         top: 0,
-                        bottom: 0
-                    }
-                }
+                        bottom: 0,
+                    },
+                },
             };
             var doughnutChart = new Chart(doughnutChartCanvas, {
                 type: "doughnut",
                 data: doughnutPieData,
-                options: doughnutPieOptions
+                options: doughnutPieOptions,
             });
         }
         if ($("#sourceLineChart").length) {
@@ -172,7 +172,7 @@
                         "2015",
                         "2016",
                         "2017",
-                        "2018"
+                        "2018",
                     ],
                     datasets: [
                         {
@@ -181,7 +181,7 @@
                             borderColor: successColor,
                             backgroundColor: successColor,
                             borderWidth: 2,
-                            fill: false
+                            fill: false,
                         },
                         {
                             label: "Mobile",
@@ -189,28 +189,28 @@
                             borderColor: primaryColor,
                             backgroundColor: primaryColor,
                             borderWidth: 2,
-                            fill: false
-                        }
-                    ]
+                            fill: false,
+                        },
+                    ],
                 },
                 options: {
                     responsive: true,
                     animation: {
                         animateScale: true,
-                        animateRotate: true
+                        animateRotate: true,
                     },
                     elements: {
                         point: {
-                            radius: 2
-                        }
+                            radius: 2,
+                        },
                     },
                     layout: {
                         padding: {
                             left: 0,
                             right: 0,
                             top: 0,
-                            bottom: 0
-                        }
+                            bottom: 0,
+                        },
                     },
                     legend: false,
                     stepsize: 20,
@@ -219,26 +219,24 @@
                             {
                                 gridLines: {
                                     color: "rgba(0, 0, 0, 0)",
-                                    display: true
-                                }
-                            }
+                                    display: true,
+                                },
+                            },
                         ],
                         yAxes: [
                             {
                                 gridLines: {
                                     color: "rgba(0, 0, 0, 0.05)",
-                                    display: true
-                                }
-                            }
-                        ]
-                    }
-                }
+                                    display: true,
+                                },
+                            },
+                        ],
+                    },
+                },
             });
         }
         if ($("#statistics-chart").length) {
-            var barChartCanvas = $("#statistics-chart")
-                .get(0)
-                .getContext("2d");
+            var barChartCanvas = $("#statistics-chart").get(0).getContext("2d");
             var barChart = new Chart(barChartCanvas, {
                 type: "bar",
                 data: {
@@ -252,20 +250,20 @@
                         "Day 7",
                         "Day 8",
                         "Day 9",
-                        "Day 10"
+                        "Day 10",
                     ],
                     datasets: [
                         {
                             label: "Revenue",
                             data: [39, 19, 25, 16, 31, 39, 23, 20, 23, 18],
-                            backgroundColor: successColor
+                            backgroundColor: successColor,
                         },
                         {
                             label: "Sales",
                             data: [27, 12, 26, 15, 21, 27, 13, 19, 32, 22],
-                            backgroundColor: primaryColor
-                        }
-                    ]
+                            backgroundColor: primaryColor,
+                        },
+                    ],
                 },
                 options: {
                     layout: {
@@ -273,8 +271,8 @@
                             left: 0,
                             right: 0,
                             top: 0,
-                            bottom: 0
-                        }
+                            bottom: 0,
+                        },
                     },
 
                     scales: {
@@ -285,9 +283,9 @@
                                 stacked: true,
                                 display: false,
                                 gridLines: {
-                                    color: "rgba(0, 0, 0, 0.03)"
-                                }
-                            }
+                                    color: "rgba(0, 0, 0, 0.03)",
+                                },
+                            },
                         ],
                         xAxes: [
                             {
@@ -295,50 +293,50 @@
                                 display: false,
                                 barPercentage: 0.3,
                                 gridLines: {
-                                    display: false
-                                }
-                            }
-                        ]
+                                    display: false,
+                                },
+                            },
+                        ],
                     },
                     legend: {
-                        display: false
-                    }
-                }
+                        display: false,
+                    },
+                },
             });
         }
         if ($("#review-rating-1").length) {
             $("#review-rating-1").barrating({
                 theme: "css-stars",
                 showSelectedRating: false,
-                initialRating: 4
+                initialRating: 4,
             });
         }
         if ($("#review-rating-2").length) {
             $("#review-rating-2").barrating({
                 theme: "css-stars",
                 showSelectedRating: false,
-                initialRating: 5
+                initialRating: 5,
             });
         }
         if ($("#review-rating-3").length) {
             $("#review-rating-3").barrating({
                 theme: "css-stars",
                 showSelectedRating: false,
-                initialRating: 3
+                initialRating: 3,
             });
         }
         if ($("#review-rating-4").length) {
             $("#review-rating-4").barrating({
                 theme: "css-stars",
                 showSelectedRating: false,
-                initialRating: 4
+                initialRating: 4,
             });
         }
         if ($("#review-rating-5").length) {
             $("#review-rating-5").barrating({
                 theme: "css-stars",
                 showSelectedRating: false,
-                initialRating: 2
+                initialRating: 2,
             });
         }
         if ($("#trafficSourceDoughnutChart").length) {
@@ -352,18 +350,18 @@
                         backgroundColor: [
                             "rgba(38,52,73,0.5)",
                             successColor,
-                            dangerColor
+                            dangerColor,
                         ],
                         borderColor: [
                             "rgba(38,52,73,0.1)",
                             successColor,
-                            dangerColor
-                        ]
-                    }
+                            dangerColor,
+                        ],
+                    },
                 ],
 
                 // These labels appear in the legend and in the tooltips when hovering different arcs
-                labels: ["Human Resources", "Manger", "Other"]
+                labels: ["Human Resources", "Manger", "Other"],
             };
             var doughnutPieOptions = {
                 cutoutPercentage: 75,
@@ -374,27 +372,25 @@
                 maintainAspectRatio: true,
                 showScale: true,
                 legend: {
-                    display: false
+                    display: false,
                 },
                 layout: {
                     padding: {
                         left: 0,
                         right: 0,
                         top: 0,
-                        bottom: 0
-                    }
-                }
+                        bottom: 0,
+                    },
+                },
             };
             var doughnutChart = new Chart(doughnutChartCanvas, {
                 type: "doughnut",
                 data: doughnutPieData,
-                options: doughnutPieOptions
+                options: doughnutPieOptions,
             });
         }
         if ($("#source-graph-1").length) {
-            var lineChartCanvas = $("#source-graph-1")
-                .get(0)
-                .getContext("2d");
+            var lineChartCanvas = $("#source-graph-1").get(0).getContext("2d");
             var data = {
                 labels: [
                     "Day 1",
@@ -403,7 +399,7 @@
                     "Day 4",
                     "Day 5",
                     "Day 6",
-                    "Day 7"
+                    "Day 7",
                 ],
                 datasets: [
                     {
@@ -411,21 +407,19 @@
                         data: [1, 3, 7, 4, 1, 9, 6],
                         borderColor: [warningColor],
                         borderWidth: 2,
-                        fill: false
-                    }
-                ]
+                        fill: false,
+                    },
+                ],
             };
 
             var lineChart = new Chart(lineChartCanvas, {
                 type: "line",
                 data: data,
-                options: lineChartStyleOption_1
+                options: lineChartStyleOption_1,
             });
         }
         if ($("#source-graph-2").length) {
-            var lineChartCanvas = $("#source-graph-2")
-                .get(0)
-                .getContext("2d");
+            var lineChartCanvas = $("#source-graph-2").get(0).getContext("2d");
             var data = {
                 labels: [
                     "Day 1",
@@ -434,7 +428,7 @@
                     "Day 4",
                     "Day 5",
                     "Day 6",
-                    "Day 7"
+                    "Day 7",
                 ],
                 datasets: [
                     {
@@ -442,15 +436,15 @@
                         data: [1, 4, 8, 3, 4, 6, 1],
                         borderColor: [successColor],
                         borderWidth: 2,
-                        fill: false
-                    }
-                ]
+                        fill: false,
+                    },
+                ],
             };
 
             var lineChart = new Chart(lineChartCanvas, {
                 type: "line",
                 data: data,
-                options: lineChartStyleOption_1
+                options: lineChartStyleOption_1,
             });
         }
         if ($("#UsersDoughnutChart").length) {
@@ -464,16 +458,16 @@
                         backgroundColor: [
                             successColor,
                             primaryColor,
-                            secondaryColor
+                            secondaryColor,
                         ],
                         borderColor: [
                             successColor,
                             primaryColor,
-                            secondaryColor
-                        ]
-                    }
+                            secondaryColor,
+                        ],
+                    },
                 ],
-                labels: ["Request", "Email"]
+                labels: ["Request", "Email"],
             };
             var doughnutPieOptions = {
                 cutoutPercentage: 70,
@@ -484,21 +478,21 @@
                 maintainAspectRatio: true,
                 showScale: true,
                 legend: {
-                    display: false
+                    display: false,
                 },
                 layout: {
                     padding: {
                         left: 0,
                         right: 0,
                         top: 0,
-                        bottom: 0
-                    }
-                }
+                        bottom: 0,
+                    },
+                },
             };
             var doughnutChart = new Chart(doughnutChartCanvas, {
                 type: "doughnut",
                 data: doughnutPieData,
-                options: doughnutPieOptions
+                options: doughnutPieOptions,
             });
         }
         if ($("#conversionBarChart").length) {
@@ -518,7 +512,7 @@
                         "Day 7",
                         "Day 8",
                         "Day 9",
-                        "Day 10"
+                        "Day 10",
                     ],
                     datasets: [
                         {
@@ -526,9 +520,9 @@
                             data: [39, 19, 25, 16, 31, 39, 12, 18, 33, 24],
                             backgroundColor: primaryColor,
                             borderColor: primaryColor,
-                            borderWidth: 0
-                        }
-                    ]
+                            borderWidth: 0,
+                        },
+                    ],
                 },
                 options: {
                     layout: {
@@ -536,8 +530,8 @@
                             left: 0,
                             right: 0,
                             top: 0,
-                            bottom: 0
-                        }
+                            bottom: 0,
+                        },
                     },
 
                     scales: {
@@ -547,30 +541,28 @@
                             {
                                 display: false,
                                 gridLines: {
-                                    color: "rgba(0, 0, 0, 0.03)"
-                                }
-                            }
+                                    color: "rgba(0, 0, 0, 0.03)",
+                                },
+                            },
                         ],
                         xAxes: [
                             {
                                 display: false,
                                 barPercentage: 0.4,
                                 gridLines: {
-                                    display: false
-                                }
-                            }
-                        ]
+                                    display: false,
+                                },
+                            },
+                        ],
                     },
                     legend: {
-                        display: false
-                    }
-                }
+                        display: false,
+                    },
+                },
             });
         }
         if ($("#source-graph-3").length) {
-            var lineChartCanvas = $("#source-graph-3")
-                .get(0)
-                .getContext("2d");
+            var lineChartCanvas = $("#source-graph-3").get(0).getContext("2d");
             var data = {
                 labels: [
                     "Day 1",
@@ -579,7 +571,7 @@
                     "Day 4",
                     "Day 5",
                     "Day 6",
-                    "Day 7"
+                    "Day 7",
                 ],
                 datasets: [
                     {
@@ -587,21 +579,19 @@
                         data: [8, 12, 5, 4, 1, 12, 4],
                         borderColor: [dangerColor],
                         borderWidth: 2,
-                        fill: false
-                    }
-                ]
+                        fill: false,
+                    },
+                ],
             };
 
             var lineChart = new Chart(lineChartCanvas, {
                 type: "line",
                 data: data,
-                options: lineChartStyleOption_1
+                options: lineChartStyleOption_1,
             });
         }
         if ($("#source-graph-4").length) {
-            var lineChartCanvas = $("#source-graph-4")
-                .get(0)
-                .getContext("2d");
+            var lineChartCanvas = $("#source-graph-4").get(0).getContext("2d");
             var data = {
                 labels: [
                     "Day 1",
@@ -610,7 +600,7 @@
                     "Day 4",
                     "Day 5",
                     "Day 6",
-                    "Day 7"
+                    "Day 7",
                 ],
                 datasets: [
                     {
@@ -618,15 +608,15 @@
                         data: [6, 9, 3, 4, 2, 5, 6],
                         borderColor: [warningColor],
                         borderWidth: 2,
-                        fill: false
-                    }
-                ]
+                        fill: false,
+                    },
+                ],
             };
 
             var lineChart = new Chart(lineChartCanvas, {
                 type: "line",
                 data: data,
-                options: lineChartStyleOption_1
+                options: lineChartStyleOption_1,
             });
         }
         if ($("#product-area-chart").length) {
@@ -641,7 +631,7 @@
                     "2015",
                     "2016",
                     "2017",
-                    "2018"
+                    "2018",
                 ],
                 datasets: [
                     {
@@ -650,7 +640,7 @@
                         backgroundColor: "rgba(52,110,240,0.7)",
                         borderColor: "rgba(52,110,240,0.8)",
                         borderWidth: 2,
-                        fill: true
+                        fill: true,
                     },
                     {
                         label: "Product",
@@ -658,40 +648,40 @@
                         backgroundColor: "rgba(0,187,248,0.7)",
                         borderColor: "rgba(0,187,248,0.8)",
                         borderWidth: 2,
-                        fill: true
-                    }
-                ]
+                        fill: true,
+                    },
+                ],
             };
             var options = {
                 scales: {
                     yAxes: [
                         {
-                            display: false
-                        }
+                            display: false,
+                        },
                     ],
                     xAxes: [
                         {
-                            display: false
-                        }
-                    ]
+                            display: false,
+                        },
+                    ],
                 },
                 legend: {
-                    display: false
+                    display: false,
                 },
                 elements: {
                     point: {
-                        radius: 3
+                        radius: 3,
                     },
                     line: {
-                        tension: 0
-                    }
+                        tension: 0,
+                    },
                 },
-                stepsize: 1
+                stepsize: 1,
             };
             var lineChart = new Chart(lineChartCanvas, {
                 type: "line",
                 data: data,
-                options: options
+                options: options,
             });
         }
     });

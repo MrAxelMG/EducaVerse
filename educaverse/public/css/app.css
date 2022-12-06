@@ -14262,6 +14262,11 @@ code {
     line-height: 1;
 }
 
+.text-instagram {
+    color: #E1306C;
+    line-height: 1;
+}
+
 .text-linkedin {
     color: #0177b5;
     line-height: 1;
@@ -17808,7 +17813,7 @@ small {
     margin-right: 10px;
     line-height: 1;
     padding-right: 10px;
-    border-right: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255);
 }
 
 .auth.theme-one .auth-footer li:last-child {
@@ -17818,7 +17823,7 @@ small {
 
 .auth.theme-one .auth-footer li a {
     font-size: 13px;
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255);
 }
 
 @media (max-width: 576px) {
@@ -17828,7 +17833,7 @@ small {
 }
 
 .auth.theme-one .footer-text {
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255);
 }
 
 .auth.theme-two .auto-form-wrapper {
@@ -20029,7 +20034,7 @@ small {
     opacity: 0;
     background: rgba(255, 255, 255, 0.5);
     border-radius: 100%;
-    border: 0 solid rgba(255, 255, 255, 0.4);
+    border: 0 solid rgba(255, 255, 255);
     transition-duration: 0.25s;
     transition-timing-function: ease;
 }
