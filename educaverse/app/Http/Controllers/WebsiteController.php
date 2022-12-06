@@ -11,7 +11,8 @@ class WebsiteController extends Controller
 
     public function index()
     {
-        // Log::channel('papertrail')->info('El usuario: "Javier Salazar", inició sesión');
+        Log::channel('papertrail')->info('El usuario: "Javier Salazar", inició sesión');
+        Log::stack(['papertrail'])->info('Something happened!');
         Log::info('An informational message.');
 
         $videojuegos = Videojuego::join('materias', 'materias.id', '=', 'videojuegos.materia_id')
@@ -34,8 +35,6 @@ class WebsiteController extends Controller
 
     public function nosotros()
     {
-        Log::stack(['single', 'papertrail'])->info('Something happened!');
-
         return view('website.nosotros');
     }
 

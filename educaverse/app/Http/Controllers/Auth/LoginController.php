@@ -25,7 +25,6 @@ class LoginController extends Controller
             ]);
         } 
 
-        Log::channel('papertrail')->info('El usuario: "Javier Salazar", inició sesión');
         return redirect()->to('/admin/dashboard');
     }
 
