@@ -2,7 +2,7 @@
 
 use Log;
 use Monolog\Formatter\LineFormatter;
-use Monolog\Handler\SyslogUdpHandler;
+use Monolog\Handler\SocketHandler;
 use Illuminate\Support\ServiceProvider;
 
 class PaperTrailServiceProvider extends ServiceProvider {
@@ -15,7 +15,7 @@ class PaperTrailServiceProvider extends ServiceProvider {
     public function register()
     {
         $monolog = Log::getLogger();
-        $syslogHandler = new SyslogUdpHandler(env('PAPERTRAIL_URL'), env('PAPERTRAIL_PORT'));
+        $syslogHandler = new SocketHandler(env('PAPERTRAIL_URL'), env('PAPERTRAIL_PORT'));
 
         $formatter = new LineFormatter('%channel%.%level_name%: %message% %extra%');
         $syslogHandler->setFormatter($formatter);
