@@ -77,14 +77,24 @@ return [
 
         'papertrail' => [
             'driver' => 'monolog',
-            'level' => "debug",
+            'level' => "info",
             'handler' => SocketHandler::class,
             'handler_with' => [
-                'connectionString' => [
-                    'tls://'.env('PAPERTRAIL_URL').':'.env('PAPERTRAIL_PORT')
-                ],
+                'host' => env('PAPERTRAIL_URL', 'logs.papertrailapp.com'),
+                'port' => env('PAPERTRAIL_PORT', '26957'),
             ],
         ],
+
+        // 'papertrail' => [
+        //     'driver' => 'monolog',
+        //     'level' => "debug",
+        //     'handler' => SocketHandler::class,
+        //     'handler_with' => [
+        //         'connectionString' => [
+        //             'tls://'.env('PAPERTRAIL_URL').':'.env('PAPERTRAIL_PORT')
+        //         ],
+        //     ],
+        // ],
 
         'stderr' => [
             'driver' => 'monolog',
