@@ -77,7 +77,7 @@ return [
 
         'papertrail' => [
             'driver' => 'monolog',
-            'level' => "info",
+            'level' => "debug",
             'handler' => SocketHandler::class,
             'handler_with' => [
                 'host' => env('PAPERTRAIL_URL', 'logs.papertrailapp.com'),
