@@ -12,5 +12,3 @@
 <link rel="stylesheet" href="{{ asset('css/default.css') }}">
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
-
-{{-- @laravelPWA --}}

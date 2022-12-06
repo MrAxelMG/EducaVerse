@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     @include('website.assets.css')
+    
+    @laravelPWA
 </head>
 
 <body>
