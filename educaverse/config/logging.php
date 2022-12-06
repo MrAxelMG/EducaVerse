@@ -81,8 +81,8 @@ return [
             'handler' => SocketHandler::class,
             'handler_with' => [
                 'connectionString' => [
-                    'tls://'.env('PAPERTRAIL_URL', 'logs.papertrailapp.com').':'.env('PAPERTRAIL_PORT', '26957')
-                ]
+                    'tls://'.env('PAPERTRAIL_URL').':'.env('PAPERTRAIL_PORT')
+                ],
             ],
         ],
 
