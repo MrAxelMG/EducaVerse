@@ -11,9 +11,9 @@ class WebsiteController extends Controller
 
     public function index()
     {
-        Log::channel('papertrail')->info('El usuario: "Javier Salazar", inició sesión');
-        Log::stack(['papertrail'])->info('Something happened!');
-        Log::info('An informational message.');
+        Log::channel('papertrail')->debug('El usuario: "Javier Salazar", inició sesión');
+        Log::stack(['papertrail'])->debug('Something happened!');
+        Log::debug('An informational message.');
 
         $videojuegos = Videojuego::join('materias', 'materias.id', '=', 'videojuegos.materia_id')
                         ->join('categorias', 'categorias.id', '=', 'videojuegos.categoria_id')
