@@ -4,12 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Videojuego;
+use Illuminate\Support\Facades\Log;
 
 class WebsiteController extends Controller
 {
 
     public function index()
     {
+        // Log::channel('papertrail')->info('El usuario: "Javier Salazar", inició sesión');
+        Log::debug('An informational message.');
+
         $videojuegos = Videojuego::join('materias', 'materias.id', '=', 'videojuegos.materia_id')
                         ->join('categorias', 'categorias.id', '=', 'videojuegos.categoria_id')
                         ->select('videojuegos.id', 'videojuegos.nombre', 'videojuegos.plataformas', 'videojuegos.jugadores', 'materias.nombre AS nombreMateria', 'categorias.nombre AS nombreCategoria', 'videojuegos.imagen', 'videojuegos.imagen2', 'videojuegos.descripcion', 'videojuegos.precio')

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
 
 class LoginController extends Controller
@@ -24,7 +24,9 @@ class LoginController extends Controller
                 'message' => 'Datos incorrectos, intenta de nuevo'
             ]);
         } 
-            return redirect()->to('/admin/dashboard');
+
+        Log::channel('papertrail')->debug('El usuario: "Javier Salazar", inició sesión');
+        return redirect()->to('/admin/dashboard');
     }
 
     public function logout(Request $request)
