@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Wait : MonoBehaviour
 {
- public float wait_time = 10f;
+ public float wait_time = 7f;
 
  void Start()
  {

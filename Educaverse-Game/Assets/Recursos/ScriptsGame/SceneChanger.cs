@@ -10,6 +10,6 @@ public class SceneChanger : MonoBehaviour
     //Escena 3 es el juego matematico
     void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 }
