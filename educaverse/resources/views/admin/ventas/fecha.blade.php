@@ -1,0 +1,1 @@
+{{ Carbon\Carbon::parse($fecha)->format('d/m/Y') }} ({{ ucfirst(Carbon\Carbon::parse($fecha)->diffForHumans()) }})

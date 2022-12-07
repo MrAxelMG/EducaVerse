@@ -18,3 +18,4 @@
 <script src="{{ asset('js/plugins.js') }}"></script>
 <script src="{{ asset('js/main.js') }}"></script>
 <script src="{{ asset('js/active-indicator.js') }}"></script>
+<script src="{{ asset('js/ventas.js') }}"></script>

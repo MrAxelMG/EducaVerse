@@ -106,7 +106,7 @@
                                                 </ul>
                                             </div>
                                             <p>{{ $videojuego->descripcion }}</p>
-                                            <a href="{{ $videojuego->url }}" class="btn btn-style-two" target="_blank">Comprar ahora</a>
+                                            <a href="{{ $videojuego->url }}" class="btn btn-style-two comprar" data-videojuegoid="{{ $videojuego->id }}" data-precio="{{ $videojuego->precio }}" data-cantidad="1" target="_blank">Comprar ahora</a>
                                         </div>
                                     </div>                                    
                                 </div>
@@ -212,11 +212,11 @@
                                     <img src="{{ asset("images/videojuegos/$videojuego->imagen") }}" alt="{{ $videojuego->nombre }}" height="365px">
                                 </div>
                                 <div class="featured-game-content">
-                                    <h4><a href="#">{{ $nombre[0] }} <span style="color: #221d1d">{{ $nombre[1] }}</span></a></h4>
+                                    <h4><a href="#" class="prevent">{{ $nombre[0] }} <span style="color: #221d1d">{{ $nombre[1] }}</span></a></h4>
                                 </div>
                                 <div class="featured-game-content featured-game-overlay-content">
                                     <div class="featured-game-icon"><img src="{{ asset('images/icon/featured_game_icon.png') }}" alt=""></div>
-                                    <h4><a href="#">{{ $nombre[0] }} <span>{{ $nombre[1] }}</span></a></h4>
+                                    <h4><a href="#" class="prevent">{{ $nombre[0] }} <span>{{ $nombre[1] }}</span></a></h4>
                                     <div class="featured-game-meta">
                                         <i class="fas fa-bell"></i>
                                         <span>{{ $plat }}</span>
@@ -267,11 +267,11 @@
                     <div class="col-xl-3">
                         <div class="shop-item">
                             <div class="product-thumb">
-                                <a href="#"><img src="{{ asset('images/proximos/encuentra objetos perdidos.png') }}" alt="Encuentra objetos perdidos" width="278px" height="243px"></a>
+                                <a href="#" class="prevent"><img src="{{ asset('images/proximos/encuentra objetos perdidos.png') }}" alt="Encuentra objetos perdidos" width="278px" height="243px"></a>
                             </div>
                             <div class="product-content">
-                                <div class="product-tag"><a href="#">P. Lógico</a></div>
-                                <h4><a href="#">Encuentra objetos perdidos</a></h4>
+                                <div class="product-tag"><a href="#" class="prevent">P. Lógico</a></div>
+                                <h4><a href="#" class="prevent">Encuentra objetos perdidos</a></h4>
                                 <div class="product-meta">
                                     <div class="product-price">
                                         <h5>¡proximamente!</h5>
@@ -283,11 +283,11 @@
                     <div class="col-xl-3">
                         <div class="shop-item">
                             <div class="product-thumb">
-                                <a href="#"><img src="{{ asset('images/proximos/mas zonas con parkour.png') }}" alt="Mas zonas con parkour" width="278px" height="243px"></a>
+                                <a href="#" class="prevent"><img src="{{ asset('images/proximos/mas zonas con parkour.png') }}" alt="Mas zonas con parkour" width="278px" height="243px"></a>
                             </div>
                             <div class="product-content">
-                                <div class="product-tag"><a href="#">Habilidad</a></div>
-                                <h4><a href="#">Mas zonas con parkour</a></h4>
+                                <div class="product-tag"><a href="#" class="prevent">Habilidad</a></div>
+                                <h4><a href="#" class="prevent">Mas zonas con parkour</a></h4>
                                 <div class="product-meta">
                                     <div class="product-price">
                                         <h5>¡proximamente!</h5>
@@ -299,11 +299,11 @@
                     <div class="col-xl-3">
                         <div class="shop-item">
                             <div class="product-thumb">
-                                <a href="#"><img src="{{ asset('images/proximos/recorrido inicial rejugable.png') }}" alt="Recorrido inicial rejugable" width="278px" height="243px"></a>
+                                <a href="#" class="prevent"><img src="{{ asset('images/proximos/recorrido inicial rejugable.png') }}" alt="Recorrido inicial rejugable" width="278px" height="243px"></a>
                             </div>
                             <div class="product-content">
-                                <div class="product-tag"><a href="#">Habilidad</a></div>
-                                <h4><a href="#">Recorrido inicial rejugable</a></h4>
+                                <div class="product-tag"><a href="#" class="prevent">Habilidad</a></div>
+                                <h4><a href="#" class="prevent">Recorrido inicial rejugable</a></h4>
                                 <div class="product-meta">
                                     <div class="product-price">
                                         <h5>¡proximamente!</h5>
@@ -315,11 +315,11 @@
                     <div class="col-xl-3">
                         <div class="shop-item">
                             <div class="product-thumb">
-                                <a href="#"><img src="{{ asset('images/proximos/recorrido matematico avanzado.png') }}" alt="Recorrido matemático avanzado" width="278px" height="243px"></a>
+                                <a href="#" class="prevent"><img src="{{ asset('images/proximos/recorrido matematico avanzado.png') }}" alt="Recorrido matemático avanzado" width="278px" height="243px"></a>
                             </div>
                             <div class="product-content">
-                                <div class="product-tag"><a href="#">Matemáticas</a></div>
-                                <h4><a href="#">Recorrido matemático avanzado</a></h4>
+                                <div class="product-tag"><a href="#" class="prevent">Matemáticas</a></div>
+                                <h4><a href="#" class="prevent">Recorrido matemático avanzado</a></h4>
                                 <div class="product-meta">
                                     <div class="product-price">
                                         <h5>¡proximamente!</h5>
@@ -331,11 +331,11 @@
                     <div class="col-xl-3">
                         <div class="shop-item">
                             <div class="product-thumb">
-                                <a href="#"><img src="{{ asset('images/proximos/rompecabezas geografico.png') }}" alt="Rompecabezas geográfico" width="278px" height="243px"></a>
+                                <a href="#" class="prevent"><img src="{{ asset('images/proximos/rompecabezas geografico.png') }}" alt="Rompecabezas geográfico" width="278px" height="243px"></a>
                             </div>
                             <div class="product-content">
-                                <div class="product-tag"><a href="#">Geografía</a></div>
-                                <h4><a href="#">Rompecabezas geográfico</a></h4>
+                                <div class="product-tag"><a href="#" class="prevent">Geografía</a></div>
+                                <h4><a href="#" class="prevent">Rompecabezas geográfico</a></h4>
                                 <div class="product-meta">
                                     <div class="product-price">
                                         <h5>¡proximamente!</h5>
@@ -347,11 +347,11 @@
                     <div class="col-xl-3">
                         <div class="shop-item">
                             <div class="product-thumb">
-                                <a href="#"><img src="{{ asset('images/proximos/nintendo.jpg') }}" alt="Diferentes plataformas" width="278px" height="243px"></a>
+                                <a href="#" class="prevent"><img src="{{ asset('images/proximos/nintendo.jpg') }}" alt="Diferentes plataformas" width="278px" height="243px"></a>
                             </div>
                             <div class="product-content">
-                                <div class="product-tag"><a href="#">Nintendo DS</a></div>
-                                <h4><a href="#">Diferentes plataformas</a></h4>
+                                <div class="product-tag"><a href="#" class="prevent">Nintendo DS</a></div>
+                                <h4><a href="#" class="prevent">Diferentes plataformas</a></h4>
                                 <div class="product-meta">
                                     <div class="product-price">
                                         <h5>¡proximamente!</h5>

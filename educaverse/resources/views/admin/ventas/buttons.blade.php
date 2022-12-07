@@ -1,0 +1,2 @@
+<a href="" data-cantidad="{{ $cantidad }}" data-total="{{ $total }}" data-videojuego="{{ $videojuegos_nombre }}"  data-fecha="{{ $fecha }}" type="button" title="Vista previa" class="btn btn-primary btn-sm btn-icon view"> <i class="mdi mdi-eye"></i></a>
+<a href="" data-id="{{ $ventasid }}" type="button" title="Eliminar venta" class="btn btn-danger btn-sm btn-icon delete"> <i class="mdi mdi-delete"></i></a>

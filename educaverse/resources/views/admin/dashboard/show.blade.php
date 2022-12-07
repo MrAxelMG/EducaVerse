@@ -156,26 +156,26 @@
     <div class="col-md-6 col-xl-4 grid-margin stretch-card">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">Schedules</h4>
+          <h4 class="card-title">Tareas</h4>
           <div class="shedule-list d-flex align-items-center justify-content-between mb-3">
             <h3>{{ \Carbon\Carbon::now()->isoFormat('D \d\e MMMM \d\e\l Y'); }}</h3>
-            <small>21 Events</small>
+            <small>21 Eventos</small>
           </div>
           <div class="event border-bottom py-3">
-            <p class="mb-2 font-weight-medium">Skype call with alex</p>
+            <p class="mb-2 font-weight-medium">Presentar proyecto</p>
             <div class="d-flex align-items-center">
-              <div class="badge badge-success">3:45 AM</div>
-              <small class="text-muted ml-2">London, UK</small>
+              <div class="badge badge-success">12:00 PM</div>
+              <small class="text-muted ml-2">Durango, Dgo</small>
               <div class="image-grouped ml-auto">
                 <img src="{{ url('assets/images/faces/face10.jpg') }}" alt="profile image">
                 <img src="{{ url('assets/images/faces/face13.jpg') }}" alt="profile image"> </div>
             </div>
           </div>
           <div class="event py-3 border-bottom">
-            <p class="mb-2 font-weight-medium">Data Analysing with team</p>
+            <p class="mb-2 font-weight-medium">Vender el proyecto</p>
             <div class="d-flex align-items-center">
-              <div class="badge badge-warning">12.30 AM</div>
-              <small class="text-muted ml-2">San Francisco, CA</small>
+              <div class="badge badge-warning">13:30 PM</div>
+              <small class="text-muted ml-2">Durango, Dgo</small>
               <div class="image-grouped ml-auto">
                 <img src="{{ url('assets/images/faces/face20.jpg') }}" alt="profile image">
                 <img src="{{ url('assets/images/faces/face17.jpg') }}" alt="profile image">
@@ -183,10 +183,10 @@
             </div>
           </div>
           <div class="event py-3">
-            <p class="mb-2 font-weight-medium">Meeting with client</p>
+            <p class="mb-2 font-weight-medium">Mostrar resultados</p>
             <div class="d-flex align-items-center">
-              <div class="badge badge-danger">4.15 AM</div>
-              <small class="text-muted ml-2">San Diego, CA</small>
+              <div class="badge badge-danger">14:30 PM</div>
+              <small class="text-muted ml-2">Durango, Dgo</small>
               <div class="image-grouped ml-auto">
                 <img src="{{ url('assets/images/faces/face21.jpg') }}" alt="profile image">
                 <img src="{{ url('assets/images/faces/face16.jpg') }}" alt="profile image"> </div>
@@ -202,9 +202,9 @@
             <div class="card-body d-flex align-items-center">
               <div class="d-flex flex-grow">
                 <div class="mr-auto">
-                  <p class="highlight-text mb-0 text-white"> $168.90 </p>
+                  <p class="highlight-text mb-0 text-white"> ${{ $ventasMes }} </p>
                   <p class="text-white">  Ventas de este mes </p>
-                  <div class="badge badge-pill"> 18% </div>
+                  <div class="badge badge-pill"> Creció un 18% </div>
                 </div>
                 <div class="ml-auto align-self-end">
                   <div id="revenue-chart" sparkType="bar" sparkBarColor="#e6ecf5" barWidth="2"> 4,3,10,9,4,3,8,6,7,8 </div>
@@ -218,8 +218,8 @@
             <div class="card-body">
               <div class="revenue-item d-flex">
                 <div class="revenue-desc">
-                  <h6>Member Profit</h6>
-                  <p class="font-weight-light"> Average Weekly Profit </p>
+                  <h6>Beneficio</h6>
+                  <p class="font-weight-light"> Beneficio semanal promedio </p>
                 </div>
                 <div class="revenue-amount">
                   <p class="text-primary"> +168.900 </p>
@@ -227,11 +227,11 @@
               </div>
               <div class="revenue-item d-flex">
                 <div class="revenue-desc">
-                  <h6>Total Profit</h6>
-                  <p class="font-weight-light"> Weekly Customer Orders </p>
+                  <h6>Total de beneficio</h6>
+                  <p class="font-weight-light"> Pedidos de clientes semanales </p>
                 </div>
                 <div class="revenue-amount">
-                  <p class="text-primary"> +6890.00 </p>
+                  <p class="text-primary"> +6,890.00 </p>
                 </div>
               </div>
             </div>
@@ -249,12 +249,12 @@
               <canvas id="UsersDoughnutChart" class="400x160 mb-4 mb-md-0" height="200"></canvas>
             </div>
             <div class="col-md-7">
-              <h4 class="card-title font-weight-medium mb-0 d-none d-md-block">Active Users</h4>
+              <h4 class="card-title font-weight-medium mb-0 d-none d-md-block" style="text-transform: none;">Usuarios activos en este momento</h4>
               <div class="wrapper mt-4">
                 <div class="d-flex justify-content-between mb-2">
                   <div class="d-flex align-items-center">
-                    <p class="mb-0 font-weight-medium">67,550</p>
-                    <small class="text-muted ml-2">Email account</small>
+                    <p class="mb-0 font-weight-medium">558</p>
+                    <small class="text-muted ml-2">Cuenta de correo</small>
                   </div>
                   <p class="mb-0 font-weight-medium">80%</p>
                 </div>
@@ -265,8 +265,8 @@
               <div class="wrapper mt-4">
                 <div class="d-flex justify-content-between mb-2">
                   <div class="d-flex align-items-center">
-                    <p class="mb-0 font-weight-medium">21,435</p>
-                    <small class="text-muted ml-2">Requests</small>
+                    <p class="mb-0 font-weight-medium">431</p>
+                    <small class="text-muted ml-2">Peticiones</small>
                   </div>
                   <p class="mb-0 font-weight-medium">34%</p>
                 </div>
@@ -284,10 +284,9 @@
         <div class="card-body">
           <div class="row">
             <div class="col-md-7">
-              <h4 class="card-title font-weight-medium mb-3">Amount Due</h4>
-              <h1 class="font-weight-medium mb-0">$5998</h1>
-              <p class="text-muted">Milestone Completed</p>
-              <p class="mb-0">Payment for next week</p>
+              <h4 class="card-title font-weight-medium mb-3">Ventas totales</h4>
+              <h1 class="font-weight-medium mb-0">${{ $ventas }}</h1>
+              <p class="mb-0">Ventas por videojuegos y app</p>
             </div>
             <div class="col-md-5 d-flex align-items-end mt-4 mt-md-0">
               <canvas id="conversionBarChart" height="150"></canvas>
@@ -301,85 +300,35 @@
     <div class="col-lg-12 grid-margin">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">Orders</h4>
+          <h4 class="card-title">Ordenes</h4>
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
                 <tr>
                   <th> # </th>
-                  <th> First name </th>
-                  <th> Progress </th>
-                  <th> Amount </th>
-                  <th> Sales </th>
-                  <th> Deadline </th>
+                  <th> Nombre </th>
+                  <th> Progreso </th>
+                  <th> Total </th>
+                  <th> Venta </th>
+                  <th> Fecha </th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td class="font-weight-medium"> 1 </td>
-                  <td> Herman Beck </td>
-                  <td>
-                    <div class="progress">
-                      <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </td>
-                  <td> $ 77.99 </td>
-                  <td class="text-danger"> 53.64% <i class="mdi mdi-arrow-down"></i>
-                  </td>
-                  <td> May 15, 2015 </td>
-                </tr>
-                <tr>
-                  <td class="font-weight-medium"> 2 </td>
-                  <td> Messsy Adam </td>
-                  <td>
-                    <div class="progress">
-                      <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </td>
-                  <td> $245.30 </td>
-                  <td class="text-success"> 24.56% <i class="mdi mdi-arrow-up"></i>
-                  </td>
-                  <td> July 1, 2015 </td>
-                </tr>
-                <tr>
-                  <td class="font-weight-medium"> 3 </td>
-                  <td> John Richards </td>
-                  <td>
-                    <div class="progress">
-                      <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </td>
-                  <td> $138.00 </td>
-                  <td class="text-danger"> 28.76% <i class="mdi mdi-arrow-down"></i>
-                  </td>
-                  <td> Apr 12, 2015 </td>
-                </tr>
-                <tr>
-                  <td class="font-weight-medium"> 4 </td>
-                  <td> Peter Meggik </td>
-                  <td>
-                    <div class="progress">
-                      <div class="progress-bar bg-primary progress-bar-striped" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </td>
-                  <td> $ 77.99 </td>
-                  <td class="text-danger"> 53.45% <i class="mdi mdi-arrow-down"></i>
-                  </td>
-                  <td> May 15, 2015 </td>
-                </tr>
-                <tr>
-                  <td class="font-weight-medium"> 5 </td>
-                  <td> Edward </td>
-                  <td>
-                    <div class="progress">
-                      <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </td>
-                  <td> $ 160.25 </td>
-                  <td class="text-success"> 18.32% <i class="mdi mdi-arrow-up"></i>
-                  </td>
-                  <td> May 03, 2015 </td>
-                </tr>
+                @foreach ($ventaFinal as $venta)                  
+                  <tr>
+                    <td class="font-weight-medium"> {{ $venta->ventasid }} </td>
+                    <td> {{ $venta->nombre }} </td>
+                    <td>
+                      <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </td>
+                    <td> ${{ $venta->total }}.00 </td>
+                    <td class="text-success"> {{ $venta->ventasid + 23.5 }}% <i class="mdi mdi-arrow-up"></i>
+                    </td>
+                    <td> {{ \Carbon\Carbon::parse($venta->fecha)->formatLocalized('%d de %B de %Y') }} </td>
+                  </tr>
+                @endforeach
               </tbody>
             </table>
           </div>

@@ -35,6 +35,10 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function(){
     Route::get('contacto/show', [App\Http\Controllers\ContactoController::class, 'show']);
     Route::post('contacto/delete', [App\Http\Controllers\ContactoController::class, 'delete']);
 
+    Route::get('ventas', [App\Http\Controllers\VentaController::class, 'index']);
+    Route::get('ventas/show', [App\Http\Controllers\VentaController::class, 'show']);
+    Route::post('ventas/delete', [App\Http\Controllers\VentaController::class, 'delete']);
+
     Route::get('perfil', [App\Http\Controllers\PerfilController::class, 'index']);
     Route::post('perfil/update', [App\Http\Controllers\PerfilController::class, 'update']);
 
@@ -48,6 +52,7 @@ Route::get('/videojuegos', [App\Http\Controllers\WebsiteController::class, 'vide
 Route::get('/nosotros', [App\Http\Controllers\WebsiteController::class, 'nosotros'])->name('contacto');
 Route::get('/contacto', [App\Http\Controllers\WebsiteController::class, 'contacto'])->name('nosotros');
 Route::post('/contacto/add', [App\Http\Controllers\ContactoController::class, 'add']);
+Route::post('/venta/add', [App\Http\Controllers\VentaController::class, 'add']);
 
 Route::get('login', [App\Http\Controllers\Auth\LoginController::class, 'create'])->name('login');
 Route::post('login', [App\Http\Controllers\Auth\LoginController::class, 'store']);
