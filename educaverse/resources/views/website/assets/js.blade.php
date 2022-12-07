@@ -1,3 +1,19 @@
+<script type="text/javascript">
+    // Initialize the service worker
+    if ('serviceWorker' in navigator) {
+        console.log("entró");
+        navigator.serviceWorker.register('/serviceworker.js', {
+            scope: '.'
+        }).then(function (registration) {
+            // Registration was successful
+            console.log('Laravel PWA: ServiceWorker registration successful with scope: ', registration.scope);
+        }, function (err) {
+            // registration failed :(
+            console.log('Laravel PWA: ServiceWorker registration failed: ', err);
+        });
+    }
+</script>
+
 <script src="{{ asset('js/vendor/jquery-3.4.1.min.js') }}"></script>
 <script src="{{ asset('js/popper.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
@@ -18,19 +34,3 @@
 <script src="{{ asset('js/plugins.js') }}"></script>
 <script src="{{ asset('js/main.js') }}"></script>
 <script src="{{ asset('js/active-indicator.js') }}"></script>
-
-<script type="text/javascript">
-    // Initialize the service worker
-    if ('serviceWorker' in navigator) {
-        console.log("entró");
-        navigator.serviceWorker.register('/serviceworker.js', {
-            scope: '.'
-        }).then(function (registration) {
-            // Registration was successful
-            console.log('Laravel PWA: ServiceWorker registration successful with scope: ', registration.scope);
-        }, function (err) {
-            // registration failed :(
-            console.log('Laravel PWA: ServiceWorker registration failed: ', err);
-        });
-    }
-</script>
