@@ -106,7 +106,7 @@
                                                 </ul>
                                             </div>
                                             <p>{{ $videojuego->descripcion }}</p>
-                                            <a href="{{ $videojuego->url }}" class="btn btn-style-two" target="_blank" data-id="{{ $videojuego->id }}">Comprar ahora</a>
+                                            <a href="{{ $videojuego->url }}" class="btn btn-style-two" target="_blank">Comprar ahora</a>
                                         </div>
                                     </div>                                    
                                 </div>

@@ -45,7 +45,7 @@
                                             @endphp
                                             <h4>{{ $nombre[0] }} <span>{{ $nombre[1] }}</span></h4>
                                             <p>Precio : <span>${{ number_format($videojuego->precio, 2) }}</span></p>
-                                            <a href="#" class="btn btn-style-two" style="padding: 10px 25px !important; margin-top: 40px; margin-bottom: -15px">Comprar ahora</a>
+                                            <a href="{{ $videojuego->url }}" class="btn btn-style-two" style="padding: 10px 25px !important; margin-top: 40px; margin-bottom: -15px">Comprar ahora</a>
                                         </div>
                                     </div>
                                 @endforeach
