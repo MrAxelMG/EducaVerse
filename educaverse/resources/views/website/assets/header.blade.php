@@ -12,7 +12,7 @@
                       <div id="mobile-menu" class="navbar-wrap d-none d-lg-flex" style="display: block;">
                         @php
                           $ruta = explode('/', request());
-                          $ruta = explode(' ', $ruta[4]);
+                          $ruta = explode(' ', $ruta[3]);
                         @endphp
                         <ul>
                           <li @if ($ruta[0] == '') class="show" @endif >
