@@ -3,7 +3,7 @@
     if ('serviceWorker' in navigator) {
         console.log("entró");
         navigator.serviceWorker.register('/serviceworker.js', {
-            scope: '.'
+            scope: '/'
         }).then(function (registration) {
             // Registration was successful
             console.log('Laravel PWA: ServiceWorker registration successful with scope: ', registration.scope);
