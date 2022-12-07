@@ -10,6 +10,7 @@
 
     @include('website.assets.css')
     
+    @laravelPWA
 </head>
 
 <body>
