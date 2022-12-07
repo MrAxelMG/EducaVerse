@@ -10,7 +10,6 @@
 
     @include('website.assets.css')
     
-    @laravelPWA
 </head>
 
 <body>
@@ -107,7 +106,7 @@
                                                 </ul>
                                             </div>
                                             <p>{{ $videojuego->descripcion }}</p>
-                                            <a href="#" class="btn btn-style-two">Comprar ahora</a>
+                                            <a href="{{ $videojuego->url }}" class="btn btn-style-two" target="_blank" data-id="{{ $videojuego->id }}">Comprar ahora</a>
                                         </div>
                                     </div>                                    
                                 </div>
