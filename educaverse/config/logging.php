@@ -18,7 +18,7 @@ return [
     |
     */
 
-    'default' => env('LOG_CHANNEL', 'stack'),
+    'default' => env('LOG_CHANNEL', 'papertrail'),
 
     /*
     |--------------------------------------------------------------------------
@@ -31,7 +31,7 @@ return [
     |
     */
 
-    'deprecations' => env('LOG_DEPRECATIONS_CHANNEL', 'null'),
+    'deprecations' => env('LOG_DEPRECATIONS_CHANNEL', 'papertrail'),
 
     /*
     |--------------------------------------------------------------------------
@@ -75,23 +75,23 @@ return [
             'level' => env('LOG_LEVEL', 'critical'),
         ],
 
-        // 'papertrail' => [
-        //     'driver' => 'monolog',
-        //     'level' => "debug",
-        //     'handler' => SocketHandler::class,
-        //     'handler_with' => [
-        //         'host' => env('PAPERTRAIL_URL', 'logs.papertrailapp.com'),
-        //         'port' => env('PAPERTRAIL_PORT', '26957'),
-        //     ],
-        // ],
+        'papertrail2' => [
+            'driver' => 'monolog',
+            'level' => "critical",
+            'handler' => SocketHandler::class,
+            'handler_with' => [
+                'host' => 'logs.papertrailapp.com',
+                'port' => 26957,
+            ],
+        ],
 
         'papertrail' => [
             'driver' => 'monolog',
-            'level' => "debug",
+            'level' => "critical",
             'handler' => SocketHandler::class,
             'handler_with' => [
                 'connectionString' => [
-                    'tls://'.env('PAPERTRAIL_URL').':'.env('PAPERTRAIL_PORT')
+                    'tls://logs.papertrailapp.com:26957'
                 ],
             ],
         ],
@@ -123,6 +123,12 @@ return [
 
         'emergency' => [
             'path' => storage_path('logs/laravel.log'),
+        ],
+
+        'custom' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/custom.log'),
+            'level' => 'critical',
         ],
     ],
 
