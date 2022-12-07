@@ -5,7 +5,7 @@ return [
     'manifest' => [
         'name' => env('APP_NAME', 'EducaVerse Oficial'),
         'short_name' => 'EV',
-        'start_url' => '/public/',
+        'start_url' => '/',
         'background_color' => '#252634',
         'theme_color' => '#88c426',
         'display' => 'standalone',
