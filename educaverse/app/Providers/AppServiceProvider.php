@@ -28,7 +28,8 @@ class AppServiceProvider extends ServiceProvider
             return "<?php echo number_format($money, 2); ?>";
 });
 
-date_default_timezone_set('America/Mexico_City');
-setlocale(LC_ALL, 'es_ES.UTF-8');
+Carbon::setUTF8(true);
+Carbon::setLocale(config('app.locale'));
+setlocale(LC_ALL, 'es_MX', 'es', 'ES', 'es_MX.utf8');
 }
 }
