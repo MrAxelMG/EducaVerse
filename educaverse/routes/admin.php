@@ -6,43 +6,43 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function(){
     Route::get('dashboard', [App\Http\Controllers\DashboardController::class, 'index']);
 
-    Route::get('materias', [App\Http\Controllers\MateriaController::class, 'index']);
-    Route::get('materias/show', [App\Http\Controllers\MateriaController::class, 'show']);
-    Route::post('materias/add', [App\Http\Controllers\MateriaController::class, 'add']);
-    Route::post('materias/update', [App\Http\Controllers\MateriaController::class, 'update']);
-    Route::post('materias/delete', [App\Http\Controllers\MateriaController::class, 'delete']);
+    Route::get('/materias', [App\Http\Controllers\MateriaController::class, 'index']);
+    Route::get('/materias/show', [App\Http\Controllers\MateriaController::class, 'show']);
+    Route::post('/materias/add', [App\Http\Controllers\MateriaController::class, 'add']);
+    Route::post('/materias/update', [App\Http\Controllers\MateriaController::class, 'update']);
+    Route::post('/materias/delete', [App\Http\Controllers\MateriaController::class, 'delete']);
 
 
-    Route::get('escuelas', [App\Http\Controllers\EscuelaController::class, 'index']);
-    Route::get('escuelas/show', [App\Http\Controllers\EscuelaController::class, 'show']);
-    Route::post('escuelas/add', [App\Http\Controllers\EscuelaController::class, 'add']);
-    Route::post('escuelas/update', [App\Http\Controllers\EscuelaController::class, 'update']);
-    Route::post('escuelas/delete', [App\Http\Controllers\EscuelaController::class, 'delete']);
+    Route::get('/escuelas', [App\Http\Controllers\EscuelaController::class, 'index']);
+    Route::get('/escuelas/show', [App\Http\Controllers\EscuelaController::class, 'show']);
+    Route::post('/escuelas/add', [App\Http\Controllers\EscuelaController::class, 'add']);
+    Route::post('/escuelas/update', [App\Http\Controllers\EscuelaController::class, 'update']);
+    Route::post('/escuelas/delete', [App\Http\Controllers\EscuelaController::class, 'delete']);
 
-    Route::get('categorias', [App\Http\Controllers\CategoriaController::class, 'index']);
-    Route::get('categorias/show', [App\Http\Controllers\CategoriaController::class, 'show']);
-    Route::post('categorias/add', [App\Http\Controllers\CategoriaController::class, 'add']);
-    Route::post('categorias/update', [App\Http\Controllers\CategoriaController::class, 'update']);
-    Route::post('categorias/delete', [App\Http\Controllers\CategoriaController::class, 'delete']);
+    Route::get('/categorias', [App\Http\Controllers\CategoriaController::class, 'index']);
+    Route::get('/categorias/show', [App\Http\Controllers\CategoriaController::class, 'show']);
+    Route::post('/categorias/add', [App\Http\Controllers\CategoriaController::class, 'add']);
+    Route::post('/categorias/update', [App\Http\Controllers\CategoriaController::class, 'update']);
+    Route::post('/categorias/delete', [App\Http\Controllers\CategoriaController::class, 'delete']);
 
-    Route::get('videojuegos', [App\Http\Controllers\VideojuegoController::class, 'index']);
-    Route::get('videojuegos/show', [App\Http\Controllers\VideojuegoController::class, 'show']);
-    Route::post('videojuegos/add', [App\Http\Controllers\VideojuegoController::class, 'add']);
-    Route::post('videojuegos/update', [App\Http\Controllers\VideojuegoController::class, 'update']);
-    Route::post('videojuegos/delete', [App\Http\Controllers\VideojuegoController::class, 'delete']);
+    Route::get('/videojuegos', [App\Http\Controllers\VideojuegoController::class, 'index']);
+    Route::get('/videojuegos/show', [App\Http\Controllers\VideojuegoController::class, 'show']);
+    Route::post('/videojuegos/add', [App\Http\Controllers\VideojuegoController::class, 'add']);
+    Route::post('/videojuegos/update', [App\Http\Controllers\VideojuegoController::class, 'update']);
+    Route::post('/videojuegos/delete', [App\Http\Controllers\VideojuegoController::class, 'delete']);
 
-    Route::get('contacto', [App\Http\Controllers\ContactoController::class, 'index']);
-    Route::get('contacto/show', [App\Http\Controllers\ContactoController::class, 'show']);
-    Route::post('contacto/delete', [App\Http\Controllers\ContactoController::class, 'delete']);
+    Route::get('/contacto', [App\Http\Controllers\ContactoController::class, 'index']);
+    Route::get('/contacto/show', [App\Http\Controllers\ContactoController::class, 'show']);
+    Route::post('/contacto/delete', [App\Http\Controllers\ContactoController::class, 'delete']);
 
-    Route::get('ventas', [App\Http\Controllers\VentaController::class, 'index']);
-    Route::get('ventas/show', [App\Http\Controllers\VentaController::class, 'show']);
-    Route::post('ventas/delete', [App\Http\Controllers\VentaController::class, 'delete']);
+    Route::get('/ventas', [App\Http\Controllers\VentaController::class, 'index']);
+    Route::get('/ventas/show', [App\Http\Controllers\VentaController::class, 'show']);
+    Route::post('/ventas/delete', [App\Http\Controllers\VentaController::class, 'delete']);
 
-    Route::get('perfil', [App\Http\Controllers\PerfilController::class, 'index']);
-    Route::post('perfil/update', [App\Http\Controllers\PerfilController::class, 'update']);
+    Route::get('/perfil', [App\Http\Controllers\PerfilController::class, 'index']);
+    Route::post('/perfil/update', [App\Http\Controllers\PerfilController::class, 'update']);
 
-    Route::get('grafica', [App\Http\Controllers\DashboardController::class, 'grafica']);
+    Route::get('/grafica', [App\Http\Controllers\DashboardController::class, 'grafica']);
     
     Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout']);
 });

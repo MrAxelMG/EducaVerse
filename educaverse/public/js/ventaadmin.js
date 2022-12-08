@@ -1,6 +1,6 @@
 $(document).ready(function () {
     var table = $("#ventasTable").DataTable({
-        ajax: "/admin/ventas/show",
+        ajax: "/public/admin/ventas/show",
         columns: [
             { data: "videojuegos_nombre" },
             { data: "cantidad" },
