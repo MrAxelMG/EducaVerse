@@ -52,6 +52,7 @@ class VideojuegoController extends Controller
         $videojuegos->jugadores = $request->jugadores;
         $videojuegos->categoria_id = $categoria_id;
         $videojuegos->materia_id = $request->materia_id;
+        $videojuegos->url = $request->url;
 
         // $file = $request->file('imagen');
         // $filename = $file->getClientOriginalName();
@@ -94,6 +95,7 @@ class VideojuegoController extends Controller
         $videojuegos->categoria_id = $categoria_id;
         $videojuegos->descripcion = $request->descripcion;
         $videojuegos->materia_id = $request->materia_id;
+        $videojuegos->url = $request->url;
 
         // if ($request->hasFile('imagen')) {
         //     $imagen_anterior = Videojuego::where('id', $request->id)->first();

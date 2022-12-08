@@ -97,6 +97,14 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6 col-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" placeholder="" class="form-control" id="urlInput" name="url" required>
+                                    <label for="urlInput">URL de venta</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-12">
                                 <div><label for="plataformasInput">Plataformas</label></div>
                                 <div class="d-flex align-items-center" style="margin-top: -15px">
                                     <div class="form-check px-0">
