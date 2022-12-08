@@ -57,7 +57,15 @@
                                     <label for="nombreInput">Nombre</label>
                                 </div>
                             </div>
-                        </div>                        
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="descripcionInput" name="descripcion" required>
+                                    <label for="descripcionInput">Descripcion</label>
+                                </div>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-md-6 col-12">
                                 <div class="form-floating mb-3">

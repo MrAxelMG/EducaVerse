@@ -276,6 +276,7 @@ $(document).ready(function () {
         $("#idInput").val("");
 
         $("#nombreInput").prop("readonly", false);
+        $("#descripcionInput").prop("readonly", false);
         $("#jugadoresInput").prop("disabled", false);
         $("#materiaIdInput").prop("disabled", false);
 
@@ -316,6 +317,10 @@ $(document).ready(function () {
         var jugadores = $(this).data("jugadores");
         $("#jugadoresInput").val(jugadores);
         $("#jugadoresInput").prop("disabled", true);
+
+        var descripcion = $(this).data("descripcion");
+        $("#descripcionInput").val(descripcion);
+        $("#descripcionInput").prop("disabled", true);
 
         var materiaid = $(this).data("materiaid");
         $("#materiaIdInput").val(materiaid);
@@ -386,6 +391,10 @@ $(document).ready(function () {
         var nombre = $(this).data("nombre");
         $("#nombreInput").val(nombre);
         $("#nombreInput").prop("readonly", false);
+
+        var descripcion = $(this).data("descripcion");
+        $("#descripcionInput").val(descripcion);
+        $("#descripcionInput").prop("disabled", false);
 
         var jugadores = $(this).data("jugadores");
         $("#jugadoresInput").val(jugadores);
