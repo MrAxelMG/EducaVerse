@@ -26,8 +26,8 @@
                         <div class="row">
                             <div class="col-xl-6 col-lg-7 col-md-11">
                                 <div class="slider-content">
-                                    <h6 data-animation="fadeInUp" data-delay=".4s" style="color: #418039; margin-left: 2.8rem !important;">EducaVerse</h6>
-                                    <h2 data-animation="fadeInUp" data-delay=".4s" style="text-transform: none; margin-left: 2.6rem !important;">Empresa de <span style="color: #2f552a">Videojuegos</span> Educativos</h2>
+                                    <h6 data-animation="fadeInUp" data-delay=".4s" style="color: #418039; margin-left: 2.8rem ;">EducaVerse</h6>
+                                    <h2 data-animation="fadeInUp" data-delay=".4s" style="text-transform: none; margin-left: 2.6rem ;">Empresa de <span style="color: #2f552a">Videojuegos</span> Educativos</h2>
                                 </div>
                             </div>
                         </div>
@@ -103,7 +103,7 @@
                                                     <li><span>Categoría :</span> {{ $videojuego->nombreCategoria }}.</li>
                                                     <li><span>Jugadores :</span> {{ $videojuego->jugadores }}.</li>
                                                     <li><span>Plataformas :</span> {{ $plat }}.</li>
-                                                    <li><span>Precio :</span> {{ $videojuego->precio }}.</li>
+                                                    <li><span>Precio :</span>${{ number_format($videojuego->precio) }}MXN.</li>
                                                 </ul>
                                             </div>
                                             <p>{{ $videojuego->descripcion }}</p>
