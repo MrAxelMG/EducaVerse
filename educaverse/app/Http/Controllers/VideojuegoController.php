@@ -51,19 +51,19 @@ class VideojuegoController extends Controller
         $videojuegos->categoria_id = $categoria_id;
         $videojuegos->materia_id = $request->materia_id;
 
-        $file = $request->file('imagen');
-        $filename = $file->getClientOriginalName();
+        // $file = $request->file('imagen');
+        // $filename = $file->getClientOriginalName();
 
-        $file->move(public_path("videojuegos/$request->nombre/imagen"), $filename);
-        $videojuegos->imagen = $filename;
+        // $file->move(public_path("videojuegos/$request->nombre/imagen"), $filename);
+        // $videojuegos->imagen = $filename;
 
-        if ($request->hasFile('imagen2')) {
-            $file = $request->file('imagen2');
-            $filename = $file->getClientOriginalName();
+        // if ($request->hasFile('imagen2')) {
+        //     $file = $request->file('imagen2');
+        //     $filename = $file->getClientOriginalName();
 
-            $file->move(public_path("videojuegos/$request->nombre/imagen"), $filename);
-            $videojuegos->imagen2 = $filename;
-        }
+        //     $file->move(public_path("videojuegos/$request->nombre/imagen"), $filename);
+        //     $videojuegos->imagen2 = $filename;
+        // }
 
         $videojuegos->save();
 
