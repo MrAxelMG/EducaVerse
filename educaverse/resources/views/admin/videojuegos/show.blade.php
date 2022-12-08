@@ -96,7 +96,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6 col-12">
+                            <div class="col-12">
                                 <div class="form-floating mb-3">
                                     <input type="text" placeholder="" class="form-control" id="urlInput" name="url" required>
                                     <label for="urlInput">URL de venta</label>
