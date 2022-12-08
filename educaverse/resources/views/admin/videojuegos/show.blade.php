@@ -18,7 +18,7 @@
                         $categoriaAll .= $categoriaButton->id.',';
                     }
                 @endphp
-                <a class="btn btn-primary mb-4 new text-white" data-categoriacant="{{ $categoriaAll }}" data-bs-toggle="modal" data-bs-target="#formModal"> <i class="mdi mdi-plus me-1"> </i>Añadir un nuevo vodeojuego</a>
+                <a class="btn btn-primary mb-4 new text-white" data-categoriacant="{{ $categoriaAll }}" data-bs-toggle="modal" data-bs-target="#formModal"> <i class="mdi mdi-plus me-1"> </i>Añadir un nuevo videojuego</a>
                 <div class="table-responsive">
                     <table class="table table-hover table-striped table-bordered text-center nowrap" id="videojuegosTable" style="width: 100%;" >
                         <thead>
