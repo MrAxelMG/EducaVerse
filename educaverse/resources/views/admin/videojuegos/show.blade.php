@@ -61,7 +61,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-floating mb-3">
-                                    <textarea class="form-control" name="descripcion" id="descripcionInput" cols="30" rows="10" required></textarea>
+                                    <textarea type="text" class="form-control" id="descripcionInput" name="descripcion" style="height: 100px"></textarea>
                                     <label for="descripcionInput">Descripcion</label>
                                 </div>
                             </div>
