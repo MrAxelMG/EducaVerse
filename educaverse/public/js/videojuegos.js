@@ -279,6 +279,7 @@ $(document).ready(function () {
         $("#descripcionInput").prop("readonly", false);
         $("#jugadoresInput").prop("disabled", false);
         $("#materiaIdInput").prop("disabled", false);
+        $("#precioIdInput").prop("disabled", false);
 
         $("#windowsInput").prop("disabled", false);
         $("#macInput").prop("disabled", false);
@@ -325,6 +326,10 @@ $(document).ready(function () {
         var materiaid = $(this).data("materiaid");
         $("#materiaIdInput").val(materiaid);
         $("#materiaIdInput").prop("disabled", true);
+
+        var precio = $(this).data("precio");
+        $("#precioInput").val(precio);
+        $("#precioInput").prop("readonly", true);
 
         $("#windowsInput").prop("disabled", true);
         $("#macInput").prop("disabled", true);
@@ -403,6 +408,10 @@ $(document).ready(function () {
         var materiaid = $(this).data("materiaid");
         $("#materiaIdInput").val(materiaid);
         $("#materiaIdInput").prop("disabled", false);
+
+        var precio = $(this).data("precio");
+        $("#precioInput").val(precio);
+        $("#precioInput").prop("readonly", false);
 
         $("#windowsInput").prop("disabled", false);
         $("#macInput").prop("disabled", false);

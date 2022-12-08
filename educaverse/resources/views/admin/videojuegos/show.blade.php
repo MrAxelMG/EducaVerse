@@ -51,12 +51,22 @@
                         @csrf
                         <input type="hidden" name="id" id="idInput">
                         <div class="row">
-                            <div class="col-12">
+                            <div class="col-md-6 col-12">
                                 <div class="form-floating mb-3">
                                     <input type="text" class="form-control" id="nombreInput" name="nombre" required>
                                     <label for="nombreInput">Nombre</label>
                                 </div>
                             </div>
+                            <div class="col-md-6 col-12">
+                                <div class="form-floating mb-3">
+                                    <select name="jugadores" class="form-control" id="jugadoresInput" required>
+                                        <option selected disabled>Selecciona...</option>
+                                        <option value="Individual">Individual</option>
+                                        <option value="Multijugador">Multijugador</option>
+                                    </select>
+                                    <label for="jugadoresInput">Jugadores</label>
+                                </div>
+                            </div>  
                         </div>
                         <div class="row">
                             <div class="col-12">
@@ -69,12 +79,8 @@
                         <div class="row">
                             <div class="col-md-6 col-12">
                                 <div class="form-floating mb-3">
-                                    <select name="jugadores" class="form-control" id="jugadoresInput" required>
-                                        <option selected disabled>Selecciona...</option>
-                                        <option value="Individual">Individual</option>
-                                        <option value="Multijugador">Multijugador</option>
-                                    </select>
-                                    <label for="jugadoresInput">Jugadores</label>
+                                    <input type="number" class="form-control" id="precioInput" name="precio" required>
+                                    <label for="precioInput">Precio</label>
                                 </div>
                             </div>  
                             <div class="col-md-6 col-12">

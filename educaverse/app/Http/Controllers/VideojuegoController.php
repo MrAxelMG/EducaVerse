@@ -25,7 +25,7 @@ class VideojuegoController extends Controller
     public function show()
     {
         $videojuegos = Videojuego::join('materias', 'materias.id', '=', 'videojuegos.materia_id')
-                        ->select('videojuegos.id', 'videojuegos.nombre', 'videojuegos.descripcion', 'videojuegos.plataformas', 'videojuegos.jugadores', 'videojuegos.categoria_id', 'materias.id as materiaid', 'materias.nombre AS materiaNombre', 'videojuegos.imagen', 'videojuegos.imagen2')
+                        ->select('videojuegos.id', 'videojuegos.nombre', 'videojuegos.descripcion', 'videojuegos.plataformas', 'videojuegos.jugadores', 'videojuegos.categoria_id', 'materias.id as materiaid', 'materias.nombre AS materiaNombre', 'videojuegos.imagen', 'videojuegos.imagen2', 'videojuegos.precio')
                         ->get();
 
         return datatables()->of($videojuegos)->addColumn('plataforma', 'admin.videojuegos.plataforma')->addColumn('categoria', 'admin.videojuegos.categoria')->addColumn('btn', 'admin.videojuegos.buttons')->rawColumns(['categoria', 'plataforma', 'btn'])->toJson();
@@ -48,6 +48,7 @@ class VideojuegoController extends Controller
 
         $videojuegos->plataformas = $plataformas;
         $videojuegos->descripcion = $request->descripcion;
+        $videojuegos->precio = $request->precio;
         $videojuegos->jugadores = $request->jugadores;
         $videojuegos->categoria_id = $categoria_id;
         $videojuegos->materia_id = $request->materia_id;
@@ -87,6 +88,8 @@ class VideojuegoController extends Controller
         }
 
         $videojuegos->plataformas = $plataformas;
+        $videojuegos->descripcion = $request->descripcion;
+        $videojuegos->precio = $request->precio;
         $videojuegos->jugadores = $request->jugadores;
         $videojuegos->categoria_id = $categoria_id;
         $videojuegos->descripcion = $request->descripcion;
