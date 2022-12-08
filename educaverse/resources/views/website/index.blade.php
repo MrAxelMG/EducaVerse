@@ -103,7 +103,7 @@
                                                     <li><span>Categoría :</span> {{ $videojuego->nombreCategoria }}.</li>
                                                     <li><span>Jugadores :</span> {{ $videojuego->jugadores }}.</li>
                                                     <li><span>Plataformas :</span> {{ $plat }}.</li>
-                                                    <li><span>Precio :</span>${{ number_format($videojuego->precio) }}MXN.</li>
+                                                    <li><span>Precio :</span>${{ number_format($videojuego->precio, 2) }} MXN.</li>
                                                 </ul>
                                             </div>
                                             <p>{{ $videojuego->descripcion }}</p>
