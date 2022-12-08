@@ -125,7 +125,7 @@ $(document).ready(function () {
         var id = $(this).data("id");
 
         $("#formModal").modal("show");
-        $("#PerfilForm").attr("action", "/admin/perfil/update");
+        $("#PerfilForm").attr("action", "perfil/update");
         $("#idInput").val(id);
 
         $("#btnSubmit").show();

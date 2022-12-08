@@ -2,7 +2,7 @@ $(document).ready(function () {
     let acc = "";
 
     var table = $("#escuelaTable").DataTable({
-        ajax: "/admin/escuelas/show",
+        ajax: "escuelas/show",
         columns: [
             { data: "nombre" },
             { data: "direccion" },
@@ -266,7 +266,7 @@ $(document).ready(function () {
     });
 
     $(document).on("click", ".new", function (e) {
-        $("#escuelaForm").attr("action", "/admin/escuelas/add");
+        $("#escuelaForm").attr("action", "escuelas/add");
         $("#alertMessage").text("");
         $("#formModal").modal("show");
         acc = "new";
@@ -336,7 +336,7 @@ $(document).ready(function () {
         var nombre = $(this).data("nombre");
 
         $("#formModal").modal("show");
-        $("#escuelaForm").attr("action", "/admin/escuelas/update");
+        $("#escuelaForm").attr("action", "escuelas/update");
 
         $("#idInput").val(id);
 
@@ -390,7 +390,7 @@ $(document).ready(function () {
             cancelButtonColor: "#dc3545",
         }).then((result) => {
             if (result.value) {
-                $.post("/admin/escuelas/delete", { id: id }, function () {
+                $.post("escuelas/delete", { id: id }, function () {
                     table.ajax.reload(null, false);
                     Swal.fire({
                         icon: "success",

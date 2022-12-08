@@ -2,7 +2,7 @@ $(document).ready(function () {
     let acc = "";
 
     var table = $("#videojuegosTable").DataTable({
-        ajax: "/admin/videojuegos/show",
+        ajax: "videojuegos/show",
         columns: [
             { data: "nombre" },
             { data: "categoria" },
@@ -267,7 +267,7 @@ $(document).ready(function () {
     });
 
     $(document).on("click", ".new", function (e) {
-        $("#videojuegoForm").attr("action", "/admin/videojuegos/add");
+        $("#videojuegoForm").attr("action", "videojuegos/add");
         $("#alertMessage").text("");
         $("#formModal").modal("show");
         acc = "new";
@@ -379,7 +379,7 @@ $(document).ready(function () {
         var id = $(this).data("id");
 
         $("#formModal").modal("show");
-        $("#videojuegoForm").attr("action", "/admin/videojuegos/update");
+        $("#videojuegoForm").attr("action", "videojuegos/update");
 
         $("#idInput").val(id);
 
@@ -462,7 +462,7 @@ $(document).ready(function () {
             cancelButtonColor: "#dc3545",
         }).then((result) => {
             if (result.value) {
-                $.post("/admin/videojuegos/delete", { id: id }, function () {
+                $.post("videojuegos/delete", { id: id }, function () {
                     table.ajax.reload(null, false);
                     Swal.fire({
                         icon: "success",

@@ -1,6 +1,6 @@
 $(document).ready(function () {
     var table = $("#ventasTable").DataTable({
-        ajax: "admin/ventas/show",
+        ajax: "ventas/show",
         columns: [
             { data: "videojuegos_nombre" },
             { data: "cantidad" },
@@ -263,7 +263,7 @@ $(document).ready(function () {
             cancelButtonColor: "#dc3545",
         }).then((result) => {
             if (result.value) {
-                $.post("/admin/ventas/delete", { id: id }, function () {
+                $.post("ventas/delete", { id: id }, function () {
                     table.ajax.reload(null, false);
                     Swal.fire({
                         icon: "success",

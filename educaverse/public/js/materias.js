@@ -2,7 +2,7 @@ $(document).ready(function () {
     let acc = "";
 
     var table = $("#materiasTable").DataTable({
-        ajax: "/admin/materias/show",
+        ajax: "materias/show",
         columns: [{ data: "nombre" }, { data: "btn" }],
         responsive: {
             breakpoints: [
@@ -263,7 +263,7 @@ $(document).ready(function () {
     $(document).on("click", ".new", function (e) {
         e.preventDefault();
         console.log("prueba");
-        $("#materiaForm").attr("action", "/admin/materias/add");
+        $("#materiaForm").attr("action", "materias/add");
         $("#alertMessage").text("");
         $("#formModal").modal("show");
         acc = "new";
@@ -306,7 +306,7 @@ $(document).ready(function () {
         var nombre = $(this).data("nombre");
 
         $("#formModal").modal("show");
-        $("#materiaForm").attr("action", "/admin/materias/update");
+        $("#materiaForm").attr("action", "materias/update");
 
         $("#idInput").val(id);
 
@@ -335,7 +335,7 @@ $(document).ready(function () {
             cancelButtonColor: "#dc3545",
         }).then((result) => {
             if (result.value) {
-                $.post("/admin/materias/delete", { id: id }, function () {
+                $.post("materias/delete", { id: id }, function () {
                     table.ajax.reload(null, false);
                     Swal.fire({
                         icon: "success",

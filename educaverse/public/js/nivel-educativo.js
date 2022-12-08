@@ -2,7 +2,7 @@ $(document).ready(function () {
     let acc = "";
 
     var table = $("#nivelEducativoTable").DataTable({
-        ajax: "/admin/niveles-educativos/show",
+        ajax: "niveles-educativos/show",
         columns: [{ data: "grado" }, { data: "nivel" }, { data: "btn" }],
         responsive: {
             breakpoints: [
@@ -261,10 +261,7 @@ $(document).ready(function () {
     });
 
     $(document).on("click", ".new", function (e) {
-        $("#nivelEducativoForm").attr(
-            "action",
-            "/admin/niveles-educativos/add"
-        );
+        $("#nivelEducativoForm").attr("action", "niveles-educativos/add");
         $("#alertMessage").text("");
         $("#formModal").modal("show");
         acc = "new";
@@ -319,10 +316,7 @@ $(document).ready(function () {
         var escuelaid = $(this).data("escuelaid");
 
         $("#formModal").modal("show");
-        $("#nivelEducativoForm").attr(
-            "action",
-            "/admin/niveles-educativos/update"
-        );
+        $("#nivelEducativoForm").attr("action", "niveles-educativos/update");
 
         $("#idInput").val(id);
 
@@ -357,21 +351,17 @@ $(document).ready(function () {
             cancelButtonColor: "#dc3545",
         }).then((result) => {
             if (result.value) {
-                $.post(
-                    "/admin/niveles-educativos/delete",
-                    { id: id },
-                    function () {
-                        table.ajax.reload(null, false);
-                        Swal.fire({
-                            icon: "success",
-                            title: '<h1 style="font-family: Poppins; font-weight: 700;">Nivel educativo eliminado</h1>',
-                            html: '<p style="font-family: Poppins">El nivel educativo se ha eliminado correctamente</p>',
-                            confirmButtonText:
-                                '<a style="font-family: Poppins">Aceptar</a>',
-                            confirmButtonColor: "#01bbcc",
-                        });
-                    }
-                );
+                $.post("niveles-educativos/delete", { id: id }, function () {
+                    table.ajax.reload(null, false);
+                    Swal.fire({
+                        icon: "success",
+                        title: '<h1 style="font-family: Poppins; font-weight: 700;">Nivel educativo eliminado</h1>',
+                        html: '<p style="font-family: Poppins">El nivel educativo se ha eliminado correctamente</p>',
+                        confirmButtonText:
+                            '<a style="font-family: Poppins">Aceptar</a>',
+                        confirmButtonColor: "#01bbcc",
+                    });
+                });
             }
         });
     });

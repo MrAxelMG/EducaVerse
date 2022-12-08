@@ -15,7 +15,7 @@ $(document).ready(function () {
         let cantidad = $(this).data("cantidad");
 
         $.post({
-            url: "/venta/add",
+            url: "venta/add",
             data: {
                 videojuego_id: videojuegoid,
                 precio: precio,

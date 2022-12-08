@@ -2,7 +2,7 @@ $(document).ready(function () {
     let acc = "";
 
     var table = $("#categoriasTable").DataTable({
-        ajax: "/admin/categorias/show",
+        ajax: "categorias/show",
         columns: [{ data: "nombre" }, { data: "btn" }],
         responsive: {
             breakpoints: [
@@ -262,7 +262,7 @@ $(document).ready(function () {
     $(document).on("click", ".new", function (e) {
         e.preventDefault();
         console.log("prueba");
-        $("#categoriaForm").attr("action", "/admin/categorias/add");
+        $("#categoriaForm").attr("action", "categorias/add");
         $("#alertMessage").text("");
         $("#formModal").modal("show");
         acc = "new";
@@ -305,7 +305,7 @@ $(document).ready(function () {
         var nombre = $(this).data("nombre");
 
         $("#formModal").modal("show");
-        $("#categoriaForm").attr("action", "/admin/categorias/update");
+        $("#categoriaForm").attr("action", "categorias/update");
 
         $("#idInput").val(id);
 
@@ -334,7 +334,7 @@ $(document).ready(function () {
             cancelButtonColor: "#dc3545",
         }).then((result) => {
             if (result.value) {
-                $.post("/admin/categorias/delete", { id: id }, function () {
+                $.post("categorias/delete", { id: id }, function () {
                     table.ajax.reload(null, false);
                     Swal.fire({
                         icon: "success",

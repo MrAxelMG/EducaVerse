@@ -75,7 +75,7 @@ $(document).ready(function () {
             cancelButtonColor: "#dc3545",
         }).then((result) => {
             if (result.value) {
-                $.post("/admin/contacto/delete", { id: id }, function () {
+                $.post("contacto/delete", { id: id }, function () {
                     table.ajax.reload(null, false);
                     Swal.fire({
                         icon: "success",
@@ -91,7 +91,7 @@ $(document).ready(function () {
     });
 
     var table = $("#contactoTable").DataTable({
-        ajax: "/admin/contacto/show",
+        ajax: "contacto/show",
         columns: [
             { data: "nombre" },
             { data: "email" },
