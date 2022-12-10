@@ -70,7 +70,7 @@
                     <div class="col-xl-3">
                         <div class="shop-item">
                             <div class="product-thumb">
-                                <a href="#"><img src="{{ asset('images/proximos/encuentra objetos perdidos.png') }}" alt="Encuentra objetos perdidos" width="278px" height="243px"></a>
+                                <a href="#"><img src="{{ asset('images/proximos/encuentra objetos perdidos en.png') }}" alt="Encuentra objetos perdidos" width="278px" height="243px"></a>
                             </div>
                             <div class="product-content">
                                 <div class="product-tag"><a href="#">L. Thinking</a></div>
@@ -86,7 +86,7 @@
                     <div class="col-xl-3">
                         <div class="shop-item">
                             <div class="product-thumb">
-                                <a href="#"><img src="{{ asset('images/proximos/mas zonas con parkour.png') }}" alt="Mas zonas con parkour" width="278px" height="243px"></a>
+                                <a href="#"><img src="{{ asset('images/proximos/mas zonas con parkour en.png') }}" alt="Mas zonas con parkour" width="278px" height="243px"></a>
                             </div>
                             <div class="product-content">
                                 <div class="product-tag"><a href="#">Ability</a></div>
@@ -102,7 +102,7 @@
                     <div class="col-xl-3">
                         <div class="shop-item">
                             <div class="product-thumb">
-                                <a href="#"><img src="{{ asset('images/proximos/recorrido inicial rejugable.png') }}" alt="Recorrido inicial rejugable" width="278px" height="243px"></a>
+                                <a href="#"><img src="{{ asset('images/proximos/recorrido inicial rejugable en.png') }}" alt="Recorrido inicial rejugable" width="278px" height="243px"></a>
                             </div>
                             <div class="product-content">
                                 <div class="product-tag"><a href="#">Ability</a></div>
@@ -118,7 +118,7 @@
                     <div class="col-xl-3">
                         <div class="shop-item">
                             <div class="product-thumb">
-                                <a href="#"><img src="{{ asset('images/proximos/recorrido matematico avanzado.png') }}" alt="Recorrido matemático avanzado" width="278px" height="243px"></a>
+                                <a href="#"><img src="{{ asset('images/proximos/recorrido matematico avanzado en.png') }}" alt="Recorrido matemático avanzado" width="278px" height="243px"></a>
                             </div>
                             <div class="product-content">
                                 <div class="product-tag"><a href="#">Mathematics</a></div>
@@ -134,7 +134,7 @@
                     <div class="col-xl-3">
                         <div class="shop-item">
                             <div class="product-thumb">
-                                <a href="#"><img src="{{ asset('images/proximos/rompecabezas geografico.png') }}" alt="Rompecabezas geográfico" width="278px" height="243px"></a>
+                                <a href="#"><img src="{{ asset('images/proximos/rompecabezas geografica en.png') }}" alt="Rompecabezas geográfico" width="278px" height="243px"></a>
                             </div>
                             <div class="product-content">
                                 <div class="product-tag"><a href="#">Geography</a></div>
