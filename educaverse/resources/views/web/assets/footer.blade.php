@@ -11,12 +11,12 @@
                         </a>
                       </div>
                       <div class="footer-text">
-                          <p>We are a video game platform that has the best for you..</p>
+                          <p>Somos una plataforma de videojuegos que tiene lo mejor para ti.</p>
                           <div class="footer-contact">
                               <ul>
-                                  <li><i class="fas fa-map-marker-alt"></i> <span>Address : </span>Carr. Durango – Mezquital, Zip Code 34308, Durango, Dgo, México.</li>
-                                  <li><i class="fas fa-phone"></i> <span>Cellphone : </span>+52 618 137 3050</li>
-                                  <li><i class="fas fa-envelope-open"></i><span>Email : </span>contact@educaverse.com</li>
+                                  <li><i class="fas fa-map-marker-alt"></i> <span>Dirección : </span>Carr. Durango – Mezquital, C.P. 34308, Durango, Dgo, México.</li>
+                                  <li><i class="fas fa-phone"></i> <span>Celular : </span>+52 618 137 3050</li>
+                                  <li><i class="fas fa-envelope-open"></i><span>Email : </span>contacto@educaverse.com</li>
                               </ul>
                           </div>
                       </div>
@@ -25,12 +25,12 @@
               <div class="col-xl-2 col-lg-3 col-sm-6">
                   <div class="footer-widget mb-50">
                       <div class="fw-title mb-35">
-                          <h5>Access</h5>
+                          <h5>Acceder</h5>
                       </div>
                       <div class="fw-link">
                           <ul>
-                              <li><a href="{{ url('/login') }}">Sign in</a></li>
-                              <li><a href="{{ url('/registro') }}">Sign up</a></li>
+                              <li><a href="{{ url('/login') }}">Iniciar sesión</a></li>
+                              <li><a href="{{ url('/registro') }}">Registrate</a></li>
                           </ul>
                       </div>
                   </div>
@@ -38,13 +38,13 @@
               <div class="col-xl-3 col-lg-4 col-sm-6">
                   <div class="footer-widget mb-50">
                       <div class="fw-title mb-35">
-                          <h5>Need help?</h5>
+                          <h5>¿Necesitas ayuda?</h5>
                       </div>
                       <div class="fw-link">
                           <ul>
-                              <li><a href="{{ url('/terminos') }}">Terms &amp; Conditions</a></li>
-                              <li><a href="{{ url('/privacidad') }}">Privacy policy</a></li>
-                              <li><a href="{{ url('/faq') }}">FAQ</a></li>
+                              <li><a href="{{ url('/terminos') }}">Terminos &amp; Condiciones</a></li>
+                              <li><a href="{{ url('/privacidad') }}">Politica de privacidad</a></li>
+                              <li><a href="{{ url('/faq') }}">Preguntas frecuentes</a></li>
                           </ul>
                       </div>
                   </div>
@@ -52,7 +52,7 @@
               <div class="col-xl-2 col-lg-4 col-md-6">
                   <div class="footer-widget mb-50">
                       <div class="fw-title mb-35">
-                          <h5>Follow us</h5>
+                          <h5>Siguenos</h5>
                       </div>
                       <div class="footer-social">
                           <ul>
@@ -72,7 +72,7 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6">
                     <div class="copyright-text">
-                        <p>copyright © @php echo date('Y') @endphp Educaverse. All rights reserved.</p>
+                        <p>copyright © @php echo date('Y') @endphp Educaverse. Todos los derechos reservados</p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 d-none d-md-block">

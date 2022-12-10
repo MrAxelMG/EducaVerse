@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Contact | EducaVerse</title>
+    <title>Contacto | EducaVerse</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -23,11 +23,11 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="breadcrumb-content text-center">
-                            <h2>Contact <span>information</span></h2>
+                            <h2>Información de <span>contacto</span></h2>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page" style="font-weight: bold;">Contact</li>
+                                    <li class="breadcrumb-item"><a href="{{ url('/') }}">Inicio</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page" style="font-weight: bold;">Contacto</li>
                                 </ol>
                             </nav>
                         </div>
@@ -46,21 +46,21 @@
                     </div>
                     <div class="col-lg-6 pl-45">
                         <div class="section-title title-style-three mb-20">
-                            <h2>Contact <span>Educaverse</span></h2>
+                            <h2>Contacto con <span>Educaverse</span></h2>
                         </div>
                         <div class="contact-info-list mb-40">
                             <ul>                                
                                 <li>
                                     <a href="" style="color: #6c6c6c">
                                         <i class="fas fa-map-marker-alt"></i> 
-                                        <span>Address : </span>
-                                        Carr. Durango – Mezquital, Zip Code 34308, Durango, Dgo, México.
+                                        <span>Dirección : </span>
+                                        Carr. Durango – Mezquital, C.P. 34308, Durango, Dgo, México.
                                     </a>
                                 </li>
                                 <li>
                                     <a href="" style="color: #6c6c6c">
                                         <i class="fas fa-phone"></i> 
-                                        <span>Cellphone : </span>
+                                        <span>Celular : </span>
                                         +52 618 137 3050
                                     </a>
                                 </li>
@@ -68,7 +68,7 @@
                                     <a href="mailto:contacto@educaverse.com" style="color: #6c6c6c">
                                         <i class="fas fa-envelope"></i>
                                         <span>Email : </span>
-                                        contact@educaverse.com
+                                        contacto@educaverse.com
                                     </a>
                                 </li>
                             </ul>
@@ -76,16 +76,16 @@
                         <div class="contact-form" >
                             <form id="contactoForm" action="contacto/add">
                                 @csrf
-                                <textarea name="mensaje" id="message" placeholder="Write a message"></textarea>
+                                <textarea name="mensaje" id="message" placeholder="Escribe un mensaje"></textarea>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <input type="text" name="nombre" placeholder="Name">
+                                        <input type="text" name="nombre" placeholder="Nombre">
                                     </div>
                                     <div class="col-md-6">
                                         <input type="email" name="email" placeholder="Email">
                                     </div>
                                 </div>
-                                <button type="submit" id="enviarMensaje">Send message</button>
+                                <button type="submit" id="enviarMensaje">Enviar mensaje</button>
                             </form>
                         </div>
                     </div>

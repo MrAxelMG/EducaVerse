@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>About us | EducaVerse</title>
+    <title>Nosotros | EducaVerse</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -23,11 +23,11 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="breadcrumb-content text-center">
-                            <h2>About <span>us</span></h2>
+                            <h2>Acerca de <span>nosotros</span></h2>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page" style="font-weight: bold;">About us</li>
+                                    <li class="breadcrumb-item"><a href="{{ url('/') }}">Inicio</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page" style="font-weight: bold;">Nosotros</li>
                                 </ol>
                             </nav>
                         </div>
@@ -51,15 +51,15 @@
                     </div>
                     <div class="col-xl-5 col-lg-6">
                         <div class="section-title title-style-three mb-25">
-                            <h2>About <span>us</span></h2>
+                            <h2>Acerca de <span>nosotros</span></h2>
                         </div>
                         <div class="inner-about-content">
-                            <h5>Educational videogames platform</h5>                            
+                            <h5>Plataforma de videojuegos educativos</h5>                            
                             <p style="text-align: justify">
-                                We developed an educational platform with environments with a high degree of participation and interactivity, in which the student is able to build, design, modify, experiment and get involved in a much more active way in the learning process.
+                                Desarrollamos una plataforma educativa con entornos de un alto grado de participación e interactividad, en los que el alumno es capaz de construir, diseñar, modificar, experimentar e involucrarse de forma mucho más activa en el proceso de su aprendizaje.
                             </p>
                             <p style="text-align: justify">
-                                We try to strengthen self-regulation for learning in children, through didactic application.                               
+                                Tratamos de fortalecer la autorregulación para el aprendizaje en los niños, mediante la aplicación didáctica.                                
                             </p>
                         </div>
                     </div>

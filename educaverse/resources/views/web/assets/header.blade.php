@@ -15,30 +15,30 @@
                           $ruta = explode(' ', $ruta[3]);
                         @endphp
                         <ul>
-                          {{-- <li @if ($ruta[0] == '') class="show" @endif >
-                            <a href="{{ url('/') }}">HOME</a>
+                          <li @if ($ruta[0] == '') class="show" @endif >
+                            <a href="{{ url('/') }}">INICIO</a>
                           </li>
                           <li @if ($ruta[0] == 'videojuegos') class="show" @endif >
-                            <a href="{{ url('/videojuegos') }}">VIDEOGAMES</a>
+                            <a href="{{ url('/videojuegos') }}">VIDEOJUEGOS</a>
                           </li>
                           <li @if ($ruta[0] == 'nosotros') class="show" @endif >
-                            <a href="{{ url('/nosotros') }}">ABOUT US</a>
+                            <a href="{{ url('/nosotros') }}">NOSOTROS</a>
                           </li>
                           <li @if ($ruta[0] == 'contacto') class="show" @endif >
-                            <a href="{{ url('/contacto') }}">CONTACT</a>
+                            <a href="{{ url('/contacto') }}">CONTACTO</a>
+                          </li>
+                          {{-- <li class="show">
+                            <a href="{{ url('/') }}">INICIO</a>
+                          </li>
+                          <li>
+                            <a href="{{ url('/videojuegos') }}">VIDEOJUEGOS</a>
+                          </li>
+                          <li>
+                            <a href="{{ url('/nosotros') }}">NOSOTROS</a>
+                          </li>
+                          <li>
+                            <a href="{{ url('/contacto') }}">CONTACTO</a>
                           </li> --}}
-                          <li class="show">
-                            <a href="{{ url('/') }}">HOME</a>
-                          </li>
-                          <li>
-                            <a href="{{ url('/videojuegos') }}">VIDEOGAMES</a>
-                          </li>
-                          <li>
-                            <a href="{{ url('/nosotros') }}">ABOUT US</a>
-                          </li>
-                          <li>
-                            <a href="{{ url('/contacto') }}">CONTACT</a>
-                          </li>
                         </ul>
                       </div>
                   </nav>

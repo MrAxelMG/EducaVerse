@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Videogames | EducaVerse</title>
+    <title>Videojuegos | EducaVerse</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -25,8 +25,8 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-8">
                             <div class="section-title home-four-title mb-50">
-                                <span>Last games</span>
-                                <h2>Video games <span>launched</span></h2>
+                                <span>Últimos juegos</span>
+                                <h2>Videojuegos <span>lanzados</span></h2>
                             </div>
                         </div>
                     </div>
@@ -44,8 +44,8 @@
                                                 $nombre = explode(' ', $videojuego->nombre, 2);
                                             @endphp
                                             <h4>{{ $nombre[0] }} <span>{{ $nombre[1] }}</span></h4>
-                                            <p>Price : <span>${{ number_format($videojuego->precio, 2) }}</span></p>
-                                            <a href="{{ $videojuego->url }}" data-videojuegoid="{{ $videojuego->id }}" data-precio="{{ $videojuego->precio }}" data-cantidad="1" target="_blank" class="btn btn-style-two comprar" style="padding: 10px 25px !important; margin-top: 40px; margin-bottom: -15px">Buy</a>
+                                            <p>Precio : <span>${{ number_format($videojuego->precio, 2) }}</span></p>
+                                            <a href="{{ $videojuego->url }}" data-videojuegoid="{{ $videojuego->id }}" data-precio="{{ $videojuego->precio }}" data-cantidad="1" target="_blank" class="btn btn-style-two comprar" style="padding: 10px 25px !important; margin-top: 40px; margin-bottom: -15px">Comprar ahora</a>
                                         </div>
                                     </div>
                                 @endforeach
@@ -61,8 +61,8 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-6 col-lg-8">
                         <div class="section-title title-style-three white-title text-center mb-35">
-                            <h2>Future <span>Launches</span></h2>
-                          <p>These are some of the future releases that EducaVerse has for you.</p>
+                            <h2>Futuros <span>Lanzamientos</span></h2>
+                          <p>Estos son algunos de los futuros lanzamientos que EducaVerse tienen para ti.</p>
                         </div>
                     </div>
                 </div>
@@ -73,11 +73,11 @@
                                 <a href="#"><img src="{{ asset('images/proximos/encuentra objetos perdidos.png') }}" alt="Encuentra objetos perdidos" width="278px" height="243px"></a>
                             </div>
                             <div class="product-content">
-                                <div class="product-tag"><a href="#">L. Thinking</a></div>
-                                <h4><a href="#">Find lost items</a></h4>
+                                <div class="product-tag"><a href="#">P. Lógico</a></div>
+                                <h4><a href="#">Encuentra objetos perdidos</a></h4>
                                 <div class="product-meta">
                                     <div class="product-price">
-                                        <h5>coming soon!</h5>
+                                        <h5>¡proximamente!</h5>
                                     </div>
                                 </div>
                             </div>
@@ -89,11 +89,11 @@
                                 <a href="#"><img src="{{ asset('images/proximos/mas zonas con parkour.png') }}" alt="Mas zonas con parkour" width="278px" height="243px"></a>
                             </div>
                             <div class="product-content">
-                                <div class="product-tag"><a href="#">Ability</a></div>
-                                <h4><a href="#">More areas with parkour</a></h4>
+                                <div class="product-tag"><a href="#">Habilidad</a></div>
+                                <h4><a href="#">Mas zonas con parkour</a></h4>
                                 <div class="product-meta">
                                     <div class="product-price">
-                                        <h5>coming soon!</h5>
+                                        <h5>¡proximamente!</h5>
                                     </div>
                                 </div>
                             </div>
@@ -105,11 +105,11 @@
                                 <a href="#"><img src="{{ asset('images/proximos/recorrido inicial rejugable.png') }}" alt="Recorrido inicial rejugable" width="278px" height="243px"></a>
                             </div>
                             <div class="product-content">
-                                <div class="product-tag"><a href="#">Ability</a></div>
-                                <h4><a href="#">Replayable initial path</a></h4>
+                                <div class="product-tag"><a href="#">Habilidad</a></div>
+                                <h4><a href="#">Recorrido inicial rejugable</a></h4>
                                 <div class="product-meta">
                                     <div class="product-price">
-                                        <h5>coming soon!</h5>
+                                        <h5>¡proximamente!</h5>
                                     </div>
                                 </div>
                             </div>
@@ -121,11 +121,11 @@
                                 <a href="#"><img src="{{ asset('images/proximos/recorrido matematico avanzado.png') }}" alt="Recorrido matemático avanzado" width="278px" height="243px"></a>
                             </div>
                             <div class="product-content">
-                                <div class="product-tag"><a href="#">Mathematics</a></div>
-                                <h4><a href="#">Advanced mathematical tour</a></h4>
+                                <div class="product-tag"><a href="#">Matemáticas</a></div>
+                                <h4><a href="#">Recorrido matemático avanzado</a></h4>
                                 <div class="product-meta">
                                     <div class="product-price">
-                                        <h5>coming soon!</h5>
+                                        <h5>¡proximamente!</h5>
                                     </div>
                                 </div>
                             </div>
@@ -137,11 +137,11 @@
                                 <a href="#"><img src="{{ asset('images/proximos/rompecabezas geografico.png') }}" alt="Rompecabezas geográfico" width="278px" height="243px"></a>
                             </div>
                             <div class="product-content">
-                                <div class="product-tag"><a href="#">Geography</a></div>
-                                <h4><a href="#">Geographic puzzle</a></h4>
+                                <div class="product-tag"><a href="#">Geografía</a></div>
+                                <h4><a href="#">Rompecabezas geográfico</a></h4>
                                 <div class="product-meta">
                                     <div class="product-price">
-                                        <h5>coming soon!</h5>
+                                        <h5>¡proximamente!</h5>
                                     </div>
                                 </div>
                             </div>
@@ -154,10 +154,10 @@
                             </div>
                             <div class="product-content">
                                 <div class="product-tag"><a href="#">Nintendo DS</a></div>
-                                <h4><a href="#">Different platforms</a></h4>
+                                <h4><a href="#">Diferentes plataformas</a></h4>
                                 <div class="product-meta">
                                     <div class="product-price">
-                                        <h5>coming soon!</h5>
+                                        <h5>¡proximamente!</h5>
                                     </div>
                                 </div>
                             </div>
