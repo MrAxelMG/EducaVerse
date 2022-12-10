@@ -59,7 +59,7 @@
                     <div class="col-xl-6 col-lg-8">
                         <div class="section-title title-style-three text-center mb-20">
                           <h2>Games <span>launched</span></h2>
-                          <p>Here you can purchase our released videogames, as well as review their features.</p>
+                          <p>Here you can purchase our released video games, as well as review their features.</p>
                         </div>
                     </div>
                 </div>
@@ -132,7 +132,7 @@
                 <div class="row">
                     <div class="col-xl-5 col-lg-6 col-md-10">
                         <div class="section-title title-style-three white-title mb-70">
-                            <h2>Abput <span>EducaVerse</span></h2>
+                            <h2>About <span>EducaVerse</span></h2>
                             <p>To inform you about our video games, here are some important points of the company.</p>
                         </div>
                         <div class="just-gamers-list">
@@ -143,7 +143,7 @@
                                     </div>
                                     <div class="just-gamers-list-content fix">
                                         <h5>Educational video games</h5>
-                                        <p>We have video games in order to support the teacher in the teaching process.</p>
+                                        <p>We have video games to support the teacher in the teaching process.</p>
                                     </div>
                                 </li>
                                 <li>
@@ -268,7 +268,7 @@
                     <div class="col-xl-3">
                         <div class="shop-item">
                             <div class="product-thumb">
-                                <a href="#"><img src="{{ asset('images/proximos/encuentra objetos perdidos.png') }}" alt="Encuentra objetos perdidos" width="278px" height="243px"></a>
+                                <a href="#"><img src="{{ asset('images/proximos/encuentra objetos perdidos en.png') }}" alt="Encuentra objetos perdidos" width="278px" height="243px"></a>
                             </div>
                             <div class="product-content">
                                 <div class="product-tag"><a href="#">L. Thinking</a></div>
@@ -284,7 +284,7 @@
                     <div class="col-xl-3">
                         <div class="shop-item">
                             <div class="product-thumb">
-                                <a href="#"><img src="{{ asset('images/proximos/mas zonas con parkour.png') }}" alt="Mas zonas con parkour" width="278px" height="243px"></a>
+                                <a href="#"><img src="{{ asset('images/proximos/mas zonas con parkour en.png') }}" alt="Mas zonas con parkour" width="278px" height="243px"></a>
                             </div>
                             <div class="product-content">
                                 <div class="product-tag"><a href="#">Ability</a></div>
@@ -300,7 +300,7 @@
                     <div class="col-xl-3">
                         <div class="shop-item">
                             <div class="product-thumb">
-                                <a href="#"><img src="{{ asset('images/proximos/recorrido inicial rejugable.png') }}" alt="Recorrido inicial rejugable" width="278px" height="243px"></a>
+                                <a href="#"><img src="{{ asset('images/proximos/recorrido inicial rejugable en.png') }}" alt="Recorrido inicial rejugable" width="278px" height="243px"></a>
                             </div>
                             <div class="product-content">
                                 <div class="product-tag"><a href="#">Ability</a></div>
@@ -316,7 +316,7 @@
                     <div class="col-xl-3">
                         <div class="shop-item">
                             <div class="product-thumb">
-                                <a href="#"><img src="{{ asset('images/proximos/recorrido matematico avanzado.png') }}" alt="Recorrido matemático avanzado" width="278px" height="243px"></a>
+                                <a href="#"><img src="{{ asset('images/proximos/recorrido matematico avanzado en.png') }}" alt="Recorrido matemático avanzado" width="278px" height="243px"></a>
                             </div>
                             <div class="product-content">
                                 <div class="product-tag"><a href="#">Mathematics</a></div>
@@ -332,7 +332,7 @@
                     <div class="col-xl-3">
                         <div class="shop-item">
                             <div class="product-thumb">
-                                <a href="#"><img src="{{ asset('images/proximos/rompecabezas geografico.png') }}" alt="Rompecabezas geográfico" width="278px" height="243px"></a>
+                                <a href="#"><img src="{{ asset('images/proximos/rompecabezas geografico en.png') }}" alt="Rompecabezas geográfico" width="278px" height="243px"></a>
                             </div>
                             <div class="product-content">
                                 <div class="product-tag"><a href="#">Geography</a></div>

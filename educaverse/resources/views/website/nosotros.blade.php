@@ -54,12 +54,12 @@
                             <h2>About <span>us</span></h2>
                         </div>
                         <div class="inner-about-content">
-                            <h5>Educational videogames platform</h5>                            
+                            <h5>Educational video games platform</h5>                            
                             <p style="text-align: justify">
-                                We developed an educational platform with environments with a high degree of participation and interactivity, in which the student is able to build, design, modify, experiment and get involved in a much more active way in the learning process.
+                                We developed an educational platform with environments with a high degree of participation and interactivity, in which the student can build, design, modify, experiment, and get involved in a much more active way in the learning process.
                             </p>
                             <p style="text-align: justify">
-                                We try to strengthen self-regulation for learning in children, through didactic application.                               
+                                We try to strengthen self-regulation for learning in children, through a didactic application.
                             </p>
                         </div>
                     </div>
