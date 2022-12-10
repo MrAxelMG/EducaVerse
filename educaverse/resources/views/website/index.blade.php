@@ -332,7 +332,7 @@
                     <div class="col-xl-3">
                         <div class="shop-item">
                             <div class="product-thumb">
-                                <a href="#"><img src="{{ asset('images/proximos/rompecabezas geografico en.png') }}" alt="Rompecabezas geográfico" width="278px" height="243px"></a>
+                                <a href="#"><img src="{{ asset('images/proximos/rompecabezas geografica en.png') }}" alt="Rompecabezas geográfico" width="278px" height="243px"></a>
                             </div>
                             <div class="product-content">
                                 <div class="product-tag"><a href="#">Geography</a></div>
